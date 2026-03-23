@@ -1,0 +1,228 @@
+.mental-test-container {
+  width: 600px;
+  max-width: 90vw;
+  min-height: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  font-family: 'AtoZ', sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 캐릭터 아이콘 스타일 */
+.character-icon {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* 둥둥 떠다니는 애니메이션 */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.intro-page h2 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.intro-page p {
+  color: #777;
+  margin-bottom: 30px;
+}
+
+/* 입력창 스타일 */
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.input-group input {
+  width: 120px;
+  padding: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border: 3px solid #eee;
+  border-radius: 20px;
+  text-align: center;
+  outline: none;
+  transition: all 0.3s ease;
+  color: #4A90E2;
+}
+
+.input-group input:focus {
+  border-color: #4A90E2;
+  box-shadow: 0 0 15px rgba(74, 144, 226, 0.2);
+}
+
+.input-group .unit {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* 메인 버튼 스타일 (그라데이션) */
+.primary-button {
+  padding: 18px 50px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(110, 142, 251, 0.3);
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(110, 142, 251, 0.4);
+}
+
+.primary-button:active {
+  transform: translateY(-1px);
+}
+
+/* 진행 바 */
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #6e8efb, #a777e3);
+  transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.q-number {
+  color: #a777e3;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.q-text {
+  font-size: 1.7rem;
+  color: #2c3e50;
+  margin-bottom: 45px;
+  line-height: 1.5;
+  font-weight: 700;
+  word-break: keep-all;
+}
+
+/* 답변 버튼 개별 스타일링 */
+.answer-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.answer-btn {
+  padding: 18px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border: 2px solid #f0f0f0;
+  border-radius: 18px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #555;
+}
+
+.answer-btn:hover {
+  transform: scale(1.02);
+  border-color: #a777e3;
+  background: #fdfaff;
+  color: #a777e3;
+}
+
+.agree-very { border-left: 8px solid #4A90E2; }
+.agree { border-left: 8px solid #7cb3f1; }
+.neutral { border-left: 8px solid #ddd; }
+.disagree { border-left: 8px solid #f1967c; }
+.disagree-very { border-left: 8px solid #e24a4a; }
+
+/* 결과창 */
+.result-box {
+  margin: 30px 0;
+  padding: 40px 30px;
+  background: #fcfaff;
+  border-radius: 25px;
+  border: 1px solid #f0e6ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.age-text {
+  font-size: 4.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 10px 0;
+  line-height: 1.4;
+  padding: 15px 0;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #a777e3;
+  color: white;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.divider {
+  height: 2px;
+  background: #eee;
+  margin: 15px 0;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.comparison-text {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.question-card, .result-page, .intro-page {
+  animation: fadeIn 0.6s ease-out forwards;
+}
