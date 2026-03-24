@@ -8,13 +8,9 @@ import { calculateDopamineResult } from "./utils/resultCalculator";
 
 interface DopamineTestProps {
   externalLang: Language;
-  onExternalLangChange: (lang: Language) => void;
 }
 
-const DopamineTest: React.FC<DopamineTestProps> = ({
-  externalLang,
-  onExternalLangChange,
-}) => {
+const DopamineTest: React.FC<DopamineTestProps> = ({ externalLang }) => {
   const [phase, setPhase] = useState<"intro" | "test" | "result">("intro");
   const [currentStep, setCurrentStep] = useState(0);
   const [scores, setScores] = useState<number[]>([]);
@@ -77,7 +73,7 @@ const DopamineTest: React.FC<DopamineTestProps> = ({
       <MentalAgeQuestion
         currentStep={currentStep}
         totalSteps={dopamineQuestions.length}
-        question={dopamineQuestions[currentStep] as any} // 구조가 유사하므로 캐스팅
+        question={dopamineQuestions[currentStep]}
         onAnswer={handleAnswer}
         onBack={handleBack}
         lang={externalLang}

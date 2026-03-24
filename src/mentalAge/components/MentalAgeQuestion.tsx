@@ -2,10 +2,15 @@ import React from 'react';
 import { type Question } from '../data/questions';
 import { type Language, type TranslationType } from '../data/translations';
 
+interface BaseQuestion {
+  id: number;
+  text: Record<Language, string>;
+}
+
 interface MentalAgeQuestionProps {
   currentStep: number;
   totalSteps: number;
-  question: Question;
+  question: BaseQuestion;
   onAnswer: (score: number) => void;
   onBack: () => void;
   lang: Language;
