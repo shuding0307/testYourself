@@ -28,7 +28,14 @@ export const translations = {
       digital: "디지털 의존도",
       food: "자극적 식습관",
       habit: "습관적 탐닉",
-      emotion: "정서적 민감도"
+      emotion: "정서적 민감도",
+      brainTemp: "뇌의 온도"
+    },
+    brainStatus: {
+      cool: "🧊 평온한 숲속 뇌",
+      warm: "🌤️ 미지근한 도시 뇌",
+      hot: "🔥 과열된 엔진 뇌",
+      burnt: "💀 타버린 숯불 뇌"
     },
     answers: {
       agreeVery: "매우 그렇다",
@@ -75,8 +82,10 @@ export const translations = {
     home: {
       title: "Self-Discovery\nTest Platform",
       subtitle: "A time to look into your inner self",
-      startButton: "Start Mental Age Test",
+      startButton: "Mental Age Test",
+      startDescription: "How old is your inner self really?",
       dopamineButton: "Dopamine Addiction Test",
+      dopamineDescription: "How much is your brain addicted to stimulation?",
       backToHome: "Home"
     },
     title: "Mental Age Test",
@@ -98,7 +107,14 @@ export const translations = {
       digital: "Digital Dependency",
       food: "Stimulating Diet",
       habit: "Habitual Indulgence",
-      emotion: "Emotional Sensitivity"
+      emotion: "Emotional Sensitivity",
+      brainTemp: "Brain Temp"
+    },
+    brainStatus: {
+      cool: "🧊 Calm Forest Brain",
+      warm: "🌤️ Lukewarm City Brain",
+      hot: "🔥 Overheated Engine Brain",
+      burnt: "💀 Burnt Charcoal Brain"
     },
     answers: {
       agreeVery: "Strongly Agree",
@@ -131,10 +147,12 @@ export const translations = {
   },
   jp: {
     home: {
-      title: "自分を知るための\n테스트 플랫폼",
+      title: "自分を知るための\nテストプラットフォーム",
       subtitle: "あなたの内面を見つめる時間",
-      startButton: "精神年齢テストを開始する",
+      startButton: "精神年齢テスト",
+      startDescription: "自分の中に眠る本当의 年齡は何歳だろう？",
       dopamineButton: "ドーパミン中毒テスト",
+      dopamineDescription: "あなたの脳はどれほど刺激に依存していますか？",
       backToHome: "ホームへ"
     },
     title: "精神年齢テスト",
@@ -156,7 +174,14 @@ export const translations = {
       digital: "デジタル依存度",
       food: "刺激的な食習慣",
       habit: "習慣的な耽溺",
-      emotion: "情緒的過敏度"
+      emotion: "情緒적 過敏度",
+      brainTemp: "脳の温度"
+    },
+    brainStatus: {
+      cool: "🧊 平穏な森の脳",
+      warm: "🌤️ 生ぬるい都会の脳",
+      hot: "🔥 過熱したエンジンの脳",
+      burnt: "💀 燃え尽きた炭の脳"
     },
     answers: {
       agreeVery: "強くそう思う",
@@ -165,12 +190,12 @@ export const translations = {
       disagree: "そう思わない",
       disagreeVery: "全くそう思わない"
     },
-    ageError: "年齢を正確に入력해 주세요!",
+    ageError: "年齢を正確に入力してください！",
     results: {
       child: { title: "[小学生メンタル]", desc: "好奇心旺盛で自己中心的ですが、純粋な魂の持ち主。" },
-      teen: { title: "[疾風怒濤の中高生]", desc: "自意識이 강하고 감정 기복이 있지만 에너지가 넘침." },
+      teen: { title: "[疾風怒濤の中高生]", desc: "自意識が強く、感情の起伏がありますが、エネルギーに満ちています。" },
       adult: { title: "[立派な大人]", desc: "社会的礼儀をわきまえ、適切に妥協することを知っている状態。" },
-      sage: { title: "[人生2回目の隠者]", desc: "解脱の境地。どんな状況でも揺るがない心の安らぎ。" },
+      sage: { title: "[人生2回目の隠者]", desc: "解脱의 境地。どんな状況でも揺るがない心の安らぎ。" },
       dopamineLow: { title: "クリーンな脳 (ドーパミンクリーン)", desc: "刺激に振り回されず、内面の平穏をよく維持しています。" },
       dopamineMid: { title: "注意段階 (ドーパミン警告)", desc: "時々刺激的なものに依存しますが、自分で調節可能な状態です。" },
       dopamineHigh: { title: "依存リスク (ドーパミンストーム)", desc: "強い刺激がないと退屈を感じ、日常の集中力が低下した状態です。" },
@@ -183,16 +208,18 @@ export const translations = {
       digitalDetox: "📱 デジタル機器の使用を減らし、自然と過ごす時間を増やしてみてください。",
       meditation: "🧘 瞑想を通じて、刺激がなくても幸せを感じる練習が必要です。"
     },
-    comparisonSimilar: "実年齢と精神年齢이 아주 비슷하시네요! 건강한 밸런스를 유지하고 있습니다.",
-    comparisonOlder: "実年齢보다 {diff}살 정도 더 깊고 성숙한 생각을 가지고 계시군요.",
-    comparisonYounger: "実年齢보다 {diff}살 정도 더 젊고 유연한 감각을 유지하고 계시네요!"
+    comparisonSimilar: "実年齢と精神年齢がとても近いです！健康なバランスを維持しています。",
+    comparisonOlder: "実年齢より {diff} 歳ほど深く成熟した考えを持っていますね。",
+    comparisonYounger: "実年齢より {diff} 歳ほど若く柔軟な感覚を維持していますね！"
   },
   zh: {
     home: {
       title: "发现自我的\n测试平台",
       subtitle: "审视内心世界的时刻",
-      startButton: "开始精神年龄测试",
+      startButton: "精神年龄测试",
+      startDescription: "潜藏在内心的真实年龄是多少岁？",
       dopamineButton: "多巴胺上瘾测试",
+      dopamineDescription: "你的大脑对刺激有多依赖？",
       backToHome: "回到主页"
     },
     title: "精神年龄测试",
@@ -214,7 +241,14 @@ export const translations = {
       digital: "数字依赖度",
       food: "刺激性饮食",
       habit: "习惯性沉溺",
-      emotion: "情绪敏感度"
+      emotion: "情绪敏感度",
+      brainTemp: "大脑温度"
+    },
+    brainStatus: {
+      cool: "🧊 宁静森林脑",
+      warm: "🌤️ 微温都市脑",
+      hot: "🔥 过热引擎脑",
+      burnt: "💀 烧焦木炭脑"
     },
     answers: {
       agreeVery: "非常同意",
@@ -249,8 +283,10 @@ export const translations = {
     home: {
       title: "Saviraiškos\ntestų platforma",
       subtitle: "Laikas pažvelgti į savo vidinį pasaulį",
-      startButton: "Pradėti mentalinio amžiaus testą",
+      startButton: "Mentalinio amžiaus testas",
+      startDescription: "Kiek metų tavo vidiniam aš iš tikrųjų?",
       dopamineButton: "Dopamino priklausomybės testas",
+      dopamineDescription: "Kiek jūsų smegenys yra priklausomos nuo stimuliacijos?",
       backToHome: "Į pradžią"
     },
     title: "Mentalinio amžiaus testas",
@@ -261,7 +297,7 @@ export const translations = {
     ageUnit: " m.",
     startButton: "Pradėti testą",
     prevButton: "← Atgal",
-    restartButton: "Pradėti iš naujo",
+    restartButton: "Pradėti iš novo",
     questionLabel: "Klausimas",
     resultTitle: "Testo rezultatas",
     resultSub: "Jūsų būsena...",
@@ -272,7 +308,14 @@ export const translations = {
       digital: "Skaitmeninė priklausomybė",
       food: "Stimuliuojanti mityba",
       habit: "Įpročių tenkinimas",
-      emotion: "Emocinis jautrumas"
+      emotion: "Emocinis jautrumas",
+      brainTemp: "Smegenų temp."
+    },
+    brainStatus: {
+      cool: "🧊 Ramių miškų smegenys",
+      warm: "🌤️ Drungnos miesto smegenys",
+      hot: "🔥 Perkaitęs variklis",
+      burnt: "💀 Sudegusi anglis"
     },
     answers: {
       agreeVery: "Visiškai sutinku",

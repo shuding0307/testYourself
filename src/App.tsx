@@ -27,7 +27,7 @@ function App() {
           <p className="home-subtitle">{t.home.subtitle}</p>
           <div className="main-button-group">
             <div className="test-card" onClick={() => setCurrentPage("mentalAge")}>
-              <button className="main-test-btn">
+              <button className="main-test-btn mental-btn">
                 {t.home.startButton}
               </button>
               <p className="test-description">{(t.home as any).startDescription}</p>

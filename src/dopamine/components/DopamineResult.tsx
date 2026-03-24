@@ -10,6 +10,8 @@ interface DopamineResultProps {
     resultTitle: string;
     desc: string;
     icon: string;
+    brainTemp: number;
+    brainStatus: string;
     indices: {
       digital: number;
       food: number;
@@ -28,7 +30,11 @@ const DopamineResult: React.FC<DopamineResultProps> = ({ result, onRestart, t })
       <h2>{t.resultTitle}</h2>
       <div className="result-box">
         <div className="character-icon floating">{result.icon}</div>
-        <h3>{t.resultSub}</h3>
+        <div className="brain-temp-badge">
+          <span className="temp-label">{t.indices.brainTemp}</span>
+          <span className="temp-value">{result.brainTemp}°C</span>
+        </div>
+        <h3 className="brain-status-text">{result.brainStatus}</h3>
         <p className="age-text">{result.scoreText}</p>
         <div className="type-badge">{result.resultTitle}</div>
         <div className="desc-text">

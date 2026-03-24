@@ -7,6 +7,8 @@ export interface DopamineResult {
   resultTitle: string;
   desc: string;
   icon: string;
+  brainTemp: number;
+  brainStatus: string;
   indices: {
     digital: number;
     food: number;
@@ -31,11 +33,6 @@ export const calculateDopamineResult = (
     const score = scores[index]; // 1 ~ 5
     const weight = q.weight || 1.0;
     
-    // 점수 계산 (1~5점을 0~4점 혹은 사용자 의도에 맞게 조정 가능하나, 
-    // 여기서는 질문 개수와 합산 점수를 고려하여 1~5점 체계를 유지하되 
-    // 사용자 요청 기준(최대 40점대)에 가깝게 정규화하거나 기준치를 조정합니다.)
-    // 12문항 기준 12~60점. 사용자 요청은 10문항 40점 만점 기준인듯 함
-    // 1.25로 나누어 12~60점을 9.6~48점으로 변환하여 기준 적용
     rawTotalScore += score * weight;
     maxPossibleScore += 5 * weight;
 
@@ -43,7 +40,6 @@ export const calculateDopamineResult = (
     categoryMax[q.category] += 5 * weight;
   });
 
-  // 사용자 요청 점수 체계(최대 40점 수준)로 변환 (12~60 -> 0~40 느낌)
   const normalizedScore = ((rawTotalScore - questions.length) / (maxPossibleScore - questions.length)) * 40;
 
   const getIndex = (cat: keyof typeof categoryScores) => {
@@ -54,23 +50,31 @@ export const calculateDopamineResult = (
   let resultTitle = "";
   let desc = "";
   let icon = "";
+  let brainStatus = "";
+  // 뇌의 온도 계산: 36.5도 기본 + (정규화된 점수 * 계수)
+  // 0점일 때 36.5도, 40점일 때 약 90~100도 느낌
+  const brainTemp = Number((36.5 + (normalizedScore * 1.5)).toFixed(1));
 
   if (normalizedScore <= 15) {
     resultTitle = t.results.dopamineLow.title;
     desc = t.results.dopamineLow.desc;
     icon = "🌿";
+    brainStatus = t.brainStatus.cool;
   } else if (normalizedScore <= 25) {
     resultTitle = t.results.dopamineMid.title;
     desc = t.results.dopamineMid.desc;
-    icon = "⚠️";
+    icon = "🌤️";
+    brainStatus = t.brainStatus.warm;
   } else if (normalizedScore <= 35) {
     resultTitle = t.results.dopamineHigh.title;
     desc = t.results.dopamineHigh.desc;
     icon = "🔥";
+    brainStatus = t.brainStatus.hot;
   } else {
     resultTitle = t.results.dopamineDanger.title;
     desc = t.results.dopamineDanger.desc;
-    icon = "🚨";
+    icon = "💀"; // 타버린 뇌 느낌
+    brainStatus = t.brainStatus.burnt;
   }
 
   let specialMsg = "";
@@ -88,6 +92,8 @@ export const calculateDopamineResult = (
     resultTitle,
     desc,
     icon,
+    brainTemp,
+    brainStatus,
     indices: {
       digital: digitalIdx,
       food: getIndex('food'),
