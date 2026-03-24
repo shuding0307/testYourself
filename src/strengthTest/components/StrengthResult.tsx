@@ -4,6 +4,8 @@ import { useLanguageStore } from "../../store/useLanguageStore";
 import { strengthTypeStyles } from "../data/types";
 import BaseResult from "../../components/common/BaseResult";
 import ProgressBar from "../../components/common/ProgressBar";
+import type { StrengthCategory } from "../data/questions";
+import { strengthLongDescs } from "../data/resultsDesc";
 
 interface StrengthResultProps {
   result: ResultType;
@@ -14,18 +16,23 @@ const StrengthResult: React.FC<StrengthResultProps> = ({
   result,
   onRestart,
 }) => {
-  const { transType } = useLanguageStore();
+  const { transType, lang } = useLanguageStore();
   const style =
     strengthTypeStyles[result.typeKey] ||
     strengthTypeStyles["drive_creativity"];
 
-  const categoryLabels: Record<string, string> = {
-    drive: "추진력",
-    empathy: "공감 능력",
-    creativity: "창의성",
-    analytical: "분석력",
-    patience: "인내심",
-  };
+  // Use translations from transType.strengthResults
+  const characterTrans =
+    transType.strengthResults[
+      result.typeKey as keyof typeof transType.strengthResults
+    ] || transType.strengthResults["default"];
+  const displayTitle = characterTrans.title;
+  const displayDesc = characterTrans.desc;
+
+  // Get long description
+  const longDesc =
+    strengthLongDescs[lang][result.typeKey] ||
+    strengthLongDescs[lang]["default"];
 
   return (
     <div
@@ -44,7 +51,7 @@ const StrengthResult: React.FC<StrengthResultProps> = ({
         title={transType.resultTitle}
         icon={result.icon}
         badgeText=""
-        desc={result.description}
+        desc={displayDesc}
         onRestart={onRestart}
         restartButtonText={transType.restartButton}
         buttonClass="strength-btn"
@@ -67,7 +74,7 @@ const StrengthResult: React.FC<StrengthResultProps> = ({
               wordBreak: "keep-all",
             }}
           >
-            {result.title}
+            {displayTitle}
           </h1>
         </div>
 
@@ -94,16 +101,18 @@ const StrengthResult: React.FC<StrengthResultProps> = ({
                 borderRadius: "2px",
               }}
             ></span>
-            나의 강점 분석
+            {transType.strengthAnalysisTitle}
           </h3>
           <div
             className="indices-container"
             style={{ display: "flex", flexDirection: "column", gap: "15px" }}
           >
-            {Object.entries(result.percentages).map(([cat, percent]) => (
+            {(
+              Object.entries(result.percentages) as [StrengthCategory, number][]
+            ).map(([cat, percent]) => (
               <ProgressBar
                 key={cat}
-                label={categoryLabels[cat]}
+                label={transType.indices[cat]}
                 value={percent}
                 className={cat}
                 style={
@@ -117,6 +126,40 @@ const StrengthResult: React.FC<StrengthResultProps> = ({
               />
             ))}
           </div>
+        </div>
+
+        {/* 상세 분석 섹션을 BaseResult 안으로 이동 (다시하기 버튼 위) */}
+        <div
+          className="strength-long-desc"
+          style={{
+            width: "100%",
+            textAlign: "left",
+            marginTop: "20px",
+            padding: "20px",
+            background: "rgba(255, 255, 255, 0.4)",
+            borderRadius: "18px",
+            lineHeight: "1.7",
+            color: "#4b5563",
+            fontSize: "0.95rem",
+            wordBreak: "keep-all",
+            whiteSpace: "pre-wrap",
+            border: "1px solid rgba(255, 255, 255, 0.5)",
+          }}
+        >
+          <h4
+            style={{
+              fontSize: "1.1rem",
+              fontWeight: 800,
+              color: style.mainColor,
+              marginBottom: "12px",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+            }}
+          >
+            🔍 상세 분석
+          </h4>
+          {longDesc}
         </div>
       </BaseResult>
     </div>

@@ -31,8 +31,6 @@ const BaseResult: React.FC<BaseResultProps> = ({
       <div className={`result-box ${boxClass}`}>
         <div className="character-icon floating">{icon}</div>
 
-        {children}
-
         {badgeText && <div className="type-badge">{badgeText}</div>}
         <div className="desc-text">
           {desc.split("\n").map((line, i) => (
@@ -42,6 +40,8 @@ const BaseResult: React.FC<BaseResultProps> = ({
             </React.Fragment>
           ))}
         </div>
+
+        {children}
       </div>
       <button className={`primary-button ${buttonClass}`} onClick={onRestart}>
         {restartButtonText}

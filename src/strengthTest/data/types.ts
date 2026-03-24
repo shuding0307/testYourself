@@ -1,3 +1,16 @@
+export type StrengthTypeKey =
+  | "drive_creativity"
+  | "empathy_patience"
+  | "creativity_drive"
+  | "analytical_drive"
+  | "patience_drive"
+  | "analytical_empathy"
+  | "drive_patience"
+  | "patience_creativity"
+  | "empathy_drive"
+  | "empathy_creativity"
+  | "default";
+
 export interface StrengthTypeStyle {
   mainColor: string;
   subColor: string;
@@ -56,3 +69,4 @@ export const strengthTypeStyles: Record<string, StrengthTypeStyle> = {
     gradient: "linear-gradient(to right, #4facfe 0%, #00f2fe 100%)",
   },
 };
+
