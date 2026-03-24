@@ -13,6 +13,7 @@ export const translations = {
     startButton: "테스트 시작",
     prevButton: "← 이전 질문으로",
     restartButton: "다시 테스트하기",
+    questionLabel: "질문",
     resultTitle: "테스트 결과",
     resultSub: "당신의 정신연령은...",
     comparisonSimilar: "실제 나이와 정신 연령이 아주 비슷하시네요! 건강한 밸런스를 유지하고 있습니다.",
@@ -57,6 +58,7 @@ export const translations = {
     startButton: "Start Test",
     prevButton: "← Previous",
     restartButton: "Restart Test",
+    questionLabel: "Question",
     resultTitle: "Test Result",
     resultSub: "Your mental age is...",
     comparisonSimilar: "Your mental age is very close to your actual age! You have a healthy balance.",
@@ -89,7 +91,7 @@ export const translations = {
   },
   jp: {
     home: {
-      title: "自分を知るための\nテストプラットフォーム",
+      title: "自分を知るための\n테스트 플랫폼",
       subtitle: "あなたの内面を見つめる時間",
       startButton: "精神年齢テストを開始する",
       backToHome: "ホームへ"
@@ -100,7 +102,8 @@ export const translations = {
     ageUnit: "歳",
     startButton: "テスト開始",
     prevButton: "← 戻る",
-    restartButton: "もう一度テストする",
+    restartButton: "もう一度テスト하는",
+    questionLabel: "質問",
     resultTitle: "テスト結果",
     resultSub: "あなたの精神年齢は...",
     comparisonSimilar: "実年齢と精神年齢がとても近いですね！健康なバランスを保っています。",
@@ -127,7 +130,7 @@ export const translations = {
     },
     specialMsgs: {
       childlike: "✨ 体は大人ですが、心には依然として純粋な童心を秘めていますね！",
-      stubborn: "⚠️ 年齢のわりに考えが少し凝り固まっているかもしれないので、柔軟な思考が必要です。",
+      stubborn: "⚠️ 年齢のわりに考えが少し凝리固まっているかもしれないので、柔軟な思考が必要です。",
       social: "🤝 他人への配慮と社会的成熟度が非常に高い、素敵な方ですね。"
     }
   },
@@ -145,8 +148,9 @@ export const translations = {
     startButton: "开始测试",
     prevButton: "← 返回",
     restartButton: "重新测试",
+    questionLabel: "题目",
     resultTitle: "测试结果",
-    resultSub: "你的精神年龄是...",
+    resultSub: "你的精神年龄은...",
     comparisonSimilar: "你的心理年龄和实际年龄非常接近！保持了健康的平衡。",
     comparisonOlder: "你比实际年龄成熟约{diff}岁，思考更加深思熟虑。",
     comparisonYounger: "你比实际年龄年轻约{diff}岁，保持着灵活的感官！",
@@ -189,6 +193,7 @@ export const translations = {
     startButton: "Pradėti testą",
     prevButton: "← Atgal",
     restartButton: "Pradėti iš naujo",
+    questionLabel: "Klausimas",
     resultTitle: "Testo rezultatas",
     resultSub: "Jūsų mentalinis amžius yra...",
     comparisonSimilar: "Jūsų mentalinis amžius labai artimas jūsų tikram amžiui! Jūs išlaikote sveiką balansą.",
@@ -222,3 +227,4 @@ export const translations = {
 };
 
 export type Language = keyof typeof translations;
+export type TranslationType = typeof translations['ko'];

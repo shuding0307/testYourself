@@ -1,6 +1,6 @@
 import React from 'react';
-import type { Question } from '../data/questions';
-import type { Language } from '../data/translations';
+import { type Question } from '../data/questions';
+import { type Language, type TranslationType } from '../data/translations';
 
 interface MentalAgeQuestionProps {
   currentStep: number;
@@ -9,7 +9,7 @@ interface MentalAgeQuestionProps {
   onAnswer: (score: number) => void;
   onBack: () => void;
   lang: Language;
-  t: any;
+  t: TranslationType;
 }
 
 const MentalAgeQuestion: React.FC<MentalAgeQuestionProps> = ({ 
@@ -21,7 +21,7 @@ const MentalAgeQuestion: React.FC<MentalAgeQuestionProps> = ({
   lang,
   t
 }) => {
-  if (!question) return null;
+  if (!question || !question.text) return null;
 
   return (
     <div className="mental-test-container">
@@ -33,7 +33,10 @@ const MentalAgeQuestion: React.FC<MentalAgeQuestionProps> = ({
       </div>
       
       <div className="question-card">
-        <span className="q-number">{t.prevButton.includes('←') ? '질문' : 'Question'} {currentStep + 1} / {totalSteps}</span>
+        <span className="q-number">
+          {t.questionLabel} {currentStep + 1} / {totalSteps}
+        </span>
+        
         <h2 className="q-text">{question.text[lang]}</h2>
         
         <div className="answer-buttons">
@@ -45,7 +48,9 @@ const MentalAgeQuestion: React.FC<MentalAgeQuestionProps> = ({
         </div>
 
         {currentStep > 0 && (
-          <button className="back-button" onClick={onBack}>{t.prevButton}</button>
+          <button className="back-button" onClick={onBack}>
+            {t.prevButton.replace('← ', '').replace('←', '').trim()}
+          </button>
         )}
       </div>
     </div>

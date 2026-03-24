@@ -1,4 +1,7 @@
 import React from 'react';
+import { translations } from '../data/translations';
+
+type TranslationType = typeof translations['ko'];
 
 interface MentalAgeResultProps {
   result: {
@@ -15,7 +18,7 @@ interface MentalAgeResultProps {
     specialMsg: string;
   };
   onRestart: () => void;
-  t: any;
+  t: TranslationType;
 }
 
 const MentalAgeResult: React.FC<MentalAgeResultProps> = ({ result, onRestart, t }) => {
