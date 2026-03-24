@@ -3,9 +3,10 @@ import "./App.css";
 import MentalAgeTest from "./mentalAge/MentalAgeTest";
 import { translations, type Language } from "./mentalAge/data/translations";
 import LanguageSelector from "./mentalAge/components/LanguageSelector";
+import DopamineTest from "./dopamine/DopamineTest";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<"home" | "mentalAge">("home");
+  const [currentPage, setCurrentPage] = useState<"home" | "mentalAge" | "dopamine">("home");
   const [lang, setLang] = useState<Language>("ko");
 
   const t = translations[lang];
@@ -24,19 +25,31 @@ function App() {
             ))}
           </h1>
           <p className="home-subtitle">{t.home.subtitle}</p>
-          <button 
-            className="main-test-btn" 
-            onClick={() => setCurrentPage("mentalAge")}
-          >
-            {t.home.startButton}
-          </button>
+          <div className="main-button-group">
+            <button 
+              className="main-test-btn" 
+              onClick={() => setCurrentPage("mentalAge")}
+            >
+              {t.home.startButton}
+            </button>
+            <button 
+              className="main-test-btn dopamine-btn" 
+              onClick={() => setCurrentPage("dopamine")}
+            >
+              {t.home.dopamineButton}
+            </button>
+          </div>
         </div>
       ) : (
         <div className="test-wrapper">
           <button className="back-btn" onClick={() => setCurrentPage("home")}>
             <span className="back-icon">←</span> {t.home.backToHome}
           </button>
-          <MentalAgeTest externalLang={lang} onExternalLangChange={setLang} />
+          {currentPage === "mentalAge" ? (
+            <MentalAgeTest externalLang={lang} onExternalLangChange={setLang} />
+          ) : (
+            <DopamineTest externalLang={lang} onExternalLangChange={setLang} />
+          )}
         </div>
       )}
     </div>

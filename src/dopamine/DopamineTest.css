@@ -1,0 +1,84 @@
+/* 도파민 테스트 전용 스타일 */
+.dopamine-theme {
+  --primary-color: #FF8C00;
+  --secondary-color: #FF4500;
+  --bg-gradient: linear-gradient(135deg, #FF8C00, #FF4500);
+}
+
+/* 도파민 버튼 스타일 (App.css에 추가해도 되지만 편의상 여기 작성) */
+.dopamine-btn {
+  background: linear-gradient(135deg, #FF8C00, #FF4500) !important;
+  box-shadow: 0 10px 20px rgba(255, 140, 0, 0.3) !important;
+}
+
+/* 도파민 결과 화면 전용 */
+.score-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 10px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  position: relative;
+}
+
+.score-num {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #FF4500;
+}
+
+.score-label {
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: bold;
+}
+
+/* 도파민 테마 진행 바 */
+.dopamine-theme .progress {
+  background: linear-gradient(90deg, #FFB347, #FF4500);
+}
+
+/* 지수 바 컬러 */
+.fill.digital { background: #FF4500; }
+.fill.food { background: #FFA500; }
+.fill.habit { background: #FFD700; }
+.fill.emotion { background: #FF6347; }
+
+/* 질문 카드 강조 */
+.dopamine-theme .q-number {
+  color: #FF4500;
+}
+
+/* 답변 버튼 호버 시 컬러 */
+.dopamine-theme .answer-btn:hover {
+  border-color: #FF4500;
+  color: #FF4500;
+  background: #FFF5F0;
+}
+
+/* 결과 배지 */
+.dopamine-theme .type-badge {
+  background: #FF4500;
+}
+
+/* 스페셜 메시지 강조 */
+.special-msg {
+  padding: 15px;
+  background: #FFF5F0;
+  border-radius: 12px;
+  border-left: 5px solid #FF4500;
+  color: #D32F2F;
+  font-weight: 600;
+  margin: 20px 0;
+  font-size: 0.95rem;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
