@@ -1,27 +1,27 @@
 import React from "react";
 import { useLanguageStore } from "../../store/useLanguageStore";
 import BaseIntro from "../../components/common/BaseIntro";
-import { dopamineTranslations } from "../data/translations";
+import { strengthTranslations } from "../data/translations";
 
-interface DopamineIntroProps {
+interface StrengthIntroProps {
   onStart: () => void;
 }
 
-const DopamineIntro: React.FC<DopamineIntroProps> = ({ onStart }) => {
+const StrengthIntro: React.FC<StrengthIntroProps> = ({ onStart }) => {
   const { lang, common } = useLanguageStore();
-  const t = dopamineTranslations[lang];
+  const t = strengthTranslations[lang];
 
   return (
     <BaseIntro
-      icon="📱"
+      icon="💎"
       title={t.title}
       subtitle={t.subtitle}
       buttonText={common.common.startButton}
       onStart={onStart}
-      containerClass="dopamine-theme"
-      buttonClass="dopamine-btn"
+      containerClass="strength-intro-container"
+      buttonClass="strength-btn"
     />
   );
 };
 
-export default DopamineIntro;
+export default StrengthIntro;

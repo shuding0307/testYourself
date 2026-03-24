@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { type Language } from '../mentalAge/data/translations';
+import { type Language } from '../data/commonTranslations';
 import { useLanguageStore } from '../store/useLanguageStore';
 
 const LanguageSelector: React.FC = () => {

@@ -6,9 +6,11 @@ import DopamineIntro from "./components/DopamineIntro";
 import DopamineResult from "./components/DopamineResult";
 import { calculateDopamineResult } from "./utils/resultCalculator";
 import { useLanguageStore } from "../store/useLanguageStore";
+import { dopamineTranslations } from "./data/translations";
 
 const DopamineTest: React.FC = () => {
-  const { transType } = useLanguageStore();
+  const { lang } = useLanguageStore();
+  const t = dopamineTranslations[lang];
   const [phase, setPhase] = useState<"intro" | "test" | "result">("intro");
   const [currentStep, setCurrentStep] = useState(0);
   const [scores, setScores] = useState<number[]>([]);
@@ -45,7 +47,7 @@ const DopamineTest: React.FC = () => {
     const result = calculateDopamineResult(
       dopamineQuestions,
       scores,
-      transType,
+      t,
     );
 
     return (

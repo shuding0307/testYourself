@@ -1,18 +1,18 @@
 import { create } from "zustand";
 import {
   type Language,
-  translations,
-  type TranslationType,
-} from "../mentalAge/data/translations";
+  commonTranslations,
+  type CommonTranslationType,
+} from "../data/commonTranslations";
 
 interface LanguageState {
   lang: Language;
-  transType: TranslationType;
+  common: CommonTranslationType;
   setLang: (lang: Language) => void;
 }
 
 export const useLanguageStore = create<LanguageState>((set) => ({
   lang: "ko",
-  transType: translations["ko"],
-  setLang: (lang: Language) => set({ lang, transType: translations[lang] }),
+  common: commonTranslations["ko"],
+  setLang: (lang: Language) => set({ lang, common: commonTranslations[lang] }),
 }));
