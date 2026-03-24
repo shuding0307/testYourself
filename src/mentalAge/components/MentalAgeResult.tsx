@@ -1,7 +1,5 @@
 import React from 'react';
-import { translations } from '../data/translations';
-
-type TranslationType = typeof translations['ko'];
+import { useLanguageStore } from '../../store/useLanguageStore';
 
 interface MentalAgeResultProps {
   result: {
@@ -18,10 +16,10 @@ interface MentalAgeResultProps {
     specialMsg: string;
   };
   onRestart: () => void;
-  t: TranslationType;
 }
 
-const MentalAgeResult: React.FC<MentalAgeResultProps> = ({ result, onRestart, t }) => {
+const MentalAgeResult: React.FC<MentalAgeResultProps> = ({ result, onRestart }) => {
+  const { t } = useLanguageStore();
   return (
     <div className="mental-test-container result-page">
       <h2>{t.resultTitle}</h2>

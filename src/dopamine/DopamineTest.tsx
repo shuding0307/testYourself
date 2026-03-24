@@ -1,21 +1,16 @@
 import React, { useState } from "react";
 import "./DopamineTest.css";
 import { dopamineQuestions } from "./data/questions";
-import { translations, type Language } from "../mentalAge/data/translations";
 import MentalAgeQuestion from "../mentalAge/components/MentalAgeQuestion";
 import DopamineResult from "./components/DopamineResult";
 import { calculateDopamineResult } from "./utils/resultCalculator";
+import { useLanguageStore } from "../store/useLanguageStore";
 
-interface DopamineTestProps {
-  externalLang: Language;
-}
-
-const DopamineTest: React.FC<DopamineTestProps> = ({ externalLang }) => {
+const DopamineTest: React.FC = () => {
+  const { t } = useLanguageStore();
   const [phase, setPhase] = useState<"intro" | "test" | "result">("intro");
   const [currentStep, setCurrentStep] = useState(0);
   const [scores, setScores] = useState<number[]>([]);
-
-  const t = translations[externalLang];
 
   const startTest = () => {
     setCurrentStep(0);
@@ -62,7 +57,6 @@ const DopamineTest: React.FC<DopamineTestProps> = ({ externalLang }) => {
         <DopamineResult
           result={result}
           onRestart={() => setPhase("intro")}
-          t={t}
         />
       </div>
     );
@@ -76,8 +70,6 @@ const DopamineTest: React.FC<DopamineTestProps> = ({ externalLang }) => {
         question={dopamineQuestions[currentStep]}
         onAnswer={handleAnswer}
         onBack={handleBack}
-        lang={externalLang}
-        t={t}
       />
     </div>
   );

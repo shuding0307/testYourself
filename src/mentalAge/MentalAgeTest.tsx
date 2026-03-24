@@ -1,28 +1,19 @@
 import React, { useState } from "react";
 import "./MentalAgeTest.css";
 import { questions, type Question } from "./data/questions";
-import { translations, type Language } from "./data/translations";
 import MentalAgeIntro from "./components/MentalAgeIntro";
 import MentalAgeQuestion from "./components/MentalAgeQuestion";
 import MentalAgeResult from "./components/MentalAgeResult";
 import { calculateMentalAgeResult } from "./utils/resultCalculator";
+import { useLanguageStore } from "../store/useLanguageStore";
 
-interface MentalAgeTestProps {
-  externalLang: Language;
-  onExternalLangChange: (lang: Language) => void;
-}
-
-const MentalAgeTest: React.FC<MentalAgeTestProps> = ({
-  externalLang,
-  onExternalLangChange,
-}) => {
+const MentalAgeTest: React.FC = () => {
+  const { t } = useLanguageStore();
   const [phase, setPhase] = useState<"intro" | "test" | "result">("intro");
   const [actualAge, setActualAge] = useState<string>("");
   const [activeQuestions, setActiveQuestions] = useState<Question[]>([]);
   const [currentStep, setCurrentStep] = useState(0);
   const [scores, setScores] = useState<number[]>([]);
-
-  const t = translations[externalLang];
 
   const startTest = () => {
     if (!actualAge || isNaN(Number(actualAge)) || Number(actualAge) <= 0) {
@@ -62,9 +53,6 @@ const MentalAgeTest: React.FC<MentalAgeTestProps> = ({
         actualAge={actualAge}
         setActualAge={setActualAge}
         onStart={startTest}
-        lang={externalLang}
-        setLang={onExternalLangChange}
-        t={t}
       />
     );
   }
@@ -80,7 +68,6 @@ const MentalAgeTest: React.FC<MentalAgeTestProps> = ({
       <MentalAgeResult
         result={result}
         onRestart={() => setPhase("intro")}
-        t={t}
       />
     );
   }
@@ -92,8 +79,6 @@ const MentalAgeTest: React.FC<MentalAgeTestProps> = ({
       question={activeQuestions[currentStep]}
       onAnswer={handleAnswer}
       onBack={handleBack}
-      lang={externalLang}
-      t={t}
     />
   );
 };

@@ -1,7 +1,5 @@
 import React from 'react';
-import { translations } from '../../mentalAge/data/translations';
-
-type TranslationType = typeof translations['ko'];
+import { useLanguageStore } from '../../store/useLanguageStore';
 
 interface DopamineResultProps {
   result: {
@@ -22,10 +20,10 @@ interface DopamineResultProps {
     specialMsg: string;
   };
   onRestart: () => void;
-  t: TranslationType;
 }
 
-const DopamineResult: React.FC<DopamineResultProps> = ({ result, onRestart, t }) => {
+const DopamineResult: React.FC<DopamineResultProps> = ({ result, onRestart }) => {
+  const { t } = useLanguageStore();
   const actionData = t.dopamineActions[result.worstCategory];
 
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import { type Question } from '../data/questions';
-import { type Language, type TranslationType } from '../data/translations';
+import { type Language } from '../data/translations';
+import { useLanguageStore } from '../../store/useLanguageStore';
 
 interface BaseQuestion {
   id: number;
@@ -13,8 +13,6 @@ interface MentalAgeQuestionProps {
   question: BaseQuestion;
   onAnswer: (score: number) => void;
   onBack: () => void;
-  lang: Language;
-  t: TranslationType;
 }
 
 const MentalAgeQuestion: React.FC<MentalAgeQuestionProps> = ({ 
@@ -23,9 +21,8 @@ const MentalAgeQuestion: React.FC<MentalAgeQuestionProps> = ({
   question, 
   onAnswer, 
   onBack,
-  lang,
-  t
 }) => {
+  const { lang, t } = useLanguageStore();
   if (!question || !question.text) return null;
 
   return (

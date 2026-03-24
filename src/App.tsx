@@ -1,20 +1,18 @@
 import { useState } from "react";
 import "./App.css";
 import MentalAgeTest from "./mentalAge/MentalAgeTest";
-import { translations, type Language } from "./mentalAge/data/translations";
 import LanguageSelector from "./mentalAge/components/LanguageSelector";
 import DopamineTest from "./dopamine/DopamineTest";
+import { useLanguageStore } from "./store/useLanguageStore";
 
 function App() {
   const [currentPage, setCurrentPage] = useState<"home" | "mentalAge" | "dopamine">("home");
-  const [lang, setLang] = useState<Language>("ko");
-
-  const t = translations[lang];
+  const { t } = useLanguageStore();
 
   return (
     <div className="main-container">
       {/* 전역 언어 선택기 */}
-      <LanguageSelector lang={lang} setLang={setLang} />
+      <LanguageSelector />
 
       {currentPage === "home" ? (
         <div className="home-content">
@@ -47,9 +45,9 @@ function App() {
             <span className="back-icon">←</span> {t.home.backToHome}
           </button>
           {currentPage === "mentalAge" ? (
-            <MentalAgeTest externalLang={lang} onExternalLangChange={setLang} />
+            <MentalAgeTest />
           ) : (
-            <DopamineTest externalLang={lang} onExternalLangChange={setLang} />
+            <DopamineTest />
           )}
         </div>
       )}

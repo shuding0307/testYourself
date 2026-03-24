@@ -1,23 +1,18 @@
 import React from "react";
-import { translations, type Language } from "../data/translations";
-
-type TranslationType = (typeof translations)["ko"];
+import { useLanguageStore } from "../../store/useLanguageStore";
 
 interface MentalAgeIntroProps {
   actualAge: string;
   setActualAge: (age: string) => void;
   onStart: () => void;
-  lang: Language;
-  setLang: (lang: Language) => void;
-  t: TranslationType;
 }
 
 const MentalAgeIntro: React.FC<MentalAgeIntroProps> = ({
   actualAge,
   setActualAge,
   onStart,
-  t,
 }) => {
+  const { t } = useLanguageStore();
   return (
     <div className="mental-test-container intro-page">
       <div className="character-icon floating">🤔</div>
