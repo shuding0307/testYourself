@@ -1,0 +1,98 @@
+.strength-theme {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'AtoZ', sans-serif;
+}
+
+/* Intro and Question container alignment */
+.strength-intro-container,
+.strength-test-container {
+  width: 600px !important;
+  max-width: 90vw !important;
+  min-height: 600px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+.strength-icon {
+  font-size: 6rem;
+  margin-bottom: 30px;
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Question Styles */
+.strength-option-btn {
+  transition: all 0.2s ease;
+  border-left: 8px solid #eee !important;
+}
+
+.strength-option-btn:hover {
+  border-color: #10b981 !important;
+  background: #f0fdf4 !important;
+  color: #10b981 !important;
+}
+
+/* Result Styles - Result page should keep its own unique size if needed, 
+   but let's make it consistent in width */
+.result-page.type-default,
+.result-page[class*="type-"] {
+  width: 100%;
+}
+
+.result-card {
+  width: 600px !important;
+  max-width: 90vw !important;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation for Wave (Type 10) */
+.type-empathy_creativity .result-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  animation: wave 2s infinite ease-in-out;
+}
+
+@keyframes wave {
+  0%, 100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  50% { clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%); }
+}
+
+/* Hover effects for restart button */
+.restart-btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .strength-title {
+    font-size: 2rem;
+  }
+}

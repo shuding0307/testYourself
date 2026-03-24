@@ -261,6 +261,17 @@
   box-shadow: 0 15px 30px rgba(255, 69, 0, 0.4);
 }
 
+/* 강점 테스트 버튼 (에메랄드/블루 계열) */
+.strength-btn {
+  background: linear-gradient(135deg, #10b981, #3b82f6) !important;
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+}
+
+.test-card:hover .strength-btn {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+}
+
 .test-description {
   font-size: 1.1rem;
   color: #5c6b73;

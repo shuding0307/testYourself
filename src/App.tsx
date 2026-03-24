@@ -3,11 +3,12 @@ import "./App.css";
 import MentalAgeTest from "./mentalAge/MentalAgeTest";
 import LanguageSelector from "./components/LanguageSelector";
 import DopamineTest from "./dopamine/DopamineTest";
+import StrengthTest from "./strengthTest/StrengthTest";
 import { useLanguageStore } from "./store/useLanguageStore";
 
 function App() {
   const [currentPage, setCurrentPage] = useState<
-    "home" | "mentalAge" | "dopamine"
+    "home" | "mentalAge" | "dopamine" | "strength"
   >("home");
   const { transType } = useLanguageStore();
 
@@ -52,6 +53,18 @@ function App() {
                 {transType.home.dopamineDescription}
               </p>
             </div>
+
+            <div
+              className="test-card"
+              onClick={() => setCurrentPage("strength")}
+            >
+              <button className="main-test-btn strength-btn">
+                {transType.home.strengthButton}
+              </button>
+              <p className="test-description">
+                {transType.home.strengthDescription}
+              </p>
+            </div>
           </div>
         </div>
       ) : (
@@ -59,7 +72,13 @@ function App() {
           <button className="back-btn" onClick={() => setCurrentPage("home")}>
             <span className="back-icon">←</span> {transType.home.backToHome}
           </button>
-          {currentPage === "mentalAge" ? <MentalAgeTest /> : <DopamineTest />}
+          {currentPage === "mentalAge" ? (
+            <MentalAgeTest />
+          ) : currentPage === "dopamine" ? (
+            <DopamineTest />
+          ) : (
+            <StrengthTest />
+          )}
         </div>
       )}
     </div>
