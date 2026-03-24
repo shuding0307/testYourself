@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { translations, type Language } from '../data/translations';
+import { type Language } from '../data/translations';
 
 interface LanguageSelectorProps {
   lang: Language;
