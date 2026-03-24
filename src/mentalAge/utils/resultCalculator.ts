@@ -1,4 +1,7 @@
 import type { Question } from '../data/questions';
+import { translations } from '../data/translations';
+
+type TranslationType = typeof translations['ko'];
 
 export interface TestResult {
   mentalAge: string;
@@ -18,7 +21,7 @@ export const calculateMentalAgeResult = (
   actualAge: number,
   activeQuestions: Question[],
   scores: number[],
-  t: any
+  t: TranslationType
 ): TestResult => {
   let totalScore = 0;
   let maxPossibleScore = 0;

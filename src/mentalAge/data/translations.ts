@@ -1,5 +1,11 @@
 export const translations = {
   ko: {
+    home: {
+      title: "나를 알아가는\n테스트 플랫폼",
+      subtitle: "당신의 내면을 들여다보는 시간",
+      startButton: "정신연령 테스트 시작하기",
+      backToHome: "처음으로"
+    },
     title: "정신연령 테스트",
     subtitle: "무작위로 추출된 15개의 문항으로 당신의 내면을 분석합니다.",
     agePlaceholder: "나이",
@@ -7,6 +13,7 @@ export const translations = {
     startButton: "테스트 시작",
     prevButton: "← 이전 질문으로",
     restartButton: "다시 테스트하기",
+    questionLabel: "질문",
     resultTitle: "테스트 결과",
     resultSub: "당신의 정신연령은...",
     comparisonSimilar: "실제 나이와 정신 연령이 아주 비슷하시네요! 건강한 밸런스를 유지하고 있습니다.",
@@ -38,6 +45,12 @@ export const translations = {
     }
   },
   en: {
+    home: {
+      title: "Self-Discovery\nTest Platform",
+      subtitle: "A time to look into your inner self",
+      startButton: "Start Mental Age Test",
+      backToHome: "Home"
+    },
     title: "Mental Age Test",
     subtitle: "Analyze your inner self with 15 randomized questions.",
     agePlaceholder: "Age",
@@ -45,6 +58,7 @@ export const translations = {
     startButton: "Start Test",
     prevButton: "← Previous",
     restartButton: "Restart Test",
+    questionLabel: "Question",
     resultTitle: "Test Result",
     resultSub: "Your mental age is...",
     comparisonSimilar: "Your mental age is very close to your actual age! You have a healthy balance.",
@@ -76,18 +90,25 @@ export const translations = {
     }
   },
   jp: {
+    home: {
+      title: "自分を知るための\n테스트 플랫폼",
+      subtitle: "あなたの内面を見つめる時間",
+      startButton: "精神年齢テストを開始する",
+      backToHome: "ホームへ"
+    },
     title: "精神年齢テスト",
-    subtitle: "ランダムに抽出された15の質問であなたの内面을 분석합니다.",
+    subtitle: "ランダムに抽出された15の質問であなたの内面を分析します。",
     agePlaceholder: "年齢",
     ageUnit: "歳",
     startButton: "テスト開始",
     prevButton: "← 戻る",
-    restartButton: "もう一度テストする",
+    restartButton: "もう一度テスト하는",
+    questionLabel: "質問",
     resultTitle: "テスト結果",
     resultSub: "あなたの精神年齢は...",
-    comparisonSimilar: "実年齢と精神年齢이 아주 비슷하시네요! 건강한 밸런스를 유지하고 있습니다.",
-    comparisonOlder: "実年齢보다 {diff}살 정도 더 깊고 성숙한 생각을 가지고 계시군요.",
-    comparisonYounger: "実年齢보다 {diff}살 정도 더 젊고 유연한 감각을 유지하고 계시네요!",
+    comparisonSimilar: "実年齢と精神年齢がとても近いですね！健康なバランスを保っています。",
+    comparisonOlder: "実年齢より{diff}歳ほど深く、成熟した考えを持っていますね。",
+    comparisonYounger: "実年齢より{diff}歳ほど若く、柔軟な感覚を持っていますね！",
     indices: {
       childlike: "童心指数",
       stubborn: "頑固指数",
@@ -109,11 +130,17 @@ export const translations = {
     },
     specialMsgs: {
       childlike: "✨ 体は大人ですが、心には依然として純粋な童心を秘めていますね！",
-      stubborn: "⚠️ 年齢のわりに考えが少し凝り固まっているかもしれないので、柔軟な思考が必要です。",
+      stubborn: "⚠️ 年齢のわりに考えが少し凝리固まっているかもしれないので、柔軟な思考が必要です。",
       social: "🤝 他人への配慮と社会的成熟度が非常に高い、素敵な方ですね。"
     }
   },
   zh: {
+    home: {
+      title: "发现自我的\n测试平台",
+      subtitle: "审视内心世界的时刻",
+      startButton: "开始精神年龄测试",
+      backToHome: "回到主页"
+    },
     title: "精神年龄测试",
     subtitle: "通过随机抽取的15道题来分析你的内心世界。",
     agePlaceholder: "年龄",
@@ -121,8 +148,9 @@ export const translations = {
     startButton: "开始测试",
     prevButton: "← 返回",
     restartButton: "重新测试",
+    questionLabel: "题目",
     resultTitle: "测试结果",
-    resultSub: "你的精神年龄是...",
+    resultSub: "你的精神年龄은...",
     comparisonSimilar: "你的心理年龄和实际年龄非常接近！保持了健康的平衡。",
     comparisonOlder: "你比实际年龄成熟约{diff}岁，思考更加深思熟虑。",
     comparisonYounger: "你比实际年龄年轻约{diff}岁，保持着灵活的感官！",
@@ -152,6 +180,12 @@ export const translations = {
     }
   },
   lt: {
+    home: {
+      title: "Saviraiškos\ntestų platforma",
+      subtitle: "Laikas pažvelgti į savo vidinį pasaulį",
+      startButton: "Pradėti mentalinio amžiaus testą",
+      backToHome: "Į pradžią"
+    },
     title: "Mentalinio amžiaus testas",
     subtitle: "Išanalizuokite savo vidinį pasaulį su 15 atsitiktinių klausimų.",
     agePlaceholder: "Amžius",
@@ -159,6 +193,7 @@ export const translations = {
     startButton: "Pradėti testą",
     prevButton: "← Atgal",
     restartButton: "Pradėti iš naujo",
+    questionLabel: "Klausimas",
     resultTitle: "Testo rezultatas",
     resultSub: "Jūsų mentalinis amžius yra...",
     comparisonSimilar: "Jūsų mentalinis amžius labai artimas jūsų tikram amžiui! Jūs išlaikote sveiką balansą.",
@@ -181,7 +216,7 @@ export const translations = {
       child: { title: "[Pradinuko mentalitetas]", desc: "Smalsus, egocentriškas, bet grynos sielos." },
       teen: { title: "[Maištingas paauglys]", desc: "Sąmoningas, su nuotaikų kaita, bet kupinas energijos." },
       adult: { title: "[Suaugęs žmogus]", desc: "Socialiai mandagus ir mokantis tinkamai eiti į kompromisus." },
-      sage: { title: "[Sena siela]", desc: "Nušvitimo būsena. Patogus ir nepalaužiamas bet kokioje situacijoje." }
+      sage: { title: "[Sena siela]", desc: "Nušvitimo būsena. Patogus ir nepalaužiamas bet kokioje siuacijoje." }
     },
     specialMsgs: {
       childlike: "✨ Nors esate suaugęs, jūsų širdis vis dar saugo tyrą vaikišką nekaltumą!",
@@ -192,3 +227,4 @@ export const translations = {
 };
 
 export type Language = keyof typeof translations;
+export type TranslationType = typeof translations['ko'];
