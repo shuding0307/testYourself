@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import type { Language } from '../data/translations';
+import LanguageSelector from './LanguageSelector';
 
 interface MentalAgeIntroProps {
   actualAge: string;
@@ -18,64 +19,16 @@ const MentalAgeIntro: React.FC<MentalAgeIntroProps> = ({
   setLang, 
   t 
 }) => {
-  const [isLangOpen, setIsLangOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  const languages: { code: Language; label: string; flag: string }[] = [
-    { code: 'ko', label: '한국어', flag: '🇰🇷' },
-    { code: 'en', label: 'English', flag: '🇺🇸' },
-    { code: 'jp', label: '日本語', flag: '🇯🇵' },
-    { code: 'zh', label: '中文', flag: '🇨🇳' },
-    { code: 'lt', label: 'Lietuvių', flag: '🇱🇹' }
-  ];
-
-  const currentLang = languages.find(l => l.code === lang) || languages[0];
-
-  // 외부 클릭 시 드롭다운 닫기
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsLangOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
   return (
     <div className="mental-test-container intro-page">
-      <div className="lang-dropdown-container" ref={dropdownRef}>
-        <button 
-          className="lang-toggle-btn"
-          onClick={() => setIsLangOpen(!isLangOpen)}
-          aria-label="Select Language"
-        >
-          <span className="current-flag">{currentLang.flag}</span>
-          <span className={`arrow ${isLangOpen ? 'up' : 'down'}`}>▾</span>
-        </button>
-
-        {isLangOpen && (
-          <ul className="lang-list">
-            {languages.map((l) => (
-              <li key={l.code}>
-                <button 
-                  className={`lang-item-btn ${lang === l.code ? 'active' : ''}`}
-                  onClick={() => {
-                    setLang(l.code);
-                    setIsLangOpen(false);
-                  }}
-                >
-                  <span className="flag">{l.flag}</span>
-                  <span className="label">{l.label}</span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-
+      {/* 
+        테스트 내부에 있을 때는 이미 App.tsx에 Selector가 있으므로 
+        여기서는 중복 표시하지 않거나, 필요 시 배치할 수 있습니다. 
+        사용자 경험상 우측 상단에 고정된 Selector가 하나만 있는 것이 깔끔합니다.
+      */}
+      
       <div className="character-icon floating">🤔</div>
-...
+      <h2>{t.title}</h2>
       <p>{t.subtitle}</p>
       
       <div className="input-group">

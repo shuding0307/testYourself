@@ -7,15 +7,22 @@ import MentalAgeQuestion from "./components/MentalAgeQuestion";
 import MentalAgeResult from "./components/MentalAgeResult";
 import { calculateMentalAgeResult } from "./utils/resultCalculator";
 
-const MentalAgeTest: React.FC = () => {
-  const [lang, setLang] = useState<Language>("ko");
+interface MentalAgeTestProps {
+  externalLang: Language;
+  onExternalLangChange: (lang: Language) => void;
+}
+
+const MentalAgeTest: React.FC<MentalAgeTestProps> = ({
+  externalLang,
+  onExternalLangChange,
+}) => {
   const [phase, setPhase] = useState<"intro" | "test" | "result">("intro");
   const [actualAge, setActualAge] = useState<string>("");
   const [activeQuestions, setActiveQuestions] = useState<Question[]>([]);
   const [currentStep, setCurrentStep] = useState(0);
   const [scores, setScores] = useState<number[]>([]);
 
-  const t = translations[lang];
+  const t = translations[externalLang];
 
   const startTest = () => {
     if (!actualAge || isNaN(Number(actualAge)) || Number(actualAge) <= 0) {
@@ -55,15 +62,20 @@ const MentalAgeTest: React.FC = () => {
         actualAge={actualAge}
         setActualAge={setActualAge}
         onStart={startTest}
-        lang={lang}
-        setLang={setLang}
+        lang={externalLang}
+        setLang={onExternalLangChange}
         t={t}
       />
     );
   }
 
   if (phase === "result") {
-    const result = calculateMentalAgeResult(Number(actualAge), activeQuestions, scores, t);
+    const result = calculateMentalAgeResult(
+      Number(actualAge),
+      activeQuestions,
+      scores,
+      t,
+    );
     return (
       <MentalAgeResult
         result={result}
@@ -80,7 +92,7 @@ const MentalAgeTest: React.FC = () => {
       question={activeQuestions[currentStep]}
       onAnswer={handleAnswer}
       onBack={handleBack}
-      lang={lang}
+      lang={externalLang}
       t={t}
     />
   );

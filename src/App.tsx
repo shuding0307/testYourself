@@ -1,30 +1,42 @@
 import { useState } from "react";
 import "./App.css";
 import MentalAgeTest from "./mentalAge/MentalAgeTest";
+import { translations, type Language } from "./mentalAge/data/translations";
+import LanguageSelector from "./mentalAge/components/LanguageSelector";
 
 function App() {
   const [currentPage, setCurrentPage] = useState<"home" | "mentalAge">("home");
+  const [lang, setLang] = useState<Language>("ko");
+
+  const t = translations[lang];
 
   return (
     <div className="main-container">
+      {/* 전역 언어 선택기 */}
+      <LanguageSelector lang={lang} setLang={setLang} />
+
       {currentPage === "home" ? (
         <div className="home-content">
-          <div className="home-logo">🧐</div>
-          <h1 className="home-title">나를 알아가는<br />테스트 플랫폼</h1>
-          <p className="home-subtitle">당신의 내면을 들여다보는 시간</p>
+          <div className="home-logo floating">🧐</div>
+          <h1 className="home-title">
+            {t.home.title.split('\n').map((line: string, i: number) => (
+              <span key={i}>{line}<br /></span>
+            ))}
+          </h1>
+          <p className="home-subtitle">{t.home.subtitle}</p>
           <button 
             className="main-test-btn" 
             onClick={() => setCurrentPage("mentalAge")}
           >
-            정신연령 테스트 시작하기
+            {t.home.startButton}
           </button>
         </div>
       ) : (
         <div className="test-wrapper">
           <button className="back-btn" onClick={() => setCurrentPage("home")}>
-            <span className="back-icon">←</span> 처음으로
+            <span className="back-icon">←</span> {t.home.backToHome}
           </button>
-          <MentalAgeTest />
+          <MentalAgeTest externalLang={lang} onExternalLangChange={setLang} />
         </div>
       )}
     </div>
