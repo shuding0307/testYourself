@@ -1,30 +1,18 @@
-import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import MentalAgeTest from "./mentalAge/MentalAgeTest";
-import LanguageSelector from "./components/LanguageSelector";
+import Header from "./components/Header";
 import DopamineTest from "./dopamine/DopamineTest";
 import StrengthTest from "./strengthTest/StrengthTest";
 import { useLanguageStore } from "./store/useLanguageStore";
 
 function App() {
   const navigate = useNavigate();
-  const location = useLocation();
   const { transType } = useLanguageStore();
-
-  const isHome = location.pathname === "/";
 
   return (
     <div className="main-container">
-      {/* 전역 언어 선택기 */}
-      <LanguageSelector />
-
-      {!isHome && (
-        <div className="test-wrapper">
-          <button className="back-btn" onClick={() => navigate("/")}>
-            <span className="back-icon">←</span> {transType.home.backToHome}
-          </button>
-        </div>
-      )}
+      <Header />
 
       <Routes>
         <Route
