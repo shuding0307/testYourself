@@ -1,5 +1,5 @@
-import type { Question } from '../data/questions';
-import { mentalAgeTranslations, type MentalAgeTranslationType } from '../data/translations';
+import type { Question } from "../data/questions";
+import { type MentalAgeTranslationType } from "../data/translations";
 
 export interface TestResult {
   mentalAge: string;
@@ -20,7 +20,7 @@ export const calculateMentalAgeResult = (
   activeQuestions: Question[],
   scores: number[],
   t: MentalAgeTranslationType,
-  ageUnit: string
+  ageUnit: string,
 ): TestResult => {
   let totalScore = 0;
   let maxPossibleScore = 0;
@@ -44,16 +44,17 @@ export const calculateMentalAgeResult = (
   });
 
   const scorePercentage =
-    ((totalScore - minPossibleScore) / (maxPossibleScore - minPossibleScore)) * 100;
+    ((totalScore - minPossibleScore) / (maxPossibleScore - minPossibleScore)) *
+    100;
 
-  const getIndex = (cat: 'social' | 'childlike' | 'stubborn') => {
+  const getIndex = (cat: "social" | "childlike" | "stubborn") => {
     if (categoryMax[cat] === 0) return 0;
     return Math.round((categoryScores[cat] / categoryMax[cat]) * 100);
   };
 
-  const socialIdx = getIndex('social');
-  const childlikeIdx = getIndex('childlike');
-  const stubbornIdx = getIndex('stubborn');
+  const socialIdx = getIndex("social");
+  const childlikeIdx = getIndex("childlike");
+  const stubbornIdx = getIndex("stubborn");
 
   let mentalAge = 0;
   let resultTitle = "";
@@ -98,7 +99,10 @@ export const calculateMentalAgeResult = (
   } else if (ageDiff > 0) {
     comparisonMsg = t.comparisonOlder.replace("{diff}", String(ageDiff));
   } else {
-    comparisonMsg = t.comparisonYounger.replace("{diff}", String(Math.abs(ageDiff)));
+    comparisonMsg = t.comparisonYounger.replace(
+      "{diff}",
+      String(Math.abs(ageDiff)),
+    );
   }
 
   return {
@@ -107,7 +111,11 @@ export const calculateMentalAgeResult = (
     desc,
     comparisonMsg,
     icon,
-    indices: { social: socialIdx, childlike: childlikeIdx, stubborn: stubbornIdx },
+    indices: {
+      social: socialIdx,
+      childlike: childlikeIdx,
+      stubborn: stubbornIdx,
+    },
     specialMsg,
   };
 };
