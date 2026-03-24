@@ -107,19 +107,20 @@
 /* 캐릭터 아이콘 스타일 */
 .character-icon {
   font-size: 5rem;
-  margin-bottom: 40px; /* 20px -> 40px로 증가 */
+  margin-top: 30px; /* 상단 여백 추가하여 위치 낮춤 */
+  margin-bottom: 40px;
   display: block;
 }
 
-/* 둥둥 떠다니는 애니메이션 */
+/* 둥둥 떠다니는 애니메이션 (아래로 움직이도록 수정) */
 .floating {
   animation: floating 3s ease-in-out infinite;
 }
 
 @keyframes floating {
-  0% { transform: translateY(-5px); } /* 기본 위치를 약간 위로 (-5px) */
-  50% { transform: translateY(-25px); } /* 중간 위치를 더 위로 (-15px -> -25px) */
-  100% { transform: translateY(-5px); }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(15px); } /* 위가 아닌 아래로 15px 이동 */
+  100% { transform: translateY(0px); }
 }
 
 .intro-page h2 {
