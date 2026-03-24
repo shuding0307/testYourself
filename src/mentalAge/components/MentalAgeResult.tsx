@@ -15,36 +15,37 @@ interface MentalAgeResultProps {
     specialMsg: string;
   };
   onRestart: () => void;
+  t: any;
 }
 
-const MentalAgeResult: React.FC<MentalAgeResultProps> = ({ result, onRestart }) => {
+const MentalAgeResult: React.FC<MentalAgeResultProps> = ({ result, onRestart, t }) => {
   return (
     <div className="mental-test-container result-page">
-      <h2>테스트 결과</h2>
+      <h2>{t.resultTitle}</h2>
       <div className="result-box">
         <div className="character-icon floating">{result.icon}</div>
-        <h3>당신의 정신연령은...</h3>
+        <h3>{t.resultSub}</h3>
         <p className="age-text">{result.mentalAge}</p>
         <div className="type-badge">{result.resultTitle}</div>
         <p className="desc-text">{result.desc}</p>
         
         <div className="indices-container">
           <div className="index-item">
-            <span>동심 지수</span>
+            <span>{t.indices.childlike}</span>
             <div className="bar">
               <div className="fill childlike" style={{ width: `${result.indices.childlike}%` }}></div>
             </div>
             <span className="val">{result.indices.childlike}%</span>
           </div>
           <div className="index-item">
-            <span>꼰대 지수</span>
+            <span>{t.indices.stubborn}</span>
             <div className="bar">
               <div className="fill stubborn" style={{ width: `${result.indices.stubborn}%` }}></div>
             </div>
             <span className="val">{result.indices.stubborn}%</span>
           </div>
           <div className="index-item">
-            <span>사회성 지수</span>
+            <span>{t.indices.social}</span>
             <div className="bar">
               <div className="fill social" style={{ width: `${result.indices.social}%` }}></div>
             </div>
@@ -57,7 +58,7 @@ const MentalAgeResult: React.FC<MentalAgeResultProps> = ({ result, onRestart }) 
         <div className="divider"></div>
         <p className="comparison-text">{result.comparisonMsg}</p>
       </div>
-      <button className="primary-button" onClick={onRestart}>다시 테스트하기</button>
+      <button className="primary-button" onClick={onRestart}>{t.restartButton}</button>
     </div>
   );
 };

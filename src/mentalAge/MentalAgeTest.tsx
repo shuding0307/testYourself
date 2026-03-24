@@ -63,7 +63,7 @@ const MentalAgeTest: React.FC = () => {
   }
 
   if (phase === "result") {
-    const result = calculateMentalAgeResult(Number(actualAge), activeQuestions, scores);
+    const result = calculateMentalAgeResult(Number(actualAge), activeQuestions, scores, t);
     return (
       <MentalAgeResult
         result={result}
