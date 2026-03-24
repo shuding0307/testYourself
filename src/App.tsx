@@ -26,18 +26,19 @@ function App() {
           </h1>
           <p className="home-subtitle">{t.home.subtitle}</p>
           <div className="main-button-group">
-            <button 
-              className="main-test-btn" 
-              onClick={() => setCurrentPage("mentalAge")}
-            >
-              {t.home.startButton}
-            </button>
-            <button 
-              className="main-test-btn dopamine-btn" 
-              onClick={() => setCurrentPage("dopamine")}
-            >
-              {t.home.dopamineButton}
-            </button>
+            <div className="test-card" onClick={() => setCurrentPage("mentalAge")}>
+              <button className="main-test-btn">
+                {t.home.startButton}
+              </button>
+              <p className="test-description">{(t.home as any).startDescription}</p>
+            </div>
+
+            <div className="test-card" onClick={() => setCurrentPage("dopamine")}>
+              <button className="main-test-btn dopamine-btn">
+                {t.home.dopamineButton}
+              </button>
+              <p className="test-description">{(t.home as any).dopamineDescription}</p>
+            </div>
           </div>
         </div>
       ) : (

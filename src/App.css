@@ -202,8 +202,17 @@
 .main-button-group {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
   align-items: center;
+}
+
+.test-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  width: 100%;
 }
 
 .main-test-btn {
@@ -221,9 +230,16 @@
   transition: all 0.3s ease;
 }
 
-.main-test-btn:hover {
+.test-card:hover .main-test-btn {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(110, 142, 251, 0.4);
+}
+
+.test-description {
+  font-size: 1.1rem;
+  color: #5c6b73;
+  font-weight: 500;
+  margin: 0;
 }
 
 /* 뒤로가기 버튼 */

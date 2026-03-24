@@ -3,7 +3,7 @@ import "./DopamineTest.css";
 import { dopamineQuestions, type DopamineQuestion } from "./data/questions";
 import { translations, type Language } from "../mentalAge/data/translations";
 import MentalAgeQuestion from "../mentalAge/components/MentalAgeQuestion";
-import MentalAgeResult from "../mentalAge/components/MentalAgeResult";
+import DopamineResult from "./components/DopamineResult";
 import { calculateDopamineResult } from "./utils/resultCalculator";
 
 interface DopamineTestProps {
@@ -58,25 +58,10 @@ const DopamineTest: React.FC<DopamineTestProps> = ({ externalLang, onExternalLan
   if (phase === "result") {
     const result = calculateDopamineResult(dopamineQuestions, scores, t);
     
-    // 기존 Result 컴포넌트를 사용하되, 도파민 전용 데이터 구조로 변환
-    const mappedResult = {
-      mentalAge: `${result.score}%`,
-      resultTitle: result.resultTitle,
-      desc: result.desc,
-      comparisonMsg: "",
-      icon: result.icon,
-      indices: {
-        childlike: result.indices.digital, // 디지털
-        stubborn: result.indices.food,    // 음식
-        social: result.indices.habit      // 습관
-      },
-      specialMsg: result.specialMsg
-    };
-
     return (
       <div className="dopamine-theme">
-        <MentalAgeResult
-          result={mappedResult}
+        <DopamineResult
+          result={result}
           onRestart={() => setPhase("intro")}
           t={t}
         />

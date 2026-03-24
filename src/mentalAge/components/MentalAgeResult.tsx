@@ -30,7 +30,14 @@ const MentalAgeResult: React.FC<MentalAgeResultProps> = ({ result, onRestart, t 
         <h3>{t.resultSub}</h3>
         <p className="age-text">{result.mentalAge}</p>
         <div className="type-badge">{result.resultTitle}</div>
-        <p className="desc-text">{result.desc}</p>
+        <div className="desc-text">
+          {result.desc.split('\n').map((line, i) => (
+            <React.Fragment key={i}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}
+        </div>
         
         <div className="indices-container">
           <div className="index-item">

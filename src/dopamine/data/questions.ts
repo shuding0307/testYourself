@@ -55,11 +55,11 @@ export const dopamineQuestions: DopamineQuestion[] = [
       lt: "Ar negalite ištverti nuobodulio ir iškart ieškote ko nors, kas suteiktų greitą malonumą?" 
     }, category: 'emotion', weight: 1.6 },
   { id: 7, text: { 
-      ko: "쇼핑 앱에서 물건을 고르고 결제할 때 강한 쾌감을 느끼나요?", 
-      en: "Do you feel strong pleasure when choosing and paying for items on shopping apps?", 
-      jp: "ショッピングアプリで商品を選んで決済するとき、強い快感を感じますか？", 
-      zh: "在购物应用中选择商品并支付时，你会感到强烈的快感吗？", 
-      lt: "Ar jaučiate didelį malonumą rinkdamiesi ir pirkdami daiktus programėlėse?" 
+      ko: "게임이나 쇼핑 결제 후 짜릿함보다 허무함이 더 크게 느껴지나요?", 
+      en: "Do you feel more emptiness than excitement after gaming or shopping?", 
+      jp: "ゲームやショッピングの決済後、快感よりも虚無感の方が大きく感じられますか？", 
+      zh: "游戏或购物结账后，是否感到空虚感比快感更强烈？", 
+      lt: "Ar po žaidimų ar pirkinių jaučiate didesnę tuštumą nei jaudulį?" 
     }, category: 'habit', weight: 1.4 },
   { id: 8, text: { 
       ko: "밤늦게까지 스마트폰을 하느라 수면 시간이 부족한 경우가 잦나요?", 
@@ -81,5 +81,19 @@ export const dopamineQuestions: DopamineQuestion[] = [
       jp: "現実の人間関係より、オンライン上の反応（いいね、コメント）に敏感ですか？", 
       zh: "比起现实的人际关系，你是否对网上的反馈（点赞、评论）更敏感？", 
       lt: "Ar esate jautresnis internetinėms reakcijoms nei realaus gyvenimo santykiams?" 
-    }, category: 'emotion', weight: 1.3 }
-];
+    }, category: 'emotion', weight: 1.3 },
+  { id: 11, text: { 
+      ko: "무언가 기다리는 시간(엘리베이터, 신호등 등)을 참기가 힘든가요?", 
+      en: "Is it hard for you to wait for things like an elevator or a traffic light?", 
+      jp: "エレベーターや信号待ちなどの、何かを待つ時間を耐えるのが難しいですか？", 
+      zh: "你是否觉得等待（电梯、红绿灯等）的时间很难熬？", 
+      lt: "Ar jums sunku laukti tokių dalykų kaip liftas ar šviesoforas?" 
+    }, category: 'habit', weight: 1.5 },
+  { id: 12, text: { 
+      ko: "특별한 알림이 없어도 습관적으로 스마트폰 화면을 켜서 확인하시나요?", 
+      en: "Do you habitually turn on and check your smartphone screen even when there are no notifications?", 
+      jp: "特別な通知がなくても、習慣的にスマートフォンの画面を点けてチェックしますか？", 
+      zh: "即使没有特别的通知，你也会习惯性地打开手机屏幕查看吗？", 
+      lt: "Ar įprastai įjungiate ir tikrinate išmaniojo telefono ekraną, net jei nėra jokių pranešimų?" 
+    }, category: 'digital', weight: 1.6 }
+  ];
