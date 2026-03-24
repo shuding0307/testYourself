@@ -1,9 +1,45 @@
+/* 뇌 온도 배지 스타일 */
+.brain-temp-badge {
+  background: #FFF0F0;
+  border: 2px solid #FF4500;
+  border-radius: 20px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 15px 0;
+  box-shadow: 0 4px 10px rgba(255, 69, 0, 0.15);
+  animation: pulse 2s infinite;
+}
+
+.temp-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #FF8C00;
+}
+
+.temp-value {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #FF4500;
+}
+
+.brain-status-text {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 10px 0;
+  color: #333;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
 /* 도파민 테스트 전용 스타일 */
 .dopamine-theme {
-  --primary-color: #FF8C00;
-  --secondary-color: #FF4500;
-  --bg-gradient: linear-gradient(135deg, #FF8C00, #FF4500);
-}
+...
 
 /* 도파민 버튼 스타일 (App.css에 추가해도 되지만 편의상 여기 작성) */
 .dopamine-btn {

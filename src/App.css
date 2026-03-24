@@ -221,18 +221,33 @@
   padding: 20px 40px;
   font-size: 1.4rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
   color: white;
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  box-shadow: 0 10px 20px rgba(110, 142, 251, 0.3);
   transition: all 0.3s ease;
 }
 
-.test-card:hover .main-test-btn {
+/* 정신연령 테스트 버튼 (보라색 계열) */
+.mental-btn {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  box-shadow: 0 10px 20px rgba(110, 142, 251, 0.3);
+}
+
+.test-card:hover .mental-btn {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(110, 142, 251, 0.4);
+}
+
+/* 도파민 테스트 버튼 (오렌지/레드 계열) */
+.dopamine-btn {
+  background: linear-gradient(135deg, #FF8C00, #FF4500);
+  box-shadow: 0 10px 20px rgba(255, 140, 0, 0.3);
+}
+
+.test-card:hover .dopamine-btn {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 69, 0, 0.4);
 }
 
 .test-description {
