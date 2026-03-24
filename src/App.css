@@ -199,7 +199,16 @@
   margin-bottom: 40px;
 }
 
+.main-button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
 .main-test-btn {
+  width: 100%;
+  max-width: 320px;
   padding: 20px 40px;
   font-size: 1.4rem;
   font-weight: bold;
@@ -247,7 +256,6 @@
   color: #a777e3;
   border-color: #a777e3;
 }
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
