@@ -1,12 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { type Language } from '../data/translations';
+import { type Language } from '../mentalAge/data/translations';
+import { useLanguageStore } from '../store/useLanguageStore';
 
-interface LanguageSelectorProps {
-  lang: Language;
-  setLang: (lang: Language) => void;
-}
-
-const LanguageSelector: React.FC<LanguageSelectorProps> = ({ lang, setLang }) => {
+const LanguageSelector: React.FC = () => {
+  const { lang, setLang } = useLanguageStore();
   const [isLangOpen, setIsLangOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 

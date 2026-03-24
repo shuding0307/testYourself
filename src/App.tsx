@@ -1,42 +1,65 @@
 import { useState } from "react";
 import "./App.css";
 import MentalAgeTest from "./mentalAge/MentalAgeTest";
-import { translations, type Language } from "./mentalAge/data/translations";
-import LanguageSelector from "./mentalAge/components/LanguageSelector";
+import LanguageSelector from "./components/LanguageSelector";
+import DopamineTest from "./dopamine/DopamineTest";
+import { useLanguageStore } from "./store/useLanguageStore";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<"home" | "mentalAge">("home");
-  const [lang, setLang] = useState<Language>("ko");
-
-  const t = translations[lang];
+  const [currentPage, setCurrentPage] = useState<
+    "home" | "mentalAge" | "dopamine"
+  >("home");
+  const { transType } = useLanguageStore();
 
   return (
     <div className="main-container">
       {/* 전역 언어 선택기 */}
-      <LanguageSelector lang={lang} setLang={setLang} />
+      <LanguageSelector />
 
       {currentPage === "home" ? (
         <div className="home-content">
           <div className="home-logo floating">🧐</div>
           <h1 className="home-title">
-            {t.home.title.split('\n').map((line: string, i: number) => (
-              <span key={i}>{line}<br /></span>
+            {transType.home.title.split("\n").map((line: string, i: number) => (
+              <span key={i}>
+                {line}
+                <br />
+              </span>
             ))}
           </h1>
-          <p className="home-subtitle">{t.home.subtitle}</p>
-          <button 
-            className="main-test-btn" 
-            onClick={() => setCurrentPage("mentalAge")}
-          >
-            {t.home.startButton}
-          </button>
+          <p className="home-subtitle">{transType.home.subtitle}</p>
+          <div className="main-button-group">
+            <div
+              className="test-card"
+              onClick={() => setCurrentPage("mentalAge")}
+            >
+              <button className="main-test-btn mental-btn">
+                {transType.home.startButton}
+              </button>
+              <p className="test-description">
+                {transType.home.startDescription}
+              </p>
+            </div>
+
+            <div
+              className="test-card"
+              onClick={() => setCurrentPage("dopamine")}
+            >
+              <button className="main-test-btn dopamine-btn">
+                {transType.home.dopamineButton}
+              </button>
+              <p className="test-description">
+                {transType.home.dopamineDescription}
+              </p>
+            </div>
+          </div>
         </div>
       ) : (
         <div className="test-wrapper">
           <button className="back-btn" onClick={() => setCurrentPage("home")}>
-            <span className="back-icon">←</span> {t.home.backToHome}
+            <span className="back-icon">←</span> {transType.home.backToHome}
           </button>
-          <MentalAgeTest externalLang={lang} onExternalLangChange={setLang} />
+          {currentPage === "mentalAge" ? <MentalAgeTest /> : <DopamineTest />}
         </div>
       )}
     </div>

@@ -182,7 +182,18 @@
 
 .home-logo {
   font-size: 5rem;
+  margin-top: 30px; /* 상단 여백 추가 */
   margin-bottom: 20px;
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(15px); } /* 아래로 15px 이동 */
+  100% { transform: translateY(0px); }
 }
 
 .home-title {
@@ -199,22 +210,62 @@
   margin-bottom: 40px;
 }
 
+.main-button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.test-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  width: 100%;
+}
+
 .main-test-btn {
+  width: 100%;
+  max-width: 320px;
   padding: 20px 40px;
   font-size: 1.4rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
   color: white;
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  box-shadow: 0 10px 20px rgba(110, 142, 251, 0.3);
   transition: all 0.3s ease;
 }
 
-.main-test-btn:hover {
+/* 정신연령 테스트 버튼 (보라색 계열) */
+.mental-btn {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  box-shadow: 0 10px 20px rgba(110, 142, 251, 0.3);
+}
+
+.test-card:hover .mental-btn {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(110, 142, 251, 0.4);
+}
+
+/* 도파민 테스트 버튼 (오렌지/레드 계열) */
+.dopamine-btn {
+  background: linear-gradient(135deg, #FF8C00, #FF4500);
+  box-shadow: 0 10px 20px rgba(255, 140, 0, 0.3);
+}
+
+.test-card:hover .dopamine-btn {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 69, 0, 0.4);
+}
+
+.test-description {
+  font-size: 1.1rem;
+  color: #5c6b73;
+  font-weight: 500;
+  margin: 0;
 }
 
 /* 뒤로가기 버튼 */
@@ -247,7 +298,6 @@
   color: #a777e3;
   border-color: #a777e3;
 }
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }

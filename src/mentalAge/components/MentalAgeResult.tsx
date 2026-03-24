@@ -1,7 +1,7 @@
-import React from 'react';
-import { translations } from '../data/translations';
-
-type TranslationType = typeof translations['ko'];
+import React from "react";
+import { useLanguageStore } from "../../store/useLanguageStore";
+import BaseResult from "../../components/common/BaseResult";
+import ProgressBar from "../../components/common/ProgressBar";
 
 interface MentalAgeResultProps {
   result: {
@@ -18,51 +18,49 @@ interface MentalAgeResultProps {
     specialMsg: string;
   };
   onRestart: () => void;
-  t: TranslationType;
 }
 
-const MentalAgeResult: React.FC<MentalAgeResultProps> = ({ result, onRestart, t }) => {
-  return (
-    <div className="mental-test-container result-page">
-      <h2>{t.resultTitle}</h2>
-      <div className="result-box">
-        <div className="character-icon floating">{result.icon}</div>
-        <h3>{t.resultSub}</h3>
-        <p className="age-text">{result.mentalAge}</p>
-        <div className="type-badge">{result.resultTitle}</div>
-        <p className="desc-text">{result.desc}</p>
-        
-        <div className="indices-container">
-          <div className="index-item">
-            <span>{t.indices.childlike}</span>
-            <div className="bar">
-              <div className="fill childlike" style={{ width: `${result.indices.childlike}%` }}></div>
-            </div>
-            <span className="val">{result.indices.childlike}%</span>
-          </div>
-          <div className="index-item">
-            <span>{t.indices.stubborn}</span>
-            <div className="bar">
-              <div className="fill stubborn" style={{ width: `${result.indices.stubborn}%` }}></div>
-            </div>
-            <span className="val">{result.indices.stubborn}%</span>
-          </div>
-          <div className="index-item">
-            <span>{t.indices.social}</span>
-            <div className="bar">
-              <div className="fill social" style={{ width: `${result.indices.social}%` }}></div>
-            </div>
-            <span className="val">{result.indices.social}%</span>
-          </div>
-        </div>
+const MentalAgeResult: React.FC<MentalAgeResultProps> = ({
+  result,
+  onRestart,
+}) => {
+  const { transType } = useLanguageStore();
 
-        {result.specialMsg && <p className="special-msg">{result.specialMsg}</p>}
-        
-        <div className="divider"></div>
-        <p className="comparison-text">{result.comparisonMsg}</p>
+  return (
+    <BaseResult
+      title={transType.resultTitle}
+      icon={result.icon}
+      badgeText={result.resultTitle}
+      desc={result.desc}
+      onRestart={onRestart}
+      restartButtonText={transType.restartButton}
+    >
+      <h3>{transType.resultSub}</h3>
+      <p className="age-text">{result.mentalAge}</p>
+
+      <div className="indices-container">
+        <ProgressBar
+          label={transType.indices.childlike}
+          value={result.indices.childlike}
+          className="childlike"
+        />
+        <ProgressBar
+          label={transType.indices.stubborn}
+          value={result.indices.stubborn}
+          className="stubborn"
+        />
+        <ProgressBar
+          label={transType.indices.social}
+          value={result.indices.social}
+          className="social"
+        />
       </div>
-      <button className="primary-button" onClick={onRestart}>{t.restartButton}</button>
-    </div>
+
+      {result.specialMsg && <p className="special-msg">{result.specialMsg}</p>}
+
+      <div className="divider"></div>
+      <p className="comparison-text">{result.comparisonMsg}</p>
+    </BaseResult>
   );
 };
 

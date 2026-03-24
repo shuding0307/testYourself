@@ -1,0 +1,246 @@
+/* 뇌 온도 배지 스타일 */
+.brain-temp-badge {
+  background: #fff0f0;
+  border: 2px solid #ff4500;
+  border-radius: 20px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 15px 0;
+  box-shadow: 0 4px 10px rgba(255, 69, 0, 0.15);
+  animation: pulse 2s infinite;
+}
+
+.temp-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ff8c00;
+}
+
+.temp-value {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #ff4500;
+}
+
+.brain-status-text {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 10px 0;
+  color: #333;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 도파민 버튼 스타일 (App.css에 추가해도 되지만 편의상 여기 작성) */
+.dopamine-btn {
+  background: linear-gradient(135deg, #ff8c00, #ff4500) !important;
+  box-shadow: 0 10px 20px rgba(255, 140, 0, 0.3) !important;
+}
+
+/* 도파민 결과 화면 전용 */
+.score-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 10px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  position: relative;
+}
+
+.score-num {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ff4500;
+}
+
+.score-label {
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: bold;
+}
+
+/* 도파민 테마 진행 바 */
+.dopamine-theme .progress {
+  background: linear-gradient(90deg, #ffb347, #ff4500);
+}
+
+/* 지수 컨테이너 및 바 스타일 */
+.indices-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.index-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.index-item span:first-child {
+  flex: 0 0 100px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #555;
+  text-align: left;
+}
+
+.index-item .bar {
+  flex: 1;
+  height: 12px;
+  background: #f0f0f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.index-item .fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 1s ease-out;
+}
+
+.index-item .val {
+  flex: 0 0 45px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ff4500;
+  text-align: right;
+}
+
+/* 지수별 바 컬러 */
+.fill.digital { background: #ff4500; }
+.fill.food { background: #ffa500; }
+.fill.habit { background: #ffd700; }
+.fill.emotion { background: #ff6347; }
+
+/* 질문 카드 강조 */
+.dopamine-theme .q-number {
+  color: #ff4500;
+}
+
+/* 답변 버튼 호버 시 컬러 */
+.dopamine-theme .answer-btn:hover {
+  border-color: #ff4500;
+  color: #ff4500;
+  background: #fff5f0;
+}
+
+/* 결과 배지 */
+.dopamine-theme .type-badge {
+  background: #ff4500;
+}
+
+/* Action Item 섹션 스타일 */
+.action-items-section {
+  width: 100%;
+  margin-top: 30px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  border: 1px solid #ffe0b2;
+}
+
+.action-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ff4500;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.action-item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.action-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ff8c00;
+  font-weight: bold;
+}
+
+/* 기존 스페셜 메시지 스타일 수정 (Action Item과 구분되게) */
+.special-msg {
+  padding: 15px;
+  background: #fff8e1;
+  border-radius: 12px;
+  border-left: 5px solid #ffb300;
+  color: #856404;
+  font-weight: 600;
+  margin: 20px 0;
+  font-size: 0.95rem;
+  animation: slideIn 0.5s ease-out;
+  width: 100%;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 캐릭터 아이콘 스타일 */
+.character-icon {
+  font-size: 5rem;
+  margin-top: 30px; /* 상단 여백 추가하여 위치 낮춤 */
+  margin-bottom: 40px;
+  display: block;
+}
+
+/* 둥둥 떠다니는 애니메이션 (아래로 움직이도록 수정) */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(15px);
+  } /* 위가 아닌 아래로 15px 이동 */
+  100% {
+    transform: translateY(0px);
+  }
+}
