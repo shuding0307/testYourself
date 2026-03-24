@@ -171,10 +171,10 @@ export const translations: Record<Language, TranslationType> = {
       brainTemp: "Brain Temp",
     },
     brainStatus: {
-      cool: "🧊 Calm Forest Brain",
-      warm: "🌤️ Lukewarm City Brain",
-      hot: "🔥 Overheated Engine Brain",
-      burnt: "💀 Burnt Charcoal Brain",
+      cool: "Lv.1 Sage of the Pristine Forest",
+      warm: "Lv.15 Ordinary City Dweller",
+      hot: "Lv.40 Stimulation Hunter",
+      burnt: "Lv.99 Slave to Dopamine",
     },
     answers: {
       agreeVery: "Strongly Agree",
@@ -305,10 +305,10 @@ export const translations: Record<Language, TranslationType> = {
       brainTemp: "脳の温度",
     },
     brainStatus: {
-      cool: "🧊 平穏な森の脳",
-      warm: "🌤️ 穏やかな都市の脳",
-      hot: "🔥 過熱したエンジンの脳",
-      burnt: "💀 焼け焦げた炭の脳",
+      cool: "Lv.1 清らかな森の賢者",
+      warm: "Lv.15 都市の平凡な市民",
+      hot: "Lv.40 刺激ハンター",
+      burnt: "Lv.99 ドーパミンの奴隷",
     },
     answers: {
       agreeVery: "強くそう思う",
@@ -437,10 +437,10 @@ export const translations: Record<Language, TranslationType> = {
       brainTemp: "大脑温度",
     },
     brainStatus: {
-      cool: "🧊 宁静森林脑",
-      warm: "🌤️ 微温都市脑",
-      hot: "🔥 过热引擎脑",
-      burnt: "💀 烧焦木炭脑",
+      cool: "Lv.1 纯净森林的贤者",
+      warm: "Lv.15 都市的平凡市民",
+      hot: "Lv.40 刺激猎人",
+      burnt: "Lv.99 多巴胺的奴隶",
     },
     answers: {
       agreeVery: "非常同意",
@@ -564,10 +564,10 @@ export const translations: Record<Language, TranslationType> = {
       brainTemp: "Smegenų temp.",
     },
     brainStatus: {
-      cool: "🧊 Ramių miškų smegenys",
-      warm: "🌤️ Drungnos miesto smegenys",
-      hot: "🔥 Perkaitęs variklis",
-      burnt: "💀 Sudegusi anglis",
+      cool: "Lv.1 Tyro miško išminčius ",
+      warm: "Lv.15 Paprastas miesto gyventojas",
+      hot: "Lv.40 Stimuliacijos medžiotojas",
+      burnt: "Lv.99 Dopamino vergas",
     },
     answers: {
       agreeVery: "Visiškai sutinku",
