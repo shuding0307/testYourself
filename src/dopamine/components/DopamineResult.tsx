@@ -18,6 +18,7 @@ interface DopamineResultProps {
       habit: number;
       emotion: number;
     };
+    worstCategory: 'digital' | 'food' | 'habit' | 'emotion';
     specialMsg: string;
   };
   onRestart: () => void;
@@ -25,6 +26,8 @@ interface DopamineResultProps {
 }
 
 const DopamineResult: React.FC<DopamineResultProps> = ({ result, onRestart, t }) => {
+  const actionData = t.dopamineActions[result.worstCategory];
+
   return (
     <div className="mental-test-container result-page dopamine-result">
       <h2>{t.resultTitle}</h2>
@@ -75,6 +78,16 @@ const DopamineResult: React.FC<DopamineResultProps> = ({ result, onRestart, t })
             </div>
             <span className="val">{result.indices.emotion}%</span>
           </div>
+        </div>
+
+        {/* Action Item 섹션 추가 */}
+        <div className="action-items-section">
+          <h4 className="action-title">{actionData.title}</h4>
+          <ul className="action-list">
+            {actionData.items.map((item, idx) => (
+              <li key={idx} className="action-item">{item}</li>
+            ))}
+          </ul>
         </div>
 
         {result.specialMsg && <p className="special-msg">{result.specialMsg}</p>}

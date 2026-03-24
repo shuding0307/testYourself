@@ -1,7 +1,7 @@
 /* 뇌 온도 배지 스타일 */
 .brain-temp-badge {
-  background: #FFF0F0;
-  border: 2px solid #FF4500;
+  background: #fff0f0;
+  border: 2px solid #ff4500;
   border-radius: 20px;
   padding: 8px 16px;
   display: inline-flex;
@@ -15,13 +15,13 @@
 .temp-label {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #FF8C00;
+  color: #ff8c00;
 }
 
 .temp-value {
   font-size: 1.2rem;
   font-weight: 900;
-  color: #FF4500;
+  color: #ff4500;
 }
 
 .brain-status-text {
@@ -32,18 +32,18 @@
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.03); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
   100% { transform: scale(1); }
 }
 
-/* 도파민 테스트 전용 스타일 */
-.dopamine-theme {
-...
-
 /* 도파민 버튼 스타일 (App.css에 추가해도 되지만 편의상 여기 작성) */
 .dopamine-btn {
-  background: linear-gradient(135deg, #FF8C00, #FF4500) !important;
+  background: linear-gradient(135deg, #ff8c00, #ff4500) !important;
   box-shadow: 0 10px 20px rgba(255, 140, 0, 0.3) !important;
 }
 
@@ -64,7 +64,7 @@
 .score-num {
   font-size: 3rem;
   font-weight: 900;
-  color: #FF4500;
+  color: #ff4500;
 }
 
 .score-label {
@@ -75,46 +75,125 @@
 
 /* 도파민 테마 진행 바 */
 .dopamine-theme .progress {
-  background: linear-gradient(90deg, #FFB347, #FF4500);
+  background: linear-gradient(90deg, #ffb347, #ff4500);
 }
 
 /* 지수 바 컬러 */
-.fill.digital { background: #FF4500; }
-.fill.food { background: #FFA500; }
-.fill.habit { background: #FFD700; }
-.fill.emotion { background: #FF6347; }
+.fill.digital {
+  background: #ff4500;
+}
+.fill.food {
+  background: #ffa500;
+}
+.fill.habit {
+  background: #ffd700;
+}
+.fill.emotion {
+  background: #ff6347;
+}
 
 /* 질문 카드 강조 */
 .dopamine-theme .q-number {
-  color: #FF4500;
+  color: #ff4500;
 }
 
 /* 답변 버튼 호버 시 컬러 */
 .dopamine-theme .answer-btn:hover {
-  border-color: #FF4500;
-  color: #FF4500;
-  background: #FFF5F0;
+  border-color: #ff4500;
+  color: #ff4500;
+  background: #fff5f0;
 }
 
 /* 결과 배지 */
 .dopamine-theme .type-badge {
-  background: #FF4500;
+  background: #ff4500;
 }
 
-/* 스페셜 메시지 강조 */
+/* Action Item 섹션 스타일 */
+.action-items-section {
+  width: 100%;
+  margin-top: 30px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  border: 1px solid #ffe0b2;
+}
+
+.action-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ff4500;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.action-item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.action-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ff8c00;
+  font-weight: bold;
+}
+
+/* 기존 스페셜 메시지 스타일 수정 (Action Item과 구분되게) */
 .special-msg {
   padding: 15px;
-  background: #FFF5F0;
+  background: #fff8e1;
   border-radius: 12px;
-  border-left: 5px solid #FF4500;
-  color: #D32F2F;
+  border-left: 5px solid #ffb300;
+  color: #856404;
   font-weight: 600;
   margin: 20px 0;
   font-size: 0.95rem;
   animation: slideIn 0.5s ease-out;
+  width: 100%;
 }
 
 @keyframes slideIn {
-  from { opacity: 0; transform: translateX(-20px); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 캐릭터 아이콘 스타일 */
+.character-icon {
+  font-size: 5rem;
+  margin-bottom: 40px; /* 20px -> 40px로 증가 */
+  display: block;
+}
+
+/* 둥둥 떠다니는 애니메이션 */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(-5px); } /* 기본 위치를 약간 위로 (-5px) */
+  50% { transform: translateY(-25px); } /* 중간 위치를 더 위로 (-15px -> -25px) */
+  100% { transform: translateY(-5px); }
 }

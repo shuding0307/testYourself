@@ -15,6 +15,7 @@ export interface DopamineResult {
     habit: number;
     emotion: number;
   };
+  worstCategory: 'digital' | 'food' | 'habit' | 'emotion';
   specialMsg: string;
 }
 
@@ -47,12 +48,26 @@ export const calculateDopamineResult = (
     return Math.round((categoryScores[cat] / categoryMax[cat]) * 100);
   };
 
+  const digitalIdx = getIndex('digital');
+  const foodIdx = getIndex('food');
+  const habitIdx = getIndex('habit');
+  const emotionIdx = getIndex('emotion');
+
+  // 가장 점수가 높은(취약한) 카테고리 찾기
+  const indices = {
+    digital: digitalIdx,
+    food: foodIdx,
+    habit: habitIdx,
+    emotion: emotionIdx
+  };
+
+  const worstCategory = Object.entries(indices).reduce((a, b) => a[1] > b[1] ? a : b)[0] as 'digital' | 'food' | 'habit' | 'emotion';
+
   let resultTitle = "";
   let desc = "";
   let icon = "";
   let brainStatus = "";
-  // 뇌의 온도 계산: 36.5도 기본 + (정규화된 점수 * 계수)
-  // 0점일 때 36.5도, 40점일 때 약 90~100도 느낌
+  
   const brainTemp = Number((36.5 + (normalizedScore * 1.5)).toFixed(1));
 
   if (normalizedScore <= 15) {
@@ -73,13 +88,11 @@ export const calculateDopamineResult = (
   } else {
     resultTitle = t.results.dopamineDanger.title;
     desc = t.results.dopamineDanger.desc;
-    icon = "💀"; // 타버린 뇌 느낌
+    icon = "💀";
     brainStatus = t.brainStatus.burnt;
   }
 
   let specialMsg = "";
-  const digitalIdx = getIndex('digital');
-
   if (digitalIdx > 80) {
     specialMsg = t.specialMsgs.digitalDetox;
   } else if (normalizedScore > 30) {
@@ -94,12 +107,8 @@ export const calculateDopamineResult = (
     icon,
     brainTemp,
     brainStatus,
-    indices: {
-      digital: digitalIdx,
-      food: getIndex('food'),
-      habit: getIndex('habit'),
-      emotion: getIndex('emotion')
-    },
+    indices,
+    worstCategory,
     specialMsg
   };
 };
