@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import MentalAgeTest from "./mentalAge/MentalAgeTest";
-import LanguageSelector from "./mentalAge/components/LanguageSelector";
+import LanguageSelector from "./components/LanguageSelector";
 import DopamineTest from "./dopamine/DopamineTest";
 import { useLanguageStore } from "./store/useLanguageStore";
 

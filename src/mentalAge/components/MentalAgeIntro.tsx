@@ -1,5 +1,6 @@
 import React from "react";
 import { useLanguageStore } from "../../store/useLanguageStore";
+import BaseIntro from "../../components/common/BaseIntro";
 
 interface MentalAgeIntroProps {
   actualAge: string;
@@ -13,12 +14,15 @@ const MentalAgeIntro: React.FC<MentalAgeIntroProps> = ({
   onStart,
 }) => {
   const { t } = useLanguageStore();
-  return (
-    <div className="mental-test-container intro-page">
-      <div className="character-icon floating">🤔</div>
-      <h2>{t.title}</h2>
-      <p>{t.subtitle}</p>
 
+  return (
+    <BaseIntro
+      icon="🤔"
+      title={t.title}
+      subtitle={t.subtitle}
+      buttonText={t.startButton}
+      onStart={onStart}
+    >
       <div className="input-group">
         <input
           type="number"
@@ -29,10 +33,7 @@ const MentalAgeIntro: React.FC<MentalAgeIntroProps> = ({
         />
         <span className="unit">{t.ageUnit}</span>
       </div>
-      <button className="primary-button" onClick={onStart}>
-        {t.startButton}
-      </button>
-    </div>
+    </BaseIntro>
   );
 };
 

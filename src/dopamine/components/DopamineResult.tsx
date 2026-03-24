@@ -1,5 +1,7 @@
 import React from 'react';
 import { useLanguageStore } from '../../store/useLanguageStore';
+import BaseResult from '../../components/common/BaseResult';
+import ProgressBar from '../../components/common/ProgressBar';
 
 interface DopamineResultProps {
   result: {
@@ -27,71 +29,41 @@ const DopamineResult: React.FC<DopamineResultProps> = ({ result, onRestart }) =>
   const actionData = t.dopamineActions[result.worstCategory];
 
   return (
-    <div className="mental-test-container result-page dopamine-result">
-      <h2>{t.resultTitle}</h2>
-      <div className="result-box">
-        <div className="character-icon floating">{result.icon}</div>
-        <div className="brain-temp-badge">
-          <span className="temp-label">{t.indices.brainTemp}</span>
-          <span className="temp-value">{result.brainTemp}°C</span>
-        </div>
-        <h3 className="brain-status-text">{result.brainStatus}</h3>
-        <p className="age-text">{result.scoreText}</p>
-        <div className="type-badge">{result.resultTitle}</div>
-        <div className="desc-text">
-          {result.desc.split('\n').map((line, i) => (
-            <React.Fragment key={i}>
-              {line}
-              <br />
-            </React.Fragment>
-          ))}
-        </div>
-        
-        <div className="indices-container">
-          <div className="index-item">
-            <span>{t.indices.digital}</span>
-            <div className="bar">
-              <div className="fill digital" style={{ width: `${result.indices.digital}%` }}></div>
-            </div>
-            <span className="val">{result.indices.digital}%</span>
-          </div>
-          <div className="index-item">
-            <span>{t.indices.food}</span>
-            <div className="bar">
-              <div className="fill food" style={{ width: `${result.indices.food}%` }}></div>
-            </div>
-            <span className="val">{result.indices.food}%</span>
-          </div>
-          <div className="index-item">
-            <span>{t.indices.habit}</span>
-            <div className="bar">
-              <div className="fill habit" style={{ width: `${result.indices.habit}%` }}></div>
-            </div>
-            <span className="val">{result.indices.habit}%</span>
-          </div>
-          <div className="index-item">
-            <span>{t.indices.emotion}</span>
-            <div className="bar">
-              <div className="fill emotion" style={{ width: `${result.indices.emotion}%` }}></div>
-            </div>
-            <span className="val">{result.indices.emotion}%</span>
-          </div>
-        </div>
-
-        {/* Action Item 섹션 추가 */}
-        <div className="action-items-section">
-          <h4 className="action-title">{actionData.title}</h4>
-          <ul className="action-list">
-            {actionData.items.map((item, idx) => (
-              <li key={idx} className="action-item">{item}</li>
-            ))}
-          </ul>
-        </div>
-
-        {result.specialMsg && <p className="special-msg">{result.specialMsg}</p>}
+    <BaseResult
+      title={t.resultTitle}
+      icon={result.icon}
+      badgeText={result.resultTitle}
+      desc={result.desc}
+      onRestart={onRestart}
+      restartButtonText={t.restartButton}
+      containerClass="dopamine-result"
+      buttonClass="dopamine-btn"
+    >
+      <div className="brain-temp-badge">
+        <span className="temp-label">{t.indices.brainTemp}</span>
+        <span className="temp-value">{result.brainTemp}°C</span>
       </div>
-      <button className="primary-button dopamine-btn" onClick={onRestart}>{t.restartButton}</button>
-    </div>
+      <h3 className="brain-status-text">{result.brainStatus}</h3>
+      <p className="age-text">{result.scoreText}</p>
+
+      <div className="indices-container">
+        <ProgressBar label={t.indices.digital} value={result.indices.digital} className="digital" />
+        <ProgressBar label={t.indices.food} value={result.indices.food} className="food" />
+        <ProgressBar label={t.indices.habit} value={result.indices.habit} className="habit" />
+        <ProgressBar label={t.indices.emotion} value={result.indices.emotion} className="emotion" />
+      </div>
+
+      <div className="action-items-section">
+        <h4 className="action-title">{actionData.title}</h4>
+        <ul className="action-list">
+          {actionData.items.map((item, idx) => (
+            <li key={idx} className="action-item">{item}</li>
+          ))}
+        </ul>
+      </div>
+
+      {result.specialMsg && <p className="special-msg">{result.specialMsg}</p>}
+    </BaseResult>
   );
 };
 

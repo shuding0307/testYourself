@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./DopamineTest.css";
 import { dopamineQuestions } from "./data/questions";
-import MentalAgeQuestion from "../mentalAge/components/MentalAgeQuestion";
+import TestQuestion from "../components/TestQuestion";
+import DopamineIntro from "./components/DopamineIntro";
 import DopamineResult from "./components/DopamineResult";
 import { calculateDopamineResult } from "./utils/resultCalculator";
 import { useLanguageStore } from "../store/useLanguageStore";
@@ -37,16 +38,7 @@ const DopamineTest: React.FC = () => {
   };
 
   if (phase === "intro") {
-    return (
-      <div className="mental-test-container intro-page dopamine-theme">
-        <div className="character-icon floating">📱</div>
-        <h2>{t.dopamineTitle}</h2>
-        <p>{t.dopamineSub}</p>
-        <button className="primary-button dopamine-btn" onClick={startTest}>
-          {t.startButton}
-        </button>
-      </div>
-    );
+    return <DopamineIntro onStart={startTest} />;
   }
 
   if (phase === "result") {
@@ -64,7 +56,7 @@ const DopamineTest: React.FC = () => {
 
   return (
     <div className="dopamine-theme">
-      <MentalAgeQuestion
+      <TestQuestion
         currentStep={currentStep}
         totalSteps={dopamineQuestions.length}
         question={dopamineQuestions[currentStep]}

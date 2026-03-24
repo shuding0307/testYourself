@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { type Language } from '../data/translations';
-import { useLanguageStore } from '../../store/useLanguageStore';
+import { type Language } from '../mentalAge/data/translations';
+import { useLanguageStore } from '../store/useLanguageStore';
 
 const LanguageSelector: React.FC = () => {
   const { lang, setLang } = useLanguageStore();

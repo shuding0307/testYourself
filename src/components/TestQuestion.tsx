@@ -1,13 +1,13 @@
 import React from 'react';
-import { type Language } from '../data/translations';
-import { useLanguageStore } from '../../store/useLanguageStore';
+import { type Language } from '../mentalAge/data/translations';
+import { useLanguageStore } from '../store/useLanguageStore';
 
 interface BaseQuestion {
   id: number;
   text: Record<Language, string>;
 }
 
-interface MentalAgeQuestionProps {
+interface TestQuestionProps {
   currentStep: number;
   totalSteps: number;
   question: BaseQuestion;
@@ -15,7 +15,7 @@ interface MentalAgeQuestionProps {
   onBack: () => void;
 }
 
-const MentalAgeQuestion: React.FC<MentalAgeQuestionProps> = ({ 
+const TestQuestion: React.FC<TestQuestionProps> = ({ 
   currentStep, 
   totalSteps, 
   question, 
@@ -59,4 +59,4 @@ const MentalAgeQuestion: React.FC<MentalAgeQuestionProps> = ({
   );
 };
 
-export default MentalAgeQuestion;
+export default TestQuestion;

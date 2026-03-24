@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./MentalAgeTest.css";
 import { questions, type Question } from "./data/questions";
 import MentalAgeIntro from "./components/MentalAgeIntro";
-import MentalAgeQuestion from "./components/MentalAgeQuestion";
+import TestQuestion from "../components/TestQuestion";
 import MentalAgeResult from "./components/MentalAgeResult";
 import { calculateMentalAgeResult } from "./utils/resultCalculator";
 import { useLanguageStore } from "../store/useLanguageStore";
@@ -73,7 +73,7 @@ const MentalAgeTest: React.FC = () => {
   }
 
   return (
-    <MentalAgeQuestion
+    <TestQuestion
       currentStep={currentStep}
       totalSteps={activeQuestions.length}
       question={activeQuestions[currentStep]}
