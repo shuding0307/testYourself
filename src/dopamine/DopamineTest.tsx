@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./DopamineTest.css";
-import { dopamineQuestions, type DopamineQuestion } from "./data/questions";
+import { dopamineQuestions } from "./data/questions";
 import { translations, type Language } from "../mentalAge/data/translations";
 import MentalAgeQuestion from "../mentalAge/components/MentalAgeQuestion";
 import DopamineResult from "./components/DopamineResult";
@@ -11,7 +11,10 @@ interface DopamineTestProps {
   onExternalLangChange: (lang: Language) => void;
 }
 
-const DopamineTest: React.FC<DopamineTestProps> = ({ externalLang, onExternalLangChange }) => {
+const DopamineTest: React.FC<DopamineTestProps> = ({
+  externalLang,
+  onExternalLangChange,
+}) => {
   const [phase, setPhase] = useState<"intro" | "test" | "result">("intro");
   const [currentStep, setCurrentStep] = useState(0);
   const [scores, setScores] = useState<number[]>([]);
@@ -57,7 +60,7 @@ const DopamineTest: React.FC<DopamineTestProps> = ({ externalLang, onExternalLan
 
   if (phase === "result") {
     const result = calculateDopamineResult(dopamineQuestions, scores, t);
-    
+
     return (
       <div className="dopamine-theme">
         <DopamineResult

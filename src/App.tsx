@@ -30,14 +30,14 @@ function App() {
               <button className="main-test-btn mental-btn">
                 {t.home.startButton}
               </button>
-              <p className="test-description">{(t.home as any).startDescription}</p>
+              <p className="test-description">{t.home.startDescription}</p>
             </div>
 
             <div className="test-card" onClick={() => setCurrentPage("dopamine")}>
               <button className="main-test-btn dopamine-btn">
                 {t.home.dopamineButton}
               </button>
-              <p className="test-description">{(t.home as any).dopamineDescription}</p>
+              <p className="test-description">{t.home.dopamineDescription}</p>
             </div>
           </div>
         </div>

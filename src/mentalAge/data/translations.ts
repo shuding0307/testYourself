@@ -1,83 +1,89 @@
-export const translations = {
-  ko: {
-    home: {
-      title: "나를 알아가는\n테스트 플랫폼",
-      subtitle: "당신의 내면을 들여다보는 시간",
-      startButton: "정신연령 테스트",
-      startDescription: "내 안에 잠든 진짜 나이는 몇 살일까?",
-      dopamineButton: "도파민 중독 테스트",
-      dopamineDescription: "나의 뇌는 얼마나 자극에 중독되어 있을까?",
-      backToHome: "처음으로"
-    },
-    title: "정신연령 테스트",
-    subtitle: "무작위로 추출된 15개의 문항으로 당신의 내면을 분석합니다.",
-    dopamineTitle: "도파민 중독 테스트",
-    dopamineSub: "나의 뇌는 얼마나 자극에 중독되어 있을까?",
-    agePlaceholder: "나이",
-    ageUnit: "세",
-    startButton: "테스트 시작",
-    prevButton: "← 이전 질문으로",
-    restartButton: "다시 테스트하기",
-    questionLabel: "질문",
-    resultTitle: "테스트 결과",
-    resultSub: "당신의 상태는...",
-    indices: {
-      childlike: "동심 지수",
-      stubborn: "꼰대 지수",
-      social: "사회성 지수",
-      digital: "디지털 의존도",
-      food: "자극적 식습관",
-      habit: "습관적 탐닉",
-      emotion: "정서적 민감도",
-      brainTemp: "뇌의 온도"
-    },
-    brainStatus: {
-      cool: "🧊 평온한 숲속 뇌",
-      warm: "🌤️ 미지근한 도시 뇌",
-      hot: "🔥 과열된 엔진 뇌",
-      burnt: "💀 타버린 숯불 뇌"
-    },
-    answers: {
-      agreeVery: "매우 그렇다",
-      agree: "그렇다",
-      neutral: "보통이다",
-      disagree: "아니다",
-      disagreeVery: "전혀 아니다"
-    },
-    ageError: "나이를 정확히 입력해 주세요!",
-    results: {
-      child: { title: "[초딩 멘탈]", desc: "호기심 천국, 자기중심적이지만 순수한 영혼." },
-      teen: { title: "[질풍노도 중고딩]", desc: "자의식이 강하고 감정 기복이 있지만 에너지가 넘침." },
-      adult: { title: "[갓생 사는 어른이]", desc: "사회적 예의를 갖췄고 적절히 타협할 줄 아는 상태." },
-      sage: { title: "[인생 2회차 선비]", desc: "해탈의 경지. 어떤 상황에서도 흔들리지 않는 편안함." },
-      dopamineLow: { 
-        title: "🌿 도파민 청정구역 (갓생러)", 
-        desc: "특징: 일상의 소소한 행복을 즐길 줄 아는 건강한 뇌.\n\n코멘트: \"당신은 도파민의 주인입니다! 숲길 산책과 독서를 즐기는 당신, 정말 멋져요.\"" 
-      },
-      dopamineMid: { 
-        title: "⚠️ 도파민 경계경보 (평범한 현대인)", 
-        desc: "특징: 조금씩 스마트폰에 절여지는 중. 가끔 멍 때리기가 필요함.\n\n코멘트: \"알림 설정을 끄는 것부터 시작해볼까요? 아직은 돌아올 수 있는 강입니다.\"" 
-      },
-      dopamineHigh: { 
-        title: "🔥 도파민 풀충전 (쇼츠 중독자)", 
-        desc: "특징: 뇌가 쉴 틈 없이 자극을 갈구함. 집중력이 눈에 띄게 떨어졌을 확률 높음.\n\n코멘트: \"당신의 뇌는 지금 비명을 지르고 있어요! 스마트폰 스크린 타임을 확인하고 절제가 필요합니다.\"" 
-      },
-      dopamineDanger: { 
-        title: "🚨 도파민 디톡스 시급 (브레인 포그)", 
-        desc: "특징: 자극 없이는 일상 수행이 어려운 상태. 늘 안개 낀 듯 멍한 느낌.\n\n코멘트: \"지금 당장 폰을 내려놓으세요! 24시간 디지털 디톡스가 생존을 위해 필요합니다.\"" 
-      }
-    },
-    specialMsgs: {
-      childlike: "✨ 몸은 어른이지만 마음만은 여전히 순수한 동심을 간직하고 계시네요!",
-      stubborn: "⚠️ 나이에 비해 생각이 조금 딱딱하게 굳어있을 수 있으니 유연한 사고가 필요해요.",
-      social: "🤝 타인에 대한 배려와 사회적 성숙도가 매우 높으신 멋진 분이시군요.",
-      digitalDetox: "📱 디지털 기기 사용을 줄이고 자연과 함께하는 시간을 늘려보세요.",
-      meditation: "🧘 명상을 통해 자극 없이도 행복을 느끼는 연습이 필요합니다."
-    },
-    comparisonSimilar: "실제 나이와 정신 연령이 아주 비슷하시네요! 건강한 밸런스를 유지하고 있습니다.",
-    comparisonOlder: "실제 나이보다 {diff}살 정도 더 깊고 성숙한 생각을 가지고 계시군요.",
-    comparisonYounger: "실제 나이보다 {diff}살 정도 더 젊고 유연한 감각을 유지하고 계시네요!"
+export type Language = 'ko' | 'en' | 'jp' | 'zh' | 'lt';
+
+const koData = {
+  home: {
+    title: "나를 알아가는\n테스트 플랫폼",
+    subtitle: "당신의 내면을 들여다보는 시간",
+    startButton: "정신연령 테스트",
+    startDescription: "내 안에 잠든 진짜 나이는 몇 살일까?",
+    dopamineButton: "도파민 중독 테스트",
+    dopamineDescription: "나의 뇌는 얼마나 자극에 중독되어 있을까?",
+    backToHome: "처음으로"
   },
+  title: "정신연령 테스트",
+  subtitle: "무작위로 추출된 15개의 문항으로 당신의 내면을 분석합니다.",
+  dopamineTitle: "도파민 중독 테스트",
+  dopamineSub: "나의 뇌는 얼마나 자극에 중독되어 있을까?",
+  agePlaceholder: "나이",
+  ageUnit: "세",
+  startButton: "테스트 시작",
+  prevButton: "← 이전 질문으로",
+  restartButton: "다시 테스트하기",
+  questionLabel: "질문",
+  resultTitle: "테스트 결과",
+  resultSub: "당신의 상태는...",
+  indices: {
+    childlike: "동심 지수",
+    stubborn: "꼰대 지수",
+    social: "사회성 지수",
+    digital: "디지털 의존도",
+    food: "자극적 식습관",
+    habit: "습관적 탐닉",
+    emotion: "정서적 민감도",
+    brainTemp: "뇌의 온도"
+  },
+  brainStatus: {
+    cool: "🧊 평온한 숲속 뇌",
+    warm: "🌤️ 미지근한 도시 뇌",
+    hot: "🔥 과열된 엔진 뇌",
+    burnt: "💀 타버린 숯불 뇌"
+  },
+  answers: {
+    agreeVery: "매우 그렇다",
+    agree: "그렇다",
+    neutral: "보통이다",
+    disagree: "아니다",
+    disagreeVery: "전혀 아니다"
+  },
+  ageError: "나이를 정확히 입력해 주세요!",
+  results: {
+    child: { title: "[초딩 멘탈]", desc: "호기심 천국, 자기중심적이지만 순수한 영혼." },
+    teen: { title: "[질풍노도 중고딩]", desc: "자의식이 강하고 감정 기복이 있지만 에너지가 넘침." },
+    adult: { title: "[갓생 사는 어른이]", desc: "사회적 예의를 갖췄고 적절히 타협할 줄 아는 상태." },
+    sage: { title: "[인생 2회차 선비]", desc: "해탈의 경지. 어떤 상황에서도 흔들리지 않는 편안함." },
+    dopamineLow: { 
+      title: "🌿 도파민 청정구역 (갓생러)", 
+      desc: "특징: 일상의 소소한 행복을 즐길 줄 아는 건강한 뇌.\n\n코멘트: \"당신은 도파민의 주인입니다! 숲길 산책과 독서를 즐기는 당신, 정말 멋져요.\"" 
+    },
+    dopamineMid: { 
+      title: "⚠️ 도파민 경계경보 (평범한 현대인)", 
+      desc: "특징: 조금씩 스마트폰에 절여지는 중. 가끔 멍 때리기가 필요함.\n\n코멘트: \"알림 설정을 끄는 것부터 시작해볼까요? 아직은 돌아올 수 있는 강입니다.\"" 
+    },
+    dopamineHigh: { 
+      title: "🔥 도파민 풀충전 (쇼츠 중독자)", 
+      desc: "특징: 뇌가 쉴 틈 없이 자극을 갈구함. 집중력이 눈에 띄게 떨어졌을 확률 높음.\n\n코멘트: \"당신의 뇌는 지금 비명을 지르고 있어요! 스마트폰 스크린 타임을 확인하고 절제가 필요합니다.\"" 
+    },
+    dopamineDanger: { 
+      title: "🚨 도파민 디톡스 시급 (브레인 포그)", 
+      desc: "특징: 자극 없이는 일상 수행이 어려운 상태. 늘 안개 낀 듯 멍한 느낌.\n\n코멘트: \"지금 당장 폰을 내려놓으세요! 24시간 디지털 디톡스가 생존을 위해 필요합니다.\"" 
+    }
+  },
+  specialMsgs: {
+    childlike: "✨ 몸은 어른이지만 마음만은 여전히 순수한 동심을 간직하고 계시네요!",
+    stubborn: "⚠️ 나이에 비해 생각이 조금 딱딱하게 굳어있을 수 있으니 유연한 사고가 필요해요.",
+    social: "🤝 타인에 대한 배려와 사회적 성숙도가 매우 높으신 멋진 분이시군요.",
+    digitalDetox: "📱 디지털 기기 사용을 줄이고 자연과 함께하는 시간을 늘려보세요.",
+    meditation: "🧘 명상을 통해 자극 없이도 행복을 느끼는 연습이 필요합니다."
+  },
+  comparisonSimilar: "실제 나이와 정신 연령이 아주 비슷하시네요! 건강한 밸런스를 유지하고 있습니다.",
+  comparisonOlder: "실제 나이보다 {diff}살 정도 더 깊고 성숙한 생각을 가지고 계시군요.",
+  comparisonYounger: "실제 나이보다 {diff}살 정도 더 젊고 유연한 감각을 유지하고 계시네요!"
+};
+
+export type TranslationType = typeof koData;
+
+export const translations: Record<Language, TranslationType> = {
+  ko: koData,
   en: {
     home: {
       title: "Self-Discovery\nTest Platform",
@@ -142,13 +148,13 @@ export const translations = {
       meditation: "🧘 You need to practice feeling happy without stimulation through meditation."
     },
     comparisonSimilar: "Your mental age is very close to your actual age! You have a healthy balance.",
-    comparisonOlder: "You are about {diff} years more mature and thoughtful than your actual age.",
-    comparisonYounger: "You are about {diff} years younger and more flexible in your senses than your actual age!"
+    comparisonOlder: "Your actual age is about {diff} years more mature and thoughtful than your mental age.",
+    comparisonYounger: "Your actual age is about {diff} years younger and more flexible in your senses than your mental age!"
   },
   jp: {
     home: {
-      title: "自分を知るための\nテストプラットフォーム",
-      subtitle: "あなたの内面を見つめる時間",
+      title: "自分を知るための\n테스트 플랫폼",
+      subtitle: "あなたの内면を見つめる時間",
       startButton: "精神年齢テスト",
       startDescription: "自分の中に眠る本当의 年齡は何歳だろう？",
       dopamineButton: "ドーパミン中毒テスト",
@@ -156,12 +162,12 @@ export const translations = {
       backToHome: "ホームへ"
     },
     title: "精神年齢テスト",
-    subtitle: "ランダムに抽出された15の質問であなたの内面を分析します。",
+    subtitle: "ランダムに抽出された15の 질문 であなたの内面を分析します。",
     dopamineTitle: "ドーパミン中毒テスト",
     dopamineSub: "あなたの脳はどれほど刺激に依存していますか？",
     agePlaceholder: "年齢",
     ageUnit: "歳",
-    startButton: "テスト開始",
+    startButton: "테스트 시작",
     prevButton: "← 戻る",
     restartButton: "もう一度テストする",
     questionLabel: "質問",
@@ -172,16 +178,16 @@ export const translations = {
       stubborn: "頑固指数",
       social: "社会性指数",
       digital: "デジタル依存度",
-      food: "刺激的な食習慣",
+      food: "刺激적인 식습관",
       habit: "習慣的な耽溺",
-      emotion: "情緒적 過敏度",
+      emotion: "情緒적 과민도",
       brainTemp: "脳の温度"
     },
     brainStatus: {
-      cool: "🧊 平穏な森の脳",
-      warm: "🌤️ 生ぬるい都会の脳",
-      hot: "🔥 過熱したエンジンの脳",
-      burnt: "💀 燃え尽きた炭の脳"
+      cool: "🧊 平穏な森의 뇌",
+      warm: "🌤️ 미지근한 도시 뇌",
+      hot: "🔥 과열된 엔진 뇌",
+      burnt: "💀 타버린 숯불 뇌"
     },
     answers: {
       agreeVery: "強くそう思う",
@@ -193,13 +199,13 @@ export const translations = {
     ageError: "年齢を正確に入力してください！",
     results: {
       child: { title: "[小学生メンタル]", desc: "好奇心旺盛で自己中心的ですが、純粋な魂の持ち主。" },
-      teen: { title: "[疾風怒濤の中高生]", desc: "自意識が強く、感情の起伏がありますが、エネルギーに満ちています。" },
+      teen: { title: "[疾風怒濤の中高生]", desc: "自意識가 強く、感情의 起伏がありますが、エネルギーに満ちています。" },
       adult: { title: "[立派な大人]", desc: "社会的礼儀をわきまえ、適切に妥協することを知っている状態。" },
       sage: { title: "[人生2回目の隠者]", desc: "解脱의 境地。どんな状況でも揺るがない心の安らぎ。" },
-      dopamineLow: { title: "クリーンな脳 (ドーパミンクリーン)", desc: "刺激に振り回されず、内面の平穏をよく維持しています。" },
-      dopamineMid: { title: "注意段階 (ドーパミン警告)", desc: "時々刺激的なものに依存しますが、自分で調節可能な状態です。" },
-      dopamineHigh: { title: "依存リスク (ドーパミンストーム)", desc: "強い刺激がないと退屈を感じ、日常の集中力が低下した状態です。" },
-      dopamineDanger: { title: "深刻な依存 (ドーパミンの奴隷)", desc: "脳が強い刺激に染まっています。今すぐデジタルデトックスが必要です！" }
+      dopamineLow: { title: "クリーンな脳 (ドーパミンクリーン)", desc: "刺激に振り回されず、内面の平穏을 잘 유지하고 있습니다." },
+      dopamineMid: { title: "注意段階 (ドーパミン警告)", desc: "時々刺激的なものに依存しますが、自分で調節可能な状態입니다." },
+      dopamineHigh: { title: "依存リスク (ドーパミンストーム)", desc: "強い刺激がないと退屈を感じ、日常의 集中力이 저하된 상태입니다." },
+      dopamineDanger: { title: "深刻な依存 (ドーパミンの奴隷)", desc: "脳가 強い刺激に染まっています。今すぐデジタルデトックスが必要です！" }
     },
     specialMsgs: {
       childlike: "✨ 体は大人ですが、心には依然として純粋な童心を秘めていますね！",
@@ -210,7 +216,7 @@ export const translations = {
     },
     comparisonSimilar: "実年齢と精神年齢がとても近いです！健康なバランスを維持しています。",
     comparisonOlder: "実年齢より {diff} 歳ほど深く成熟した考えを持っていますね。",
-    comparisonYounger: "実年齢より {diff} 歳ほど若く柔軟な感覚を維持していますね！"
+    comparisonYounger: "실제 나이보다 {diff}살 정도 더 젊고 유연한 감각을 유지하고 계시네요!"
   },
   zh: {
     home: {
@@ -347,6 +353,3 @@ export const translations = {
     comparisonYounger: "Jūs esate apie {diff} metus jaunesnis ir lankstesnis nei jūsų tikrasis amžius!"
   }
 };
-
-export type Language = keyof typeof translations;
-export type TranslationType = typeof translations['ko'];
