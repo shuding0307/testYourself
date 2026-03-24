@@ -6,6 +6,7 @@ import BaseResult from "../../components/common/BaseResult";
 import ProgressBar from "../../components/common/ProgressBar";
 import type { StrengthCategory } from "../data/questions";
 import { strengthLongDescs } from "../data/resultsDesc";
+import { strengthTranslations } from "../data/translations";
 
 interface StrengthResultProps {
   result: ResultType;
@@ -16,16 +17,17 @@ const StrengthResult: React.FC<StrengthResultProps> = ({
   result,
   onRestart,
 }) => {
-  const { transType, lang } = useLanguageStore();
+  const { lang, common } = useLanguageStore();
+  const t = strengthTranslations[lang];
   const style =
     strengthTypeStyles[result.typeKey] ||
     strengthTypeStyles["drive_creativity"];
 
-  // Use translations from transType.strengthResults
+  // Use translations from t.results
   const characterTrans =
-    transType.strengthResults[
-      result.typeKey as keyof typeof transType.strengthResults
-    ] || transType.strengthResults["default"];
+    t.results[
+      result.typeKey as keyof typeof t.results
+    ] || t.results["default"];
   const displayTitle = characterTrans.title;
   const displayDesc = characterTrans.desc;
 
@@ -48,12 +50,12 @@ const StrengthResult: React.FC<StrengthResultProps> = ({
       }}
     >
       <BaseResult
-        title={transType.resultTitle}
+        title={common.common.resultTitle}
         icon={result.icon}
         badgeText=""
         desc={displayDesc}
         onRestart={onRestart}
-        restartButtonText={transType.restartButton}
+        restartButtonText={common.common.restartButton}
         buttonClass="strength-btn"
         containerClass="strength-result-container"
       >
@@ -101,7 +103,7 @@ const StrengthResult: React.FC<StrengthResultProps> = ({
                 borderRadius: "2px",
               }}
             ></span>
-            {transType.strengthAnalysisTitle}
+            {t.analysisTitle}
           </h3>
           <div
             className="indices-container"
@@ -112,7 +114,7 @@ const StrengthResult: React.FC<StrengthResultProps> = ({
             ).map(([cat, percent]) => (
               <ProgressBar
                 key={cat}
-                label={transType.indices[cat]}
+                label={t.indices[cat]}
                 value={percent}
                 className={cat}
                 style={
@@ -157,7 +159,7 @@ const StrengthResult: React.FC<StrengthResultProps> = ({
               gap: "8px",
             }}
           >
-            🔍 상세 분석
+            {t.detailedTitle}
           </h4>
           {longDesc}
         </div>

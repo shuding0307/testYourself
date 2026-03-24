@@ -17,7 +17,7 @@ const StrengthQuestion: React.FC<StrengthQuestionProps> = ({
   onAnswer,
   onBack,
 }) => {
-  const { lang, transType } = useLanguageStore();
+  const { lang, common } = useLanguageStore();
   if (!question) return null;
 
   return (
@@ -54,7 +54,7 @@ const StrengthQuestion: React.FC<StrengthQuestionProps> = ({
 
         {currentStep > 0 && (
           <button className="back-button" onClick={onBack} style={{ marginTop: '30px' }}>
-            {transType.prevButton.replace('← ', '').replace('←', '').trim()}
+            {common.common.prevButton.replace('← ', '').replace('←', '').trim()}
           </button>
         )}
       </div>

@@ -6,7 +6,7 @@ import { useLanguageStore } from "../store/useLanguageStore";
 const Header: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { transType } = useLanguageStore();
+  const { common } = useLanguageStore();
 
   const isHome = location.pathname === "/";
 
@@ -16,7 +16,7 @@ const Header: React.FC = () => {
         <div className="header-left">
           {!isHome && (
             <button className="header-back-btn" onClick={() => navigate("/")}>
-              <span className="back-icon">←</span> {transType.home.backToHome}
+              <span className="back-icon">←</span> {common.home.backToHome}
             </button>
           )}
           {isHome && (

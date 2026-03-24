@@ -1,5 +1,5 @@
 import React from 'react';
-import { type Language } from '../mentalAge/data/translations';
+import { type Language } from '../data/commonTranslations';
 import { useLanguageStore } from '../store/useLanguageStore';
 
 interface BaseQuestion {
@@ -22,7 +22,7 @@ const TestQuestion: React.FC<TestQuestionProps> = ({
   onAnswer,
   onBack,
 }) => {
-  const { lang, transType } = useLanguageStore();
+  const { lang, common } = useLanguageStore();
   if (!question || !question.text) return null;
 
   return (
@@ -36,22 +36,22 @@ const TestQuestion: React.FC<TestQuestionProps> = ({
 
       <div className="question-card">
         <span className="q-number">
-          {transType.questionLabel} {currentStep + 1} / {totalSteps}
+          {common.common.questionLabel} {currentStep + 1} / {totalSteps}
         </span>
 
         <h2 className="q-text">{question.text[lang]}</h2>
 
         <div className="answer-buttons">
-          <button className="answer-btn agree-very" onClick={() => onAnswer(5)}>{transType.answers.agreeVery}</button>
-          <button className="answer-btn agree" onClick={() => onAnswer(4)}>{transType.answers.agree}</button>
-          <button className="answer-btn neutral" onClick={() => onAnswer(3)}>{transType.answers.neutral}</button>
-          <button className="answer-btn disagree" onClick={() => onAnswer(2)}>{transType.answers.disagree}</button>
-          <button className="answer-btn disagree-very" onClick={() => onAnswer(1)}>{transType.answers.disagreeVery}</button>
+          <button className="answer-btn agree-very" onClick={() => onAnswer(5)}>{common.answers.agreeVery}</button>
+          <button className="answer-btn agree" onClick={() => onAnswer(4)}>{common.answers.agree}</button>
+          <button className="answer-btn neutral" onClick={() => onAnswer(3)}>{common.answers.neutral}</button>
+          <button className="answer-btn disagree" onClick={() => onAnswer(2)}>{common.answers.disagree}</button>
+          <button className="answer-btn disagree-very" onClick={() => onAnswer(1)}>{common.answers.disagreeVery}</button>
         </div>
 
         {currentStep > 0 && (
           <button className="back-button" onClick={onBack}>
-            {transType.prevButton.replace('← ', '').replace('←', '').trim()}
+            {common.common.prevButton.replace('← ', '').replace('←', '').trim()}
           </button>
         )}
       </div>

@@ -1,5 +1,5 @@
 import { type DopamineQuestion } from '../data/questions';
-import { type TranslationType } from '../../mentalAge/data/translations';
+import { type DopamineTranslationType } from '../data/translations';
 
 export interface DopamineResult {
   score: number;
@@ -22,7 +22,7 @@ export interface DopamineResult {
 export const calculateDopamineResult = (
   questions: DopamineQuestion[],
   scores: number[],
-  t: TranslationType
+  t: DopamineTranslationType
 ): DopamineResult => {
   let rawTotalScore = 0;
   let maxPossibleScore = 0;

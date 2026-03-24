@@ -1,4 +1,4 @@
-import type { Language } from "../../mentalAge/data/translations";
+import type { Language } from "../../data/commonTranslations";
 
 export const strengthLongDescs: Record<Language, Record<string, string>> = {
   ko: {

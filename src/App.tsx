@@ -8,7 +8,7 @@ import { useLanguageStore } from "./store/useLanguageStore";
 
 function App() {
   const navigate = useNavigate();
-  const { transType } = useLanguageStore();
+  const { common } = useLanguageStore();
 
   return (
     <div className="main-container">
@@ -21,7 +21,7 @@ function App() {
             <div className="home-content">
               <div className="home-logo floating">🧐</div>
               <h1 className="home-title">
-                {transType.home.title
+                {common.home.title
                   .split("\n")
                   .map((line: string, i: number) => (
                     <span key={i}>
@@ -30,35 +30,35 @@ function App() {
                     </span>
                   ))}
               </h1>
-              <p className="home-subtitle">{transType.home.subtitle}</p>
+              <p className="home-subtitle">{common.home.subtitle}</p>
               <div className="main-button-group">
                 <div
                   className="test-card"
                   onClick={() => navigate("/mental-age")}
                 >
                   <button className="main-test-btn mental-btn">
-                    {transType.home.startButton}
+                    {common.home.startButton}
                   </button>
                   <p className="test-description">
-                    {transType.home.startDescription}
+                    {common.home.startDescription}
                   </p>
                 </div>
 
                 <div className="test-card" onClick={() => navigate("/dopamine")}>
                   <button className="main-test-btn dopamine-btn">
-                    {transType.home.dopamineButton}
+                    {common.home.dopamineButton}
                   </button>
                   <p className="test-description">
-                    {transType.home.dopamineDescription}
+                    {common.home.dopamineDescription}
                   </p>
                 </div>
 
                 <div className="test-card" onClick={() => navigate("/strength")}>
                   <button className="main-test-btn strength-btn">
-                    {transType.home.strengthButton}
+                    {common.home.strengthButton}
                   </button>
                   <p className="test-description">
-                    {transType.home.strengthDescription}
+                    {common.home.strengthDescription}
                   </p>
                 </div>
               </div>

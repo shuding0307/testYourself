@@ -1,6 +1,7 @@
 import React from "react";
 import { useLanguageStore } from "../../store/useLanguageStore";
 import BaseIntro from "../../components/common/BaseIntro";
+import { mentalAgeTranslations } from "../data/translations";
 
 interface MentalAgeIntroProps {
   actualAge: string;
@@ -13,25 +14,26 @@ const MentalAgeIntro: React.FC<MentalAgeIntroProps> = ({
   setActualAge,
   onStart,
 }) => {
-  const { transType } = useLanguageStore();
+  const { lang, common } = useLanguageStore();
+  const t = mentalAgeTranslations[lang];
 
   return (
     <BaseIntro
       icon="🤔"
-      title={transType.title}
-      subtitle={transType.subtitle}
-      buttonText={transType.startButton}
+      title={t.title}
+      subtitle={t.subtitle}
+      buttonText={common.common.startButton}
       onStart={onStart}
     >
       <div className="input-group">
         <input
           type="number"
-          placeholder={transType.agePlaceholder}
+          placeholder={common.common.agePlaceholder}
           value={actualAge}
           onChange={(e) => setActualAge(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && onStart()}
         />
-        <span className="unit">{transType.ageUnit}</span>
+        <span className="unit">{common.common.ageUnit}</span>
       </div>
     </BaseIntro>
   );
