@@ -13,25 +13,25 @@ const MentalAgeIntro: React.FC<MentalAgeIntroProps> = ({
   setActualAge,
   onStart,
 }) => {
-  const { t } = useLanguageStore();
+  const { transType } = useLanguageStore();
 
   return (
     <BaseIntro
       icon="🤔"
-      title={t.title}
-      subtitle={t.subtitle}
-      buttonText={t.startButton}
+      title={transType.title}
+      subtitle={transType.subtitle}
+      buttonText={transType.startButton}
       onStart={onStart}
     >
       <div className="input-group">
         <input
           type="number"
-          placeholder={t.agePlaceholder}
+          placeholder={transType.agePlaceholder}
           value={actualAge}
           onChange={(e) => setActualAge(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && onStart()}
         />
-        <span className="unit">{t.ageUnit}</span>
+        <span className="unit">{transType.ageUnit}</span>
       </div>
     </BaseIntro>
   );

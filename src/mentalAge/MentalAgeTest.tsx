@@ -8,7 +8,7 @@ import { calculateMentalAgeResult } from "./utils/resultCalculator";
 import { useLanguageStore } from "../store/useLanguageStore";
 
 const MentalAgeTest: React.FC = () => {
-  const { t } = useLanguageStore();
+  const { transType } = useLanguageStore();
   const [phase, setPhase] = useState<"intro" | "test" | "result">("intro");
   const [actualAge, setActualAge] = useState<string>("");
   const [activeQuestions, setActiveQuestions] = useState<Question[]>([]);
@@ -17,7 +17,7 @@ const MentalAgeTest: React.FC = () => {
 
   const startTest = () => {
     if (!actualAge || isNaN(Number(actualAge)) || Number(actualAge) <= 0) {
-      alert(t.ageError);
+      alert(transType.ageError);
       return;
     }
 
@@ -62,13 +62,10 @@ const MentalAgeTest: React.FC = () => {
       Number(actualAge),
       activeQuestions,
       scores,
-      t,
+      transType,
     );
     return (
-      <MentalAgeResult
-        result={result}
-        onRestart={() => setPhase("intro")}
-      />
+      <MentalAgeResult result={result} onRestart={() => setPhase("intro")} />
     );
   }
 

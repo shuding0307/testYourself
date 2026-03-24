@@ -8,7 +8,7 @@ import { calculateDopamineResult } from "./utils/resultCalculator";
 import { useLanguageStore } from "../store/useLanguageStore";
 
 const DopamineTest: React.FC = () => {
-  const { t } = useLanguageStore();
+  const { transType } = useLanguageStore();
   const [phase, setPhase] = useState<"intro" | "test" | "result">("intro");
   const [currentStep, setCurrentStep] = useState(0);
   const [scores, setScores] = useState<number[]>([]);
@@ -42,14 +42,15 @@ const DopamineTest: React.FC = () => {
   }
 
   if (phase === "result") {
-    const result = calculateDopamineResult(dopamineQuestions, scores, t);
+    const result = calculateDopamineResult(
+      dopamineQuestions,
+      scores,
+      transType,
+    );
 
     return (
       <div className="dopamine-theme">
-        <DopamineResult
-          result={result}
-          onRestart={() => setPhase("intro")}
-        />
+        <DopamineResult result={result} onRestart={() => setPhase("intro")} />
       </div>
     );
   }
