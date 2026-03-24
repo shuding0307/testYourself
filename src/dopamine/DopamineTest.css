@@ -80,19 +80,57 @@
   background: linear-gradient(90deg, #ffb347, #ff4500);
 }
 
-/* 지수 바 컬러 */
-.fill.digital {
-  background: #ff4500;
+/* 지수 컨테이너 및 바 스타일 */
+.indices-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
 }
-.fill.food {
-  background: #ffa500;
+
+.index-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
 }
-.fill.habit {
-  background: #ffd700;
+
+.index-item span:first-child {
+  flex: 0 0 100px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #555;
+  text-align: left;
 }
-.fill.emotion {
-  background: #ff6347;
+
+.index-item .bar {
+  flex: 1;
+  height: 12px;
+  background: #f0f0f0;
+  border-radius: 6px;
+  overflow: hidden;
 }
+
+.index-item .fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 1s ease-out;
+}
+
+.index-item .val {
+  flex: 0 0 45px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ff4500;
+  text-align: right;
+}
+
+/* 지수별 바 컬러 */
+.fill.digital { background: #ff4500; }
+.fill.food { background: #ffa500; }
+.fill.habit { background: #ffd700; }
+.fill.emotion { background: #ff6347; }
 
 /* 질문 카드 강조 */
 .dopamine-theme .q-number {
@@ -185,11 +223,12 @@
 /* 캐릭터 아이콘 스타일 */
 .character-icon {
   font-size: 5rem;
-  margin-bottom: 40px; /* 20px -> 40px로 증가 */
+  margin-top: 30px; /* 상단 여백 추가하여 위치 낮춤 */
+  margin-bottom: 40px;
   display: block;
 }
 
-/* 둥둥 떠다니는 애니메이션 */
+/* 둥둥 떠다니는 애니메이션 (아래로 움직이도록 수정) */
 .floating {
   animation: floating 3s ease-in-out infinite;
 }
@@ -199,8 +238,8 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-15px);
-  }
+    transform: translateY(15px);
+  } /* 위가 아닌 아래로 15px 이동 */
   100% {
     transform: translateY(0px);
   }

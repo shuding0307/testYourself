@@ -182,6 +182,7 @@
 
 .home-logo {
   font-size: 5rem;
+  margin-top: 30px; /* 상단 여백 추가 */
   margin-bottom: 20px;
 }
 
@@ -191,7 +192,7 @@
 
 @keyframes floating {
   0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
+  50% { transform: translateY(15px); } /* 아래로 15px 이동 */
   100% { transform: translateY(0px); }
 }
 

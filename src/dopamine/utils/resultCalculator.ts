@@ -41,7 +41,7 @@ export const calculateDopamineResult = (
     categoryMax[q.category] += 5 * weight;
   });
 
-  const normalizedScore = ((rawTotalScore - questions.length) / (maxPossibleScore - questions.length)) * 40;
+  const normalizedScore = ((rawTotalScore - questions.length) / (maxPossibleScore - questions.length)) * 100;
 
   const getIndex = (cat: keyof typeof categoryScores) => {
     if (categoryMax[cat] === 0) return 0;
@@ -68,19 +68,19 @@ export const calculateDopamineResult = (
   let icon = "";
   let brainStatus = "";
   
-  const brainTemp = Number((36.5 + (normalizedScore * 1.5)).toFixed(1));
+  const brainTemp = Number((36.5 + (normalizedScore * 0.6)).toFixed(1));
 
-  if (normalizedScore <= 15) {
+  if (normalizedScore <= 37) {
     resultTitle = t.results.dopamineLow.title;
     desc = t.results.dopamineLow.desc;
     icon = "🌿";
     brainStatus = t.brainStatus.cool;
-  } else if (normalizedScore <= 25) {
+  } else if (normalizedScore <= 62) {
     resultTitle = t.results.dopamineMid.title;
     desc = t.results.dopamineMid.desc;
     icon = "🌤️";
     brainStatus = t.brainStatus.warm;
-  } else if (normalizedScore <= 35) {
+  } else if (normalizedScore <= 87) {
     resultTitle = t.results.dopamineHigh.title;
     desc = t.results.dopamineHigh.desc;
     icon = "🔥";
@@ -95,7 +95,7 @@ export const calculateDopamineResult = (
   let specialMsg = "";
   if (digitalIdx > 80) {
     specialMsg = t.specialMsgs.digitalDetox;
-  } else if (normalizedScore > 30) {
+  } else if (normalizedScore > 75) {
     specialMsg = t.specialMsgs.meditation;
   }
 
