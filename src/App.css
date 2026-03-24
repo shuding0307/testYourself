@@ -170,7 +170,7 @@
   justify-content: flex-start;
   min-height: 100vh;
   background-color: #f7f9fc;
-  font-family: 'Pretendard', sans-serif;
+  font-family: "Pretendard", sans-serif;
   padding: 40px 20px;
 }
 
@@ -182,8 +182,9 @@
 
 .home-logo {
   font-size: 5rem;
-  margin-top: 30px; /* 상단 여백 추가 */
-  margin-bottom: 20px;
+  margin-top: 20px; /* 상단 여백 추가 */
+  margin-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .floating {
@@ -191,9 +192,15 @@
 }
 
 @keyframes floating {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(15px); } /* 아래로 15px 이동 */
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(15px);
+  } /* 아래로 15px 이동 */
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .home-title {
@@ -252,7 +259,7 @@
 
 /* 도파민 테스트 버튼 (오렌지/레드 계열) */
 .dopamine-btn {
-  background: linear-gradient(135deg, #FF8C00, #FF4500);
+  background: linear-gradient(135deg, #ff8c00, #ff4500);
   box-shadow: 0 10px 20px rgba(255, 140, 0, 0.3);
 }
 
@@ -301,7 +308,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
 }
 
 .back-btn:hover {
@@ -310,6 +317,12 @@
   border-color: #a777e3;
 }
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

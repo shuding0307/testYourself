@@ -10,7 +10,7 @@ const koData = {
     dopamineDescription: "나의 뇌는 얼마나 자극에 중독되어 있을까?",
     strengthButton: "나의 강점 테스트",
     strengthDescription: "나만 모르는 나의 특별한 강점은 무엇일까?",
-    backToHome: "처음으로",
+    backToHome: "메인으로",
   },
   title: "정신연령 테스트",
   subtitle: "무작위로 추출된 15개의 문항으로 당신의 내면을 분석합니다.",
@@ -289,7 +289,8 @@ export const translations: Record<Language, TranslationType> = {
       dopamineButton: "ドーパミン中毒テスト",
       dopamineDescription: "あなたの脳はどれほど刺激に依存していますか？",
       strengthButton: "あなたの強みテスト",
-      strengthDescription: "あなただけが知らないあなたの特別な強みは何でしょうか？",
+      strengthDescription:
+        "あなただけが知らないあなたの特別な強みは何でしょうか？",
       backToHome: "ホームへ",
     },
     title: "精神年齢テスト",
