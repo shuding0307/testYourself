@@ -7,14 +7,14 @@ interface DopamineIntroProps {
 }
 
 const DopamineIntro: React.FC<DopamineIntroProps> = ({ onStart }) => {
-  const { t } = useLanguageStore();
-  
+  const { transType } = useLanguageStore();
+
   return (
     <BaseIntro
       icon="📱"
-      title={t.dopamineTitle}
-      subtitle={t.dopamineSub}
-      buttonText={t.startButton}
+      title={transType.dopamineTitle}
+      subtitle={transType.dopamineSub}
+      buttonText={transType.startButton}
       onStart={onStart}
       containerClass="dopamine-theme"
       buttonClass="dopamine-btn"
