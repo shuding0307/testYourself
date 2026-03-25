@@ -2,7 +2,8 @@ import React from "react";
 import { useLanguageStore } from "../../store/useLanguageStore";
 
 const TermsOfService: React.FC = () => {
-  const { footer } = useLanguageStore();
+  const { common } = useLanguageStore();
+  const { footer } = common;
 
   return (
     <div className="legal-page">

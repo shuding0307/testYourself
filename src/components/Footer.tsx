@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { useLanguageStore } from "../store/useLanguageStore";
 
 const Footer: React.FC = () => {
-  const { footer } = useLanguageStore();
+  const { common } = useLanguageStore();
+  const { footer } = common;
 
   return (
     <footer className="site-footer">
