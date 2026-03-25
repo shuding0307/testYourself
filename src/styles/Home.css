@@ -8,7 +8,7 @@
 .home-logo {
   font-size: 5rem;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .floating {
@@ -16,9 +16,15 @@
 }
 
 @keyframes floating {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(15px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .home-title {
@@ -121,46 +127,64 @@
 .mental-card:hover {
   border-color: #6e8efb;
 }
-.mental-card .card-tag { color: #6e8efb; }
-.mental-card .card-icon { background: rgba(110, 142, 251, 0.1); }
-.mental-card:hover .card-arrow { color: #6e8efb; }
+.mental-card .card-tag {
+  color: #6e8efb;
+}
+.mental-card .card-icon {
+  background: rgba(110, 142, 251, 0.1);
+}
+.mental-card:hover .card-arrow {
+  color: #6e8efb;
+}
 
 /* Dopamine Card */
 .dopamine-card:hover {
   border-color: #ff8c00;
 }
-.dopamine-card .card-tag { color: #ff8c00; }
-.dopamine-card .card-icon { background: rgba(255, 140, 0, 0.1); }
-.dopamine-card:hover .card-arrow { color: #ff8c00; }
+.dopamine-card .card-tag {
+  color: #ff8c00;
+}
+.dopamine-card .card-icon {
+  background: rgba(255, 140, 0, 0.1);
+}
+.dopamine-card:hover .card-arrow {
+  color: #ff8c00;
+}
 
 /* Strength Card */
 .strength-card:hover {
   border-color: #10b981;
 }
-.strength-card .card-tag { color: #10b981; }
-.strength-card .card-icon { background: rgba(16, 185, 129, 0.1); }
-.strength-card:hover .card-arrow { color: #10b981; }
+.strength-card .card-tag {
+  color: #10b981;
+}
+.strength-card .card-icon {
+  background: rgba(16, 185, 129, 0.1);
+}
+.strength-card:hover .card-arrow {
+  color: #10b981;
+}
 
 @media (max-width: 480px) {
   .home-title {
     font-size: 2.2rem;
   }
-  
+
   .test-card {
     padding: 20px;
   }
-  
+
   .card-icon {
     width: 60px;
     height: 60px;
     font-size: 2rem;
     margin-right: 16px;
   }
-  
+
   .card-title {
     font-size: 1.2rem;
   }
-  
+
   .card-description {
     font-size: 0.85rem;
   }
