@@ -3,43 +3,65 @@ import { useLanguageStore } from "../../store/useLanguageStore";
 
 const TermsOfService: React.FC = () => {
   const { common } = useLanguageStore();
-  const { footer } = common;
+  const { terms } = common;
 
   return (
     <div className="legal-page">
-      <h1>{footer.terms}</h1>
-      <p>Last updated: March 25, 2026</p>
+      <h1>{terms.title}</h1>
+      <p className="last-updated">{terms.lastUpdated}</p>
       
-      <section>
-        <h2>1. Acceptance of Terms</h2>
-        <p>By using Test Yourself, you agree to these terms. If you do not agree, please do not use the service.</p>
-      </section>
-
-      <section>
-        <h2>2. Use of Service</h2>
-        <p>The tests are for entertainment and self-reflection purposes only. They are not professional psychological diagnoses.</p>
-      </section>
-
-      <section>
-        <h2>3. Intellectual Property</h2>
-        <p>All content on this site is the property of Test Yourself and may not be reproduced without permission.</p>
-      </section>
+      {terms.sections.map((section, index) => (
+        <section key={index}>
+          <h2>{section.title}</h2>
+          <p>{section.content}</p>
+        </section>
+      ))}
       
       <style>{`
         .legal-page {
           max-width: 800px;
           margin: 40px auto;
-          padding: 40px;
+          padding: 60px 40px;
           background: white;
-          border-radius: 20px;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-          line-height: 1.6;
+          border-radius: 30px;
+          box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+          line-height: 1.8;
           color: #2c3e50;
         }
-        .legal-page h1 { margin-bottom: 30px; color: #a777e3; }
-        .legal-page h2 { margin-top: 30px; margin-bottom: 15px; font-size: 1.4rem; }
-        .legal-page p { margin-bottom: 15px; color: #7f8c8d; }
-        .legal-page section { margin-bottom: 40px; }
+        .legal-page h1 { 
+          margin-bottom: 10px; 
+          color: #a777e3; 
+          font-size: 2.5rem;
+          font-weight: 800;
+        }
+        .last-updated {
+          color: #999;
+          font-size: 0.9rem;
+          margin-bottom: 50px;
+          border-bottom: 1px solid #eee;
+          padding-bottom: 20px;
+        }
+        .legal-page h2 { 
+          margin-top: 40px; 
+          margin-bottom: 20px; 
+          font-size: 1.5rem;
+          color: #333;
+          font-weight: 700;
+        }
+        .legal-page p { 
+          margin-bottom: 20px; 
+          color: #555;
+          text-align: justify;
+        }
+        .legal-page section { margin-bottom: 20px; }
+        
+        @media (max-width: 600px) {
+          .legal-page {
+            margin: 20px;
+            padding: 40px 20px;
+          }
+          .legal-page h1 { font-size: 2rem; }
+        }
       `}</style>
     </div>
   );

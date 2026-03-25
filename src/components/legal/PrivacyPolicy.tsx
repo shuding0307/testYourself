@@ -3,43 +3,65 @@ import { useLanguageStore } from "../../store/useLanguageStore";
 
 const PrivacyPolicy: React.FC = () => {
   const { common } = useLanguageStore();
-  const { footer } = common;
+  const { privacy } = common;
 
   return (
     <div className="legal-page">
-      <h1>{footer.privacy}</h1>
-      <p>Last updated: March 25, 2026</p>
+      <h1>{privacy.title}</h1>
+      <p className="last-updated">{privacy.lastUpdated}</p>
       
-      <section>
-        <h2>1. Information We Collect</h2>
-        <p>We do not collect any personally identifiable information. Test results are processed locally in your browser and are not stored on our servers.</p>
-      </section>
-
-      <section>
-        <h2>2. Cookies and Tracking</h2>
-        <p>We use Google AdSense to serve ads. Google may use cookies to serve ads based on your prior visits to this or other websites.</p>
-      </section>
-
-      <section>
-        <h2>3. Third Party Services</h2>
-        <p>This site uses Google AdSense. You can opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Ads Settings</a>.</p>
-      </section>
+      {privacy.sections.map((section, index) => (
+        <section key={index}>
+          <h2>{section.title}</h2>
+          <p>{section.content}</p>
+        </section>
+      ))}
       
       <style>{`
         .legal-page {
           max-width: 800px;
           margin: 40px auto;
-          padding: 40px;
+          padding: 60px 40px;
           background: white;
-          border-radius: 20px;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-          line-height: 1.6;
+          border-radius: 30px;
+          box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+          line-height: 1.8;
           color: #2c3e50;
         }
-        .legal-page h1 { margin-bottom: 30px; color: #a777e3; }
-        .legal-page h2 { margin-top: 30px; margin-bottom: 15px; font-size: 1.4rem; }
-        .legal-page p { margin-bottom: 15px; color: #7f8c8d; }
-        .legal-page section { margin-bottom: 40px; }
+        .legal-page h1 { 
+          margin-bottom: 10px; 
+          color: #a777e3; 
+          font-size: 2.5rem;
+          font-weight: 800;
+        }
+        .last-updated {
+          color: #999;
+          font-size: 0.9rem;
+          margin-bottom: 50px;
+          border-bottom: 1px solid #eee;
+          padding-bottom: 20px;
+        }
+        .legal-page h2 { 
+          margin-top: 40px; 
+          margin-bottom: 20px; 
+          font-size: 1.5rem;
+          color: #333;
+          font-weight: 700;
+        }
+        .legal-page p { 
+          margin-bottom: 20px; 
+          color: #555;
+          text-align: justify;
+        }
+        .legal-page section { margin-bottom: 20px; }
+        
+        @media (max-width: 600px) {
+          .legal-page {
+            margin: 20px;
+            padding: 40px 20px;
+          }
+          .legal-page h1 { font-size: 2rem; }
+        }
       `}</style>
     </div>
   );

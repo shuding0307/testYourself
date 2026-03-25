@@ -18,7 +18,6 @@ const Footer: React.FC = () => {
           <div className="footer-links">
             <div className="link-group">
               <h4>Platform</h4>
-              <Link to="/">{footer.about}</Link>
               <Link to="/contact">{footer.contact}</Link>
             </div>
             <div className="link-group">
