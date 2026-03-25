@@ -13,6 +13,106 @@ export const commonTranslations = {
       strengthDescription: "나만 모르는 나의 특별한 강점은 무엇일까?",
       backToHome: "메인으로",
     },
+    footer: {
+      privacy: "개인정보처리방침",
+      terms: "이용약관",
+      contact: "문의하기",
+      rights: "© 2026 Test Yourself. All rights reserved.",
+      description:
+        "Test Yourself는 다양한 테스트를 통해 자신의 성향과 감정을 더 깊이 이해할 수 있도록 돕는 심리 테스트 플랫폼입니다. 각 테스트는 일상 속 행동 패턴과 심리 이론을 참고해 구성되었으며, 누구나 공감할 수 있는 인사이트를 제공하는 것을 목표로 합니다. 본 결과는 재미와 참고를 위한 콘텐츠로, 자신을 돌아보는 하나의 가벼운 계기로 활용해 주세요.",
+    },
+    contact: {
+      title: "문의하기",
+      subtitle: "궁금한 점이나 피드백이 있으신가요?",
+      description:
+        "서비스 이용 중 불편한 점이나 제안하고 싶은 아이디어가 있다면 언제든 알려주세요. 여러분의 소중한 의견은 서비스 개선에 큰 도움이 됩니다.",
+      emailLabel: "이메일 주소",
+      revealButton: "이메일 보기",
+      copyButton: "주소 복사",
+      copied: "복사되었습니다!",
+      businessHours: "평일 기준 2~3일 내에 답변을 드리도록 노력하겠습니다.",
+    },
+    privacy: {
+      title: "개인정보처리방침",
+      lastUpdated: "최종 수정일: 2026년 3월 25일",
+      sections: [
+        {
+          title: "1. 개인정보의 수집",
+          content:
+            "Test Yourself는 사용자를 식별할 수 있는 개인정보를 수집하지 않습니다. 다만, 서비스 개선을 위해 연령대, 지역 등 개인을 식별할 수 없는 비식별 통계 데이터는 수집될 수 있습니다.",
+        },
+        {
+          title: "2. 이용 목적",
+          content:
+            "수집된 비식별 데이터는 오직 테스트 결과 생성(재미 및 자기 성찰)과 광고 환경 최적화를 위해서만 사용됩니다.",
+        },
+        {
+          title: "3. 보유 기간",
+          content:
+            "모든 데이터는 세션 기반으로 일시적으로 유지되며, 브라우저 탭을 닫거나 페이지를 새로고침할 경우 즉시 삭제됩니다.",
+        },
+        {
+          title: "4. 쿠키 및 광고 식별자",
+          content:
+            "본 사이트는 Google AdSense 및 Google Analytics와 같은 제3자 서비스를 사용하여 사용자의 관심사에 따른 맞춤형 광고를 제공하고 트래픽을 분석합니다. 이 과정에서 쿠키나 광고 식별자가 사용될 수 있습니다.",
+        },
+        {
+          title: "5. 제3자 서비스",
+          content:
+            "광고 및 분석을 위해 Google의 서비스를 이용하며, 해당 서비스 제공업체는 자체적인 개인정보 처리방침을 따릅니다.",
+        },
+        {
+          title: "6. 데이터 보안",
+          content:
+            "통계용 데이터는 암호화되어 안전한 프로토콜을 통해 전송 및 보호됩니다. 사용자의 프라이버시 보호를 최우선으로 합니다.",
+        },
+        {
+          title: "7. 문의처",
+          content:
+            "개인정보 보호와 관련된 문의사항은 하단의 '문의하기' 섹션에 기재된 이메일을 통해 연락해 주시기 바랍니다.",
+        },
+      ],
+    },
+    terms: {
+      title: "이용약관",
+      lastUpdated: "최종 수정일: 2026년 3월 25일",
+      sections: [
+        {
+          title: "1. 서비스 목적",
+          content:
+            "Test Yourself는 재미와 자기 성찰을 돕기 위한 심리 테스트 콘텐츠를 제공합니다.",
+        },
+        {
+          title: "2. 서비스 이용",
+          content:
+            "본 서비스는 오직 오락 목적으로만 제공됩니다. 어떠한 경우에도 의학적, 심리적 또는 전문적인 진단이나 조언을 대신할 수 없습니다.",
+        },
+        {
+          title: "3. 책임의 한계",
+          content:
+            "사용자가 테스트 결과를 바탕으로 내린 결정이나 행동에 대해 본 서비스는 어떠한 법적 책임도 지지 않습니다. 서비스 이용은 사용자의 자발적 판단에 따릅니다.",
+        },
+        {
+          title: "4. 저작권",
+          content:
+            "본 사이트의 디자인, 로직, 질문 문항 및 결과 텍스트를 포함한 모든 콘텐츠의 지적 재산권은 Test Yourself에 있습니다.",
+        },
+        {
+          title: "5. 서비스 변경 및 중단",
+          content:
+            "운영상의 필요에 따라 사전 고지 없이 서비스 내용이 변경되거나 일시 중단될 수 있습니다.",
+        },
+        {
+          title: "6. 사용자의 의무",
+          content:
+            "사용자는 서비스를 해킹하거나 역설계해서는 안 되며, 콘텐츠를 무단으로 배포하거나 상업적으로 이용해서는 안 됩니다.",
+        },
+        {
+          title: "7. 준거법",
+          content: "본 약관은 대한민국 법률에 따라 해석되고 규율됩니다.",
+        },
+      ],
+    },
     common: {
       startButton: "테스트 시작",
       prevButton: "← 이전 질문으로",
@@ -44,6 +144,107 @@ export const commonTranslations = {
       strengthDescription: "What are your special strengths you didn't know?",
       backToHome: "Home",
     },
+    footer: {
+      privacy: "Privacy Policy",
+      terms: "Terms of Service",
+      contact: "Contact",
+      rights: "© 2026 Test Yourself. All rights reserved.",
+      description:
+        "Test Yourself is a psychological testing platform that helps you gain a deeper understanding of your personality and emotions through various tests. Each test is designed based on daily behavior patterns and psychological theories, aiming to provide insights that anyone can relate to. Please use these results for fun and reference, as a lighthearted opportunity for self-reflection.",
+    },
+    contact: {
+      title: "Contact Us",
+      subtitle: "Have any questions or feedback?",
+      description:
+        "If you have any inconveniences or ideas to suggest while using the service, please let us know at any time. Your valuable feedback is a great help in improving the service.",
+      emailLabel: "Email Address",
+      revealButton: "Show Email",
+      copyButton: "Copy Address",
+      copied: "Copied!",
+      businessHours: "We will try to respond within 2-3 business days.",
+    },
+    privacy: {
+      title: "Privacy Policy",
+      lastUpdated: "Last Updated: March 25, 2026",
+      sections: [
+        {
+          title: "1. Information Collection",
+          content:
+            "Test Yourself does not collect identifiable personal information. However, minimal de-identified statistical data (such as age range and region) may be collected to improve our services.",
+        },
+        {
+          title: "2. Purpose of Use",
+          content:
+            "Data is used solely for generating test results (for entertainment and self-reflection) and for advertisement optimization.",
+        },
+        {
+          title: "3. Retention Period",
+          content:
+            "Data is temporary and session-based. It is immediately deleted when you close the browser tab or refresh the page.",
+        },
+        {
+          title: "4. Cookies and Ad Identifiers",
+          content:
+            "We use third-party services like Google AdSense and Google Analytics, which may use cookies or advertising identifiers to serve personalized ads based on your interests and analyze traffic.",
+        },
+        {
+          title: "5. Third-Party Services",
+          content:
+            "We utilize Google services for ads and analytics. These providers operate under their own privacy policies.",
+        },
+        {
+          title: "6. Data Security",
+          content:
+            "Statistical data is encrypted and protected using secure transmission protocols. We prioritize the protection of your privacy.",
+        },
+        {
+          title: "7. Contact Information",
+          content:
+            "For inquiries regarding privacy, please contact us via the email provided in the 'Contact' section.",
+        },
+      ],
+    },
+    terms: {
+      title: "Terms of Service",
+      lastUpdated: "Last Updated: March 25, 2026",
+      sections: [
+        {
+          title: "1. Purpose of the Service",
+          content:
+            "Test Yourself provides psychological test content intended for entertainment and self-reflection purposes.",
+        },
+        {
+          title: "2. Service Usage",
+          content:
+            "This service is for entertainment only. It is not a substitute for medical, psychological, or professional diagnosis or advice.",
+        },
+        {
+          title: "3. Limitation of Liability",
+          content:
+            "We assume no legal responsibility for any decisions or actions taken by users based on the test results. Use the service at your own discretion.",
+        },
+        {
+          title: "4. Copyright",
+          content:
+            "All content, including design, code logic, test questions, and results, is the intellectual property of Test Yourself.",
+        },
+        {
+          title: "5. Service Changes/Suspension",
+          content:
+            "We reserve the right to modify or suspend the service at any time without prior notice.",
+        },
+        {
+          title: "6. User Obligations",
+          content:
+            "Users must not attempt to hack, reverse engineer, or distribute the content without authorization.",
+        },
+        {
+          title: "7. Governing Law",
+          content:
+            "These terms are governed by and construed in accordance with the laws of the Republic of Korea.",
+        },
+      ],
+    },
     common: {
       startButton: "Start Test",
       prevButton: "← Previous",
@@ -70,11 +271,111 @@ export const commonTranslations = {
       startButton: "精神年齢テスト",
       startDescription: "自分の中に眠る本当の年齢は何歳だろう？",
       dopamineButton: "ドーパミン中毒テスト",
-      dopamineDescription: "あなたの脳はどれほど刺激에 依存していますか？",
+      dopamineDescription: "あなたの脳はどれほど刺激に依存していますか？",
       strengthButton: "あなたの強みテスト",
       strengthDescription:
         "あなただけが知らないあなたの特別な強みは何でしょうか？",
       backToHome: "ホームへ",
+    },
+    footer: {
+      privacy: "プライバシーポリシー",
+      terms: "利用規約",
+      contact: "お問い合わせ",
+      rights: "© 2026 Test Yourself. All rights reserved.",
+      description:
+        "Test Yourselfは、様々なテストを通じて自分の傾向や感情をより深く理解できるよう支援する心理テストプラットフォームです。各テストは日常の行動パターンや心理学の理論を参考に構成されており、誰もが共感できるインサイトを提供することを目指しています。本結果は楽しみと参考のためのコンテンツとして、自分を振り返る一つの気軽なきっかけとして活用してください。",
+    },
+    contact: {
+      title: "お問い合わせ",
+      subtitle: "ご質問やフィードバックはありますか？",
+      description:
+        "サービスの利用중에不便な点や提案したいアイデアがあれば、いつでもお知らせください。皆様の貴重なご意見は、サービスの改善に役立てさせていただきます。",
+      emailLabel: "メールアドレス",
+      revealButton: "メールを表示",
+      copyButton: "アドレスをコピー",
+      copied: "コピーしました！",
+      businessHours: "平日基準で2〜3日以内に回答できるよう努めます。",
+    },
+    privacy: {
+      title: "プライバシーポリシー",
+      lastUpdated: "最終更新日: 2026年3月25日",
+      sections: [
+        {
+          title: "1. 情報の収集",
+          content:
+            "Test Yourself は、ユーザーを特定できる個人情報を収集しません。ただし、サービス向上のため、年齢層や地域など、個人を特定できない非識別統計データを収集する場合があります。",
+        },
+        {
+          title: "2. 利用目的",
+          content:
+            "収集された非識別データは、テスト結果の生成（娯楽および自己省察）と広告環境の最適化のためにのみ使用されます。",
+        },
+        {
+          title: "3. 保存期間",
+          content:
+            "すべてのデータはセッションベースで一時的に保持され、ブラウザのタブを閉じるかページを更新すると即座に削除されます。",
+        },
+        {
+          title: "4. クッキーおよび広告識別子",
+          content:
+            "当サイトは Google AdSense および Google Analytics などの第三者サービスを使用して、ユーザーの興味に基づいたパーソナライズ広告の提供やトラフィック分析を行います。この過程でクッキーや広告識別子が使用されることがあります。",
+        },
+        {
+          title: "5. 第三者サービス",
+          content:
+            "広告および分析のために Google のサービスを利用しており、これらのプロバイダーは独自のプライバシーポリシーに従って運用されています。",
+        },
+        {
+          title: "6. データセキュリティ",
+          content:
+            "統計用データは暗号化され、安全なプロトコルを通じて送信および保護されます。ユーザーのプライバシー保護を最優先事項としています。",
+        },
+        {
+          title: "7. お問い合わせ",
+          content:
+            "プライバシーに関するお問い合わせは、お問い合わせセクションに記載されているメールアドレスまでご連絡ください。",
+        },
+      ],
+    },
+    terms: {
+      title: "利用規約",
+      lastUpdated: "最終更新日: 2026年3月25日",
+      sections: [
+        {
+          title: "1. サービスの目的",
+          content:
+            "Test Yourself は、娯楽と自己省察を目的とした心理テストコンテンツを提供します。",
+        },
+        {
+          title: "2. サービスの利用",
+          content:
+            "本サービスは娯楽目的のみで提供されています。いかなる場合も、医学的、心理的、または専門的な診断や助言に代わるものではありません。",
+        },
+        {
+          title: "3. 責任の制限",
+          content:
+            "ユーザーがテスト結果に基づいて下した決定や行動について、本サービスは一切の法的責任を負いません。サービスの利用はユーザー自身の判断で行ってください。",
+        },
+        {
+          title: "4. 著作権",
+          content:
+            "デザイン、ロジック、質問項目、結果テキストを含む当サイトのすべてのコンテンツの知的財産権は Test Yourself に帰属します。",
+        },
+        {
+          title: "5. サービスの変更・中断",
+          content:
+            "運営上の必要に応じて、事前の通知なしにサービス内容の変更や一時的な中断を行う場合があります。",
+        },
+        {
+          title: "6. ユーザーの義務",
+          content:
+            "ユーザーはサービスのハッキングやリバースエンジニアリングを行ってはならず、コンテンツを無단で配布したり商業的に利用したりしてはなりません。",
+        },
+        {
+          title: "7. 準拠法",
+          content: "本規約は大韓民国の法律に従って解釈され、規定されます。",
+        },
+      ],
     },
     common: {
       startButton: "テスト開始",
@@ -107,13 +408,110 @@ export const commonTranslations = {
       strengthDescription: "你不知道的自己的特别优势是什么？",
       backToHome: "回到主页",
     },
+    footer: {
+      privacy: "隐私政策",
+      terms: "服务条款",
+      contact: "联系我们",
+      rights: "© 2026 Test Yourself. All rights reserved.",
+      description:
+        "Test Yourself 是一个心理测试平台，通过各种测试帮助您更深入地了解自己的性格和情感。每个测试都参考了日常行为模式和心理学理论，旨在提供任何人都能产生共鸣的见解。本结果仅供娱乐和参考，请将其作为反思自我的一种轻松契机。",
+    },
+    contact: {
+      title: "联系我们",
+      subtitle: "有任何问题或反馈吗？",
+      description:
+        "如果您在服务使用过程中有任何不便或想提议的想法，请随时告诉我们。您的宝贵意见对改进服务大有帮助。",
+      emailLabel: "电子邮件地址",
+      revealButton: "显示电子邮件",
+      copyButton: "复制地址",
+      copied: "已复制！",
+      businessHours: "我们将努力在 2-3 个工作日内给予答复。",
+    },
+    privacy: {
+      title: "隐私政策",
+      lastUpdated: "最后更新日期：2026年3月25日",
+      sections: [
+        {
+          title: "1. 信息收集",
+          content:
+            "Test Yourself 不收集可识别用户的个人信息。但是，为了改进服务，可能会收集年龄段、地区等经过去标识化的统计数据。",
+        },
+        {
+          title: "2. 使用目的",
+          content:
+            "数据仅用于生成测试结果（娱乐和自我反思）以及优化广告体验。",
+        },
+        {
+          title: "3. 保留期限",
+          content:
+            "所有数据均基于会话临时保存，当您关闭浏览器标签或刷新页面时将立即删除。",
+        },
+        {
+          title: "4. Cookie 和广告标识符",
+          content:
+            "我们使用 Google AdSense 和 Google Analytics 等第三方服务，这些服务可能会使用 Cookie 或广告标识符根据您的兴趣提供个性化广告并分析流量。",
+        },
+        {
+          title: "5. 第三方服务",
+          content:
+            "我们利用 Google 服务进行广告 and 分析。这些提供商根据其各自的隐私政策运营。",
+        },
+        {
+          title: "6. 数据安全",
+          content:
+            "统计数据经过加密，并通过安全协议进行传输和保护。我们优先保护用户的隐私。",
+        },
+        {
+          title: "7. 联系信息",
+          content:
+            "有关隐私的咨询，请通过“联系我们”部分提供的电子邮件与我们联系。",
+        },
+      ],
+    },
+    terms: {
+      title: "服务条款",
+      lastUpdated: "最后更新日期：2026年3月25日",
+      sections: [
+        {
+          title: "1. 服务目的",
+          content: "Test Yourself 提供旨在娱乐和自我反思的心理测试内容。",
+        },
+        {
+          title: "2. 服务使用",
+          content:
+            "本服务仅供娱乐。它不能替代医学、心理或专业的诊断或建议。",
+        },
+        {
+          title: "3. 责任限制",
+          content:
+            "对于用户根据测试结果做出的任何决定或采取的行动，我们不承担任何法律责任。请自行决定是否使用本服务。",
+        },
+        {
+          title: "4. 版权",
+          content:
+            "所有内容，包括设计、代码逻辑、测试问题和结果，均为 Test Yourself 的知识产权。",
+        },
+        {
+          title: "5. 服务变更/暂停",
+          content: "我们保留随时修改或暂停服务的权利，恕不另行通知。",
+        },
+        {
+          title: "6. 用户义务",
+          content: "用户不得尝试黑客攻击、逆向工程或擅自分发内容。",
+        },
+        {
+          title: "7. 适用法律",
+          content: "本条款受大韩民国法律管辖并按其解释。",
+        },
+      ],
+    },
     common: {
       startButton: "开始测试",
       prevButton: "← 返回",
       restartButton: "重新测试",
       questionLabel: "题目",
       resultTitle: "测试结果",
-      resultSub: "你的状态是...",
+      resultSub: "你的状态...",
       agePlaceholder: "年龄",
       ageUnit: "岁",
       ageError: "请输入正确的年龄！",
@@ -138,6 +536,107 @@ export const commonTranslations = {
       strengthButton: "Mano stiprybių testas",
       strengthDescription: "Kokia yra tavo ypatinga stiprybė, kurios nežinai?",
       backToHome: "Į pradžią",
+    },
+    footer: {
+      privacy: "Privatumo politika",
+      terms: "Naudojimo taisyklės",
+      contact: "Kontaktai",
+      rights: "© 2026 Test Yourself. All rights reserved.",
+      description:
+        "„Test Yourself“ yra psichologinių testų platforma, padedanti giliau suprasti savo asmenybę ir emocijas atliekant įvairius testus. Kiekvienas testas sukurtas remiantis kasdienio elgesio modeliais ir psichologinėmis teorijomis, siekiant pateikti įžvalgas, su kuriomis galėtų susitapatinti kiekvienas. Prašome šiuos rezultatus naudoti pramogai ir kaip informacinio pobūdžio turinį – tai lengvas būdas geriau pažinti save.",
+    },
+    contact: {
+      title: "Kontaktai",
+      subtitle: "Turite klausimų ar atsiliepimų?",
+      description:
+        "Jei naudojantis paslauga iškilo kokių nors nepatogumų arba turite idėjų, kurias norėtumėte pasiūlyti, praneškite mums bet kuriuo metu. Jūsų vertingi atsiliepimai labai padeda tobulinti paslaugą.",
+      emailLabel: "El. pašto adresas",
+      revealButton: "Rodyti el. paštą",
+      copyButton: "Kopijuoti adresą",
+      copied: "Nukopijuota!",
+      businessHours: "Pasistengsime atsakyti per 2–3 darbo dienas.",
+    },
+    privacy: {
+      title: "Privatumo politika",
+      lastUpdated: "Paskutinį kartą atnaujinta: 2026 m. kovo 25 d.",
+      sections: [
+        {
+          title: "1. Informacijos rinkimas",
+          content:
+            "„Test Yourself“ nerenka identifikuojamos asmeninės informacijos. Tačiau siekiant tobulinti paslaugas, gali būti renkami nuasmeninti statistiniai duomenys (pvz., amžiaus grupė ir regionas).",
+        },
+        {
+          title: "2. Naudojimo tikslas",
+          content:
+            "Duomenys naudojami tik testų rezultatams generuoti (pramogai ir savirefleksijai) bei reklamos optimizavimui.",
+        },
+        {
+          title: "3. Saugojimo laikotarpis",
+          content:
+            "Duomenys yra laikinai saugomi sesijos metu ir yra nedelsiant ištrinami, kai uždarote naršyklės kortelę arba atnaujinate puslapį.",
+        },
+        {
+          title: "4. Slapukai ir reklamos identifikatoriai",
+          content:
+            "Mes naudojame trečiųjų šalių paslaugas, tokias kaip „Google AdSense“ ir „Google Analytics“, kurios gali naudoti slapukus ar reklamos identifikatorius, kad pateiktų personalizuotas reklamas pagal jūsų interesus ir analizuotų srautą.",
+        },
+        {
+          title: "5. Trečiųjų šalių paslaugos",
+          content:
+            "Reklamai ir analitikai naudojame „Google“ paslaugas. Šie teikėjai veikia pagal savo privatumo politikas.",
+        },
+        {
+          title: "6. Duomenų saugumas",
+          content:
+            "Statistiniai duomenys yra užšifruojami ir saugomi naudojant saugius perdavimo protokolus. Mes teikiame pirmenybę jūsų privatumo apsaugai.",
+        },
+        {
+          title: "7. Kontaktinė informacija",
+          content:
+            "Jei turite klausimų dėl privatumo, susisiekite su mumis el. paštu, nurodytu skiltyje „Kontaktai“.",
+        },
+      ],
+    },
+    terms: {
+      title: "Naudojimo taisyklės",
+      lastUpdated: "Paskutinį kartą atnaujinta: 2026 m. kovo 25 d.",
+      sections: [
+        {
+          title: "1. Paslaugos tikslas",
+          content:
+            "„Test Yourself“ teikia psichologinių testų turinį, skirtą pramogai ir savirefleksijai.",
+        },
+        {
+          title: "2. Paslaugos naudojimas",
+          content:
+            "Ši paslauga skirta tik pramogai. Ji nepakeičia medicininės, psichologinės ar profesionalios diagnozės ar patarimo.",
+        },
+        {
+          title: "3. Atsakomybės ribojimas",
+          content:
+            "Mes neprisiimame jokios teisinės atsakomybės už bet kokius vartotojų sprendimus ar veiksmus, priimtus remiantis testų rezultatais. Paslauga naudojatės savo pačių nuožiūra.",
+        },
+        {
+          title: "4. Autorių teisės",
+          content:
+            "Visas turinys, įskaitant dizainą, kodo logiką, testų klausimus ir rezultatus, yra „Test Yourself“ intelektinė nuosavybė.",
+        },
+        {
+          title: "5. Paslaugos pakeitimai/sustabdymas",
+          content:
+            "Mes pasiliekame teisę bet kuriuo metu be išankstinio įspėjimo keisti ar sustabdyti paslaugos teikimą.",
+        },
+        {
+          title: "6. Vartotojų įsipareigojimai",
+          content:
+            "Vartotojai neturi bandyti įsilaužti, atlikti atvirkštinės inžinerijos ar platinti turinio be leidimo.",
+        },
+        {
+          title: "7. Taikoma teisė",
+          content:
+            "Šioms sąlygoms taikomi ir jos aiškinamos pagal Korėjos Respublikos įstatymus.",
+        },
+      ],
     },
     common: {
       startButton: "Pradėti testą",

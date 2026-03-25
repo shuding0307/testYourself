@@ -1,3 +1,35 @@
+/* Global Layout & Utility Styles */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #f7f9fc;
+  font-family: "Pretendard", sans-serif;
+}
+
+.content-wrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Boilerplate / Placeholder Styles */
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -158,243 +190,5 @@
   border-top: 1px solid var(--border);
   @media (max-width: 1024px) {
     height: 48px;
-  }
-}
-
-/* ... existing styles ... */
-
-.site-header {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  display: flex;
-  justify-content: center;
-  padding: 12px 0;
-}
-
-.header-content {
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 24px;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-}
-
-.header-logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.header-logo-container:hover {
-  transform: scale(1.02);
-}
-
-.header-logo-emoji {
-  font-size: 1.5rem;
-}
-
-.header-logo-text {
-  font-weight: 800;
-  font-size: 1.1rem;
-  color: #2c3e50;
-  letter-spacing: -0.02em;
-}
-
-.header-back-btn {
-  background: white;
-  color: #666;
-  border: 1px solid #eee;
-  border-radius: 50px;
-  padding: 8px 16px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-}
-
-.header-back-btn:hover {
-  background: #fdfaff;
-  color: #a777e3;
-  border-color: #a777e3;
-}
-
-.main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  background-color: #f7f9fc;
-  font-family: "Pretendard", sans-serif;
-  padding: 0 0 80px 0; /* Updated: no top padding, added bottom padding */
-}
-
-.home-content {
-  text-align: center;
-  margin-top: 10vh;
-  animation: fadeIn 0.8s ease-out;
-}
-
-.home-logo {
-  font-size: 5rem;
-  margin-top: 20px; /* 상단 여백 추가 */
-  margin-bottom: 30px;
-  padding-bottom: 10px;
-}
-
-.floating {
-  animation: floating 3s ease-in-out infinite;
-}
-
-@keyframes floating {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(15px);
-  } /* 아래로 15px 이동 */
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.home-title {
-  font-size: 2.8rem;
-  font-weight: 900;
-  line-height: 1.2;
-  color: #2c3e50;
-  margin-bottom: 15px;
-}
-
-.home-subtitle {
-  font-size: 1.2rem;
-  color: #7f8c8d;
-  margin-bottom: 40px;
-}
-
-.main-button-group {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  align-items: center;
-}
-
-.test-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-  width: 100%;
-}
-
-.main-test-btn {
-  width: 100%;
-  max-width: 320px;
-  padding: 20px 40px;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-/* 정신연령 테스트 버튼 (보라색 계열) */
-.mental-btn {
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  box-shadow: 0 10px 20px rgba(110, 142, 251, 0.3);
-}
-
-.test-card:hover .mental-btn {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(110, 142, 251, 0.4);
-}
-
-/* 도파민 테스트 버튼 (오렌지/레드 계열) */
-.dopamine-btn {
-  background: linear-gradient(135deg, #ff8c00, #ff4500);
-  box-shadow: 0 10px 20px rgba(255, 140, 0, 0.3);
-}
-
-.test-card:hover .dopamine-btn {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(255, 69, 0, 0.4);
-}
-
-/* 강점 테스트 버튼 (에메랄드/블루 계열) */
-.strength-btn {
-  background: linear-gradient(135deg, #10b981, #3b82f6) !important;
-  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
-}
-
-.test-card:hover .strength-btn {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
-}
-
-.test-description {
-  font-size: 1.1rem;
-  color: #5c6b73;
-  font-weight: 500;
-  margin: 0;
-}
-
-/* 뒤로가기 버튼 */
-.test-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.back-btn {
-  align-self: flex-start;
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  background: white;
-  color: #666;
-  border: 1px solid #eee;
-  border-radius: 50px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-}
-
-.back-btn:hover {
-  background: #fdfaff;
-  color: #a777e3;
-  border-color: #a777e3;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

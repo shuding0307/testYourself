@@ -1,0 +1,108 @@
+.home-content {
+  text-align: center;
+  margin-top: 10vh;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.home-logo {
+  font-size: 5rem;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.home-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 40px;
+}
+
+.main-button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.test-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.main-test-btn {
+  width: 100%;
+  max-width: 320px;
+  padding: 20px 40px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mental-btn {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  box-shadow: 0 10px 20px rgba(110, 142, 251, 0.3);
+}
+
+.test-card:hover .mental-btn {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(110, 142, 251, 0.4);
+}
+
+.dopamine-btn {
+  background: linear-gradient(135deg, #ff8c00, #ff4500);
+  box-shadow: 0 10px 20px rgba(255, 140, 0, 0.3);
+}
+
+.test-card:hover .dopamine-btn {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 69, 0, 0.4);
+}
+
+.strength-btn {
+  background: linear-gradient(135deg, #10b981, #3b82f6) !important;
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+}
+
+.test-card:hover .strength-btn {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+}
+
+.test-description {
+  font-size: 1.1rem;
+  color: #5c6b73;
+  font-weight: 500;
+  margin: 0;
+}
