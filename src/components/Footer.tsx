@@ -12,12 +12,14 @@ const Footer: React.FC = () => {
       <div className="footer-content">
         <div className="footer-top">
           <div className="footer-info">
-            <h3 className="footer-logo">🧐 Test Yourself</h3>
+            <h3 className="footer-logo">🧐 Naora</h3>
             <p className="footer-description">{footer.description}</p>
           </div>
+
           <div className="footer-links">
             <div className="link-group">
               <h4>Platform</h4>
+              <Link to="/about">{footer.about}</Link>
               <Link to="/contact">{footer.contact}</Link>
             </div>
             <div className="link-group">
@@ -27,6 +29,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
+
         <div className="footer-bottom">
           <p className="footer-rights">{footer.rights}</p>
         </div>

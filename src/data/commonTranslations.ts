@@ -14,12 +14,13 @@ export const commonTranslations = {
       backToHome: "메인으로",
     },
     footer: {
+      about: "소개",
       privacy: "개인정보처리방침",
       terms: "이용약관",
       contact: "문의하기",
-      rights: "© 2026 Test Yourself. All rights reserved.",
+      rights: "© 2026 Naora. All rights reserved.",
       description:
-        "Test Yourself는 다양한 테스트를 통해 자신의 성향과 감정을 더 깊이 이해할 수 있도록 돕는 심리 테스트 플랫폼입니다. 각 테스트는 일상 속 행동 패턴과 심리 이론을 참고해 구성되었으며, 누구나 공감할 수 있는 인사이트를 제공하는 것을 목표로 합니다. 본 결과는 재미와 참고를 위한 콘텐츠로, 자신을 돌아보는 하나의 가벼운 계기로 활용해 주세요.",
+        "Naora는 다양한 테스트를 통해 자신의 성향과 감정을 더 깊이 이해할 수 있도록 돕는 심리 테스트 플랫폼입니다. 각 테스트는 일상 속 행동 패턴과 심리 이론을 참고해 구성되었으며, 누구나 공감할 수 있는 인사이트를 제공하는 것을 목표로 합니다. 본 결과는 재미와 참고를 위한 콘텐츠로, 자신을 돌아보는 하나의 가벼운 계기로 활용해 주세요.",
     },
     contact: {
       title: "문의하기",
@@ -39,7 +40,7 @@ export const commonTranslations = {
         {
           title: "1. 개인정보의 수집",
           content:
-            "Test Yourself는 사용자를 식별할 수 있는 개인정보를 수집하지 않습니다. 다만, 서비스 개선을 위해 연령대, 지역 등 개인을 식별할 수 없는 비식별 통계 데이터는 수집될 수 있습니다.",
+            "Naora는 사용자를 식별할 수 있는 개인정보를 수집하지 않습니다. 다만, 서비스 개선을 위해 연령대, 지역 등 개인을 식별할 수 없는 비식별 통계 데이터는 수집될 수 있습니다.",
         },
         {
           title: "2. 이용 목적",
@@ -80,7 +81,7 @@ export const commonTranslations = {
         {
           title: "1. 서비스 목적",
           content:
-            "Test Yourself는 재미와 자기 성찰을 돕기 위한 심리 테스트 콘텐츠를 제공합니다.",
+            "Naora는 재미와 자기 성찰을 돕기 위한 심리 테스트 콘텐츠를 제공합니다.",
         },
         {
           title: "2. 서비스 이용",
@@ -95,7 +96,7 @@ export const commonTranslations = {
         {
           title: "4. 저작권",
           content:
-            "본 사이트의 디자인, 로직, 질문 문항 및 결과 텍스트를 포함한 모든 콘텐츠의 지적 재산권은 Test Yourself에 있습니다.",
+            "본 사이트의 디자인, 로직, 질문 문항 및 결과 텍스트를 포함한 모든 콘텐츠의 지적 재산권은 Naora에 있습니다.",
         },
         {
           title: "5. 서비스 변경 및 중단",
@@ -112,6 +113,25 @@ export const commonTranslations = {
           content: "본 약관은 대한민국 법률에 따라 해석되고 규율됩니다.",
         },
       ],
+    },
+    about: {
+      title: "✨ About Naora",
+      description:
+        "Naora는 자신을 조금 더 이해하고 싶은 순간에서 시작된 심리 테스트 플랫폼입니다.\n우리는 일상 속에서 자연스럽게 드러나는 선택과 행동을 바탕으로, 누구나 공감할 수 있는 질문과 결과를 만들고자 합니다.",
+      whyTitle: "💡 왜 만들었나요?",
+      whyContent:
+        "가끔은 “나는 왜 이런 선택을 할까?” “연애할 때 왜 항상 비슷한 패턴일까?” 이런 생각이 들 때가 있습니다.\nNaora는 이런 작은 궁금증에서 출발해 자신의 성향과 감정을 가볍게 돌아볼 수 있는 경험을 제공하고자 만들어졌습니다.",
+      howTitle: "🧠 어떤 방식인가요?",
+      howContent:
+        "각 테스트는 심리 이론과 실제 행동 패턴을 참고해 구성되며, 결과는 사용자가 자신의 모습을 더 쉽게 이해할 수 있도록 돕는 데 초점을 맞추고 있습니다.\n다만, 모든 결과는 재미와 참고를 위한 콘텐츠이며 전문적인 진단이나 상담을 대체하지 않습니다.",
+      valuesTitle: "🌱 우리가 중요하게 생각하는 것",
+      values: [
+        "누구나 공감할 수 있는 결과",
+        "부담 없이 즐길 수 있는 경험",
+        "나를 조금 더 이해하는 계기",
+      ],
+      outro:
+        "앞으로 더 다양한 테스트와 기능을 통해, 자신을 이해하는 경험을 확장해 나갈 예정입니다.",
     },
     common: {
       startButton: "테스트 시작",
@@ -145,12 +165,13 @@ export const commonTranslations = {
       backToHome: "Home",
     },
     footer: {
+      about: "About",
       privacy: "Privacy Policy",
       terms: "Terms of Service",
       contact: "Contact",
-      rights: "© 2026 Test Yourself. All rights reserved.",
+      rights: "© 2026 Naora. All rights reserved.",
       description:
-        "Test Yourself is a psychological testing platform that helps you gain a deeper understanding of your personality and emotions through various tests. Each test is designed based on daily behavior patterns and psychological theories, aiming to provide insights that anyone can relate to. Please use these results for fun and reference, as a lighthearted opportunity for self-reflection.",
+        "Naora is a psychological testing platform that helps you gain a deeper understanding of your personality and emotions through various tests. Each test is designed based on daily behavior patterns and psychological theories, aiming to provide insights that anyone can relate to. Please use these results for fun and reference, as a lighthearted opportunity for self-reflection.",
     },
     contact: {
       title: "Contact Us",
@@ -170,7 +191,7 @@ export const commonTranslations = {
         {
           title: "1. Information Collection",
           content:
-            "Test Yourself does not collect identifiable personal information. However, minimal de-identified statistical data (such as age range and region) may be collected to improve our services.",
+            "Naora does not collect identifiable personal information. However, minimal de-identified statistical data (such as age range and region) may be collected to improve our services.",
         },
         {
           title: "2. Purpose of Use",
@@ -211,7 +232,7 @@ export const commonTranslations = {
         {
           title: "1. Purpose of the Service",
           content:
-            "Test Yourself provides psychological test content intended for entertainment and self-reflection purposes.",
+            "Naora provides psychological test content intended for entertainment and self-reflection purposes.",
         },
         {
           title: "2. Service Usage",
@@ -226,7 +247,7 @@ export const commonTranslations = {
         {
           title: "4. Copyright",
           content:
-            "All content, including design, code logic, test questions, and results, is the intellectual property of Test Yourself.",
+            "All content, including design, code logic, test questions, and results, is the intellectual property of Naora.",
         },
         {
           title: "5. Service Changes/Suspension",
@@ -244,6 +265,25 @@ export const commonTranslations = {
             "These terms are governed by and construed in accordance with the laws of the Republic of Korea.",
         },
       ],
+    },
+    about: {
+      title: "✨ About Naora",
+      description:
+        "Naora is a psychological testing platform born from moments when we want to understand ourselves a little better.\nWe aim to create questions and results that anyone can relate to, based on the choices and behaviors that naturally emerge in daily life.",
+      whyTitle: "💡 Why did we create this?",
+      whyContent:
+        "Sometimes we wonder, 'Why do I make these choices?' or 'Why do I always have similar patterns in relationships?'\nNaora was created to provide an experience where you can lightly reflect on your tendencies and emotions, starting from these small curiosities.",
+      howTitle: "🧠 How does it work?",
+      howContent:
+        "Each test is constructed with reference to psychological theories and actual behavioral patterns. The results focus on helping users understand themselves more easily.\nHowever, all results are for fun and reference and do not replace professional diagnosis or counseling.",
+      valuesTitle: "🌱 What we value",
+      values: [
+        "Results that anyone can relate to",
+        "An experience to enjoy without burden",
+        "An opportunity to understand myself a little more",
+      ],
+      outro:
+        "We plan to expand the experience of understanding yourself through a wider variety of tests and features in the future.",
     },
     common: {
       startButton: "Start Test",
@@ -276,20 +316,21 @@ export const commonTranslations = {
       strengthDescription:
         "あなただけが知らないあなたの特別な強みは何でしょうか？",
       backToHome: "ホームへ",
-    },
-    footer: {
+      },
+      footer: {
+      about: "紹介",
       privacy: "プライバシーポリシー",
       terms: "利用規約",
       contact: "お問い合わせ",
-      rights: "© 2026 Test Yourself. All rights reserved.",
+      rights: "© 2026 Naora. All rights reserved.",
       description:
-        "Test Yourselfは、様々なテストを通じて自分の傾向や感情をより深く理解できるよう支援する心理テストプラットフォームです。各テストは日常の行動パターンや心理学の理論を参考に構成されており、誰もが共感できるインサイトを提供することを目指しています。本結果は楽しみと参考のためのコンテンツとして、自分を振り返る一つの気軽なきっかけとして活用してください。",
-    },
-    contact: {
+        "Naoraは、様々なテストを通じて自分の傾向や感情をより深く理解できるよう支援する心理テストプラットフォームです。各テストは日常の行動パターンや心理学の理論を参考に構成されており、誰もが共感できるインサイトを提供することを目指しています。本結果は楽しみと参考のためのコンテンツとして、自分を振り返る一つの気軽なきっかけとして活用してください。",
+      },
+      contact: {
       title: "お問い合わせ",
       subtitle: "ご質問やフィードバックはありますか？",
       description:
-        "サービスの利用중에不便な点や提案したいアイデアがあれば、いつでもお知らせください。皆様の貴重なご意見は、サービスの改善に役立てさせていただきます。",
+        "サービスの利用중에不便な点や提案したいアイデアがあれば、いつでもお知らせください。皆様の貴重なご意見は、サービスの改善에役立てさせていただきます。",
       emailLabel: "メールアドレス",
       revealButton: "メールを表示",
       copyButton: "アドレスをコピー",
@@ -303,7 +344,7 @@ export const commonTranslations = {
         {
           title: "1. 情報の収集",
           content:
-            "Test Yourself は、ユーザーを特定できる個人情報を収集しません。ただし、サービス向上のため、年齢層や地域など、個人を特定できない非識別統計データを収集する場合があります。",
+            "Naora は、ユーザーを特定できる個人情報を収集しません。ただし、サービス向上のため、年齢層や地域など、個人を特定できない非識別統計データを収集する場合があります。",
         },
         {
           title: "2. 利用目的",
@@ -344,7 +385,7 @@ export const commonTranslations = {
         {
           title: "1. サービスの目的",
           content:
-            "Test Yourself は、娯楽と自己省察を目的とした心理テストコンテンツを提供します。",
+            "Naora は、娯楽と自己省察を目的とした心理テストコンテンツを提供します。",
         },
         {
           title: "2. サービスの利用",
@@ -359,7 +400,7 @@ export const commonTranslations = {
         {
           title: "4. 著作権",
           content:
-            "デザイン、ロジック、質問項目、結果テキストを含む当サイトのすべてのコンテンツの知的財産権は Test Yourself に帰属します。",
+            "デザイン、ロジック、質問項目、結果テキストを含む当サイトのすべてのコンテンツの知的財産権は Naora に帰属します。",
         },
         {
           title: "5. サービスの変更・中断",
@@ -376,6 +417,25 @@ export const commonTranslations = {
           content: "本規約は大韓民国の法律に従って解釈され、規定されます。",
         },
       ],
+    },
+    about: {
+      title: "✨ Naora について",
+      description:
+        "Naora は、自分自身をもう少し理解したいと思った瞬間から始まった心理テストプラットフォームです。\n私たちは、日常の中で自然に現れる選択や行動に基づき、誰もが共感できる質問と結果を作ることを目指しています。",
+      whyTitle: "💡 なぜ作ったのですか？",
+      whyContent:
+        "「なぜ自分はこのような選択をするのだろう？」「恋愛をするとき、なぜいつも似たようなパターンなんだろう？」ふとそんな風に思うことがあります。\nNaora は、こうした小さな疑問から出発し、自分の傾向や感情を気軽に振り返ることができる体験を提供するために作られました。",
+      howTitle: "🧠 どのような仕組みですか？",
+      howContent:
+        "各テストは心理学の理論や実際の行動パターンを参考に構成されており、結果はユーザーが自分自身の姿をより簡単に理解できるよう手助けすることに焦点を当てています。\nただし、すべての結果は楽しみと参考のためのコンテンツであり、専門的な診断やカウンセリングに代わるものではありません。",
+      valuesTitle: "🌱 私たちが大切にしていること",
+      values: [
+        "誰もが共感できる結果",
+        "負担なく楽しめる体験",
+        "自分をもう少し理解するきっかけ",
+      ],
+      outro:
+        "今後、より多様なテストや機能を通じて、自分自身を理解する体験を広げていく予定です。",
     },
     common: {
       startButton: "テスト開始",
@@ -409,12 +469,13 @@ export const commonTranslations = {
       backToHome: "回到主页",
     },
     footer: {
+      about: "关于",
       privacy: "隐私政策",
       terms: "服务条款",
       contact: "联系我们",
-      rights: "© 2026 Test Yourself. All rights reserved.",
+      rights: "© 2026 Naora. All rights reserved.",
       description:
-        "Test Yourself 是一个心理测试平台，通过各种测试帮助您更深入地了解自己的性格和情感。每个测试都参考了日常行为模式和心理学理论，旨在提供任何人都能产生共鸣的见解。本结果仅供娱乐和参考，请将其作为反思自我的一种轻松契机。",
+        "Naora 是一个心理测试平台，通过各种测试帮助您更深入地了解自己的性格和情感。每个测试都参考了日常行为模式和心理学理论，旨在提供任何人都能产生共鸣的见解。本结果仅供娱乐和参考，请将其作为反思自我的一种轻松契机。",
     },
     contact: {
       title: "联系我们",
@@ -434,7 +495,7 @@ export const commonTranslations = {
         {
           title: "1. 信息收集",
           content:
-            "Test Yourself 不收集可识别用户的个人信息。但是，为了改进服务，可能会收集年龄段、地区等经过去标识化的统计数据。",
+            "Naora 不收集可识别用户的个人信息。但是，为了改进服务，可能会收集年龄段、地区等经过去标识化的统计数据。",
         },
         {
           title: "2. 使用目的",
@@ -457,7 +518,7 @@ export const commonTranslations = {
             "我们利用 Google 服务进行广告 and 分析。这些提供商根据其各自的隐私政策运营。",
         },
         {
-          title: "6. 数据安全",
+          title: "6. 数据 security",
           content:
             "统计数据经过加密，并通过安全协议进行传输和保护。我们优先保护用户的隐私。",
         },
@@ -474,7 +535,7 @@ export const commonTranslations = {
       sections: [
         {
           title: "1. 服务目的",
-          content: "Test Yourself 提供旨在娱乐和自我反思的心理测试内容。",
+          content: "Naora 提供旨在娱乐和自我反思的心理测试内容。",
         },
         {
           title: "2. 服务使用",
@@ -489,7 +550,7 @@ export const commonTranslations = {
         {
           title: "4. 版权",
           content:
-            "所有内容，包括设计、代码逻辑、测试问题和结果，均为 Test Yourself 的知识产权。",
+            "所有内容，包括设计、代码逻辑、测试问题和结果，均为 Naora 的知识产权。",
         },
         {
           title: "5. 服务变更/暂停",
@@ -504,6 +565,24 @@ export const commonTranslations = {
           content: "本条款受大韩民国法律管辖并按其解释。",
         },
       ],
+    },
+    about: {
+      title: "✨ 关于 Naora",
+      description:
+        "Naora 是一个始于想要多了解自己一点的瞬间的心理测试平台。\n我们旨在以日常生活中自然显现的选择和行为为基础，创造任何人都能产生共鸣的问题和结果。",
+      whyTitle: "💡 为什么创建它？",
+      whyContent:
+        "有时我们会想，“我为什么会做出这种选择？”“为什么恋爱时总是有相似的模式？”\nNaora 始于这些小小的疑虑，旨在提供一个可以轻松回顾自己倾向和情感的体验。",
+      howTitle: "🧠 它是如何运作的？",
+      howContent:
+        "每个测试都参考了心理学理论和实际行为模式，结果侧重于帮助用户更轻松地了解自己。\n但是，所有结果仅供娱乐和参考，不能替代专业的诊断或咨询。",
+      valuesTitle: "🌱 我们重视的事情",
+      values: [
+        "任何人都能产生共鸣的结果",
+        "可以毫无负担享受的体验",
+        "多了解自己一点的契机",
+      ],
+      outro: "未来，我们将通过更多样化的测试和功能，不断扩展了解自我的体验。",
     },
     common: {
       startButton: "开始测试",
@@ -534,16 +613,17 @@ export const commonTranslations = {
       dopamineDescription:
         "Kiek jūsų smegenys yra priklausomos nuo stimuliacijos?",
       strengthButton: "Mano stiprybių testas",
-      strengthDescription: "Kokia yra tavo ypatinga stiprybė, kurios nežinai?",
+      strengthDescription: "Kokia yra tavo ypatinga stiprybė, kurios než인ai?",
       backToHome: "Į pradžią",
     },
     footer: {
+      about: "Apie",
       privacy: "Privatumo politika",
       terms: "Naudojimo taisyklės",
       contact: "Kontaktai",
-      rights: "© 2026 Test Yourself. All rights reserved.",
+      rights: "© 2026 Naora. All rights reserved.",
       description:
-        "„Test Yourself“ yra psichologinių testų platforma, padedanti giliau suprasti savo asmenybę ir emocijas atliekant įvairius testus. Kiekvienas testas sukurtas remiantis kasdienio elgesio modeliais ir psichologinėmis teorijomis, siekiant pateikti įžvalgas, su kuriomis galėtų susitapatinti kiekvienas. Prašome šiuos rezultatus naudoti pramogai ir kaip informacinio pobūdžio turinį – tai lengvas būdas geriau pažinti save.",
+        "„Naora“ yra psichologinių testų platforma, padedanti giliau suprasti savo asmenybę ir emocijas atliekant įvairius testus. Kiekvienas testas sukurtas remiantis kasdienio elgesio modeliais ir psichologinėmis teorijomis, siekiant pateikti įžvalgas, su kuriomis galėtų susitapatinti kiekvienas. Prašome šiuos rezultatus naudoti pramogai ir kaip informacinio pobūdžio turinį – tai lengvas būdas geriau pažinti save.",
     },
     contact: {
       title: "Kontaktai",
@@ -563,7 +643,7 @@ export const commonTranslations = {
         {
           title: "1. Informacijos rinkimas",
           content:
-            "„Test Yourself“ nerenka identifikuojamos asmeninės informacijos. Tačiau siekiant tobulinti paslaugas, gali būti renkami nuasmeninti statistiniai duomenys (pvz., amžiaus grupė ir regionas).",
+            "„Naora“ nerenka identifikuojamos asmeninės informacijos. Tačiau siekiant tobulinti paslaugas, gali būti renkami nuasmeninti statistiniai duomenys (pvz., amžiaus grupė ir regionas).",
         },
         {
           title: "2. Naudojimo tikslas",
@@ -604,7 +684,7 @@ export const commonTranslations = {
         {
           title: "1. Paslaugos tikslas",
           content:
-            "„Test Yourself“ teikia psichologinių testų turinį, skirtą pramogai ir savirefleksijai.",
+            "„Naora“ teikia psichologinių testų turinį, skirtą pramogai ir savirefleksijai.",
         },
         {
           title: "2. Paslaugos naudojimas",
@@ -619,7 +699,7 @@ export const commonTranslations = {
         {
           title: "4. Autorių teisės",
           content:
-            "Visas turinys, įskaitant dizainą, kodo logiką, testų klausimus ir rezultatus, yra „Test Yourself“ intelektinė nuosavybė.",
+            "Visas turinys, įskaitant dizainą, kodo logiką, testų klausimus ir rezultatus, yra „Naora“ intelektinė nuosavybė.",
         },
         {
           title: "5. Paslaugos pakeitimai/sustabdymas",
@@ -637,6 +717,25 @@ export const commonTranslations = {
             "Šioms sąlygoms taikomi ir jos aiškinamos pagal Korėjos Respublikos įstatymus.",
         },
       ],
+    },
+    about: {
+      title: "✨ Apie Naora",
+      description:
+        "„Naora“ yra psichologinių testų platforma, sukurta tiems momentams, kai norime šiek tiek geriau suprasti save.\nSiekime sukurti klausimus ir rezultatus, su kuriais galėtų susitapatinti kiekvienas, remdamiesi kasdieniame gyvenime natūraliai pasireiškiančiais pasirinkimais ir elgesiu.",
+      whyTitle: "💡 Kodėl tai sukūrėme?",
+      whyContent:
+        "Kartais kyla klausimas: „Kodėl aš taip renkuosi?“ arba „Kodėl santykiuose visada kartojasi tie patys modeliai?“\n„Naora“ atsirado iš šių nedidelių smalsumų, siekiant suteikti patirtį, leidžiančią lengvai pažvelgti į savo polinkius ir emocijas.",
+      howTitle: "🧠 Kaip tai veikia?",
+      howContent:
+        "Kiekvienas testas sudarytas remiantis psichologinėmis teorijomis ir realiais elgesio modeliais. Rezultatai orientuoti į tai, kad vartotojai galėtų lengviau suprasti save.\nTačiau visi rezultatai yra skirti pramogai bei savišvietai ir nepakeičia profesionalios diagnozės ar konsultacijos.",
+      valuesTitle: "🌱 Kas mums svarbu",
+      values: [
+        "Rezultatai, su kuriais kiekvienas gali susitapatinti",
+        "Patirtis, kuria galima mėgautis be įtampos",
+        "Galimybė šiek tiek geriau suprasti save",
+      ],
+      outro:
+        "Ateityje planuojame plėsti savęs pažinimo patirtį siūlydami dar daugiau įvairių testų ir funkcijų.",
     },
     common: {
       startButton: "Pradėti testą",

@@ -7,7 +7,7 @@ const Contact: React.FC = () => {
   const [copied, setCopied] = useState(false);
 
   // 이메일 주소를 조각내어 봇 크롤링을 방어합니다.
-  const emailUser = "testyourself.26.contact";
+  const emailUser = "naora.26.contact";
   const emailDomain = "gmail.com";
   const fullEmail = `${emailUser}@${emailDomain}`;
 

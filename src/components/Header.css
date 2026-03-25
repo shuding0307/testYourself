@@ -41,11 +41,25 @@
   font-size: 1.5rem;
 }
 
+.header-logo-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
 .header-logo-text {
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #2c3e50;
   letter-spacing: -0.02em;
+}
+
+.header-logo-subtext {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #7f8c8d;
+  text-transform: lowercase;
+  letter-spacing: 0.05em;
 }
 
 .header-back-btn {
