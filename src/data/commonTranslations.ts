@@ -7,10 +7,13 @@ export const commonTranslations = {
       subtitle: "당신의 내면을 들여다보는 시간",
       startButton: "정신연령 테스트",
       startDescription: "내 안에 잠든 진짜 나이는 몇 살일까?",
+      mentalTags: "#정신연령 #자아탐구",
       dopamineButton: "도파민 중독 테스트",
       dopamineDescription: "나의 뇌는 얼마나 자극에 중독되어 있을까?",
+      dopamineTags: "#도파민 #중독체크",
       strengthButton: "나의 강점 테스트",
       strengthDescription: "나만 모르는 나의 특별한 강점은 무엇일까?",
+      strengthTags: "#나의강점 #잠재력",
       backToHome: "메인으로",
     },
     footer: {
@@ -158,10 +161,13 @@ export const commonTranslations = {
       subtitle: "A time to look into your inner self",
       startButton: "Mental Age Test",
       startDescription: "How old is your inner self really?",
+      mentalTags: "#MentalAge #SelfDiscovery",
       dopamineButton: "Dopamine Addiction Test",
       dopamineDescription: "How much is your brain addicted to stimulation?",
+      dopamineTags: "#Dopamine #Addiction",
       strengthButton: "Strength Test",
       strengthDescription: "What are your special strengths you didn't know?",
+      strengthTags: "#MyStrength #Potential",
       backToHome: "Home",
     },
     footer: {
@@ -310,27 +316,30 @@ export const commonTranslations = {
       subtitle: "あなたの内面を見つめる時間",
       startButton: "精神年齢テスト",
       startDescription: "自分の中に眠る本当の年齢は何歳だろう？",
+      mentalTags: "#精神年齢 #自己分析",
       dopamineButton: "ドーパミン中毒テスト",
       dopamineDescription: "あなたの脳はどれほど刺激に依存していますか？",
+      dopamineTags: "#ドーパミン #依存度チェック",
       strengthButton: "あなたの強みテスト",
       strengthDescription:
         "あなただけが知らないあなたの特別な強みは何でしょうか？",
+      strengthTags: "#私の強み #ポテンシャル",
       backToHome: "ホームへ",
-      },
-      footer: {
+    },
+    footer: {
       about: "紹介",
       privacy: "プライバシーポリシー",
       terms: "利用規約",
       contact: "お問い合わせ",
       rights: "© 2026 Naora. All rights reserved.",
       description:
-        "Naoraは、様々なテストを通じて自分の傾向や感情をより深く理解できるよう支援する心理テストプラットフォームです。各テストは日常の行動パターンや心理学の理論を参考に構成されており、誰もが共感できるインサイトを提供することを目指しています。本結果は楽しみと参考のためのコンテンツとして、自分を振り返る一つの気軽なきっかけとして活用してください。",
-      },
-      contact: {
+        "Naoraは、様々なテストを通じて自分の傾向や感情をより深く理解できるよう支援하는心理テストプラットフォームです。各テストは日常の行動パターンや心理学の理論を参考に構成されており、誰もが共感できるインサイトを提供することを目指しています。本結果は楽しみと参考のためのコンテンツとして、自分を振り返る一つの気軽なきっかけとして活用してください。",
+    },
+    contact: {
       title: "お問い合わせ",
       subtitle: "ご質問やフィードバックはありますか？",
       description:
-        "サービスの利用중에不便な点や提案したいアイデアがあれば、いつでもお知らせください。皆様の貴重なご意見は、サービスの改善에役立てさせていただきます。",
+        "サービスの利用中に不便な点や提案したいアイデアがあれば、いつでもお知らせください。皆様の貴重なご意見は、サービスの改善に役立てさせていただきます。",
       emailLabel: "メールアドレス",
       revealButton: "メールを表示",
       copyButton: "アドレスをコピー",
@@ -410,7 +419,7 @@ export const commonTranslations = {
         {
           title: "6. ユーザーの義務",
           content:
-            "ユーザーはサービスのハッキングやリバースエンジニアリングを行ってはならず、コンテンツを無단で配布したり商業的に利用したりしてはなりません。",
+            "ユーザーはサービスのハッキングやリバースエンジニアリングを行ってはならず、コンテンツを無断で配布したり商業的に利用したりしてはなりません。",
         },
         {
           title: "7. 準拠法",
@@ -438,7 +447,7 @@ export const commonTranslations = {
         "今後、より多様なテストや機能を通じて、自分自身を理解する体験を広げていく予定です。",
     },
     common: {
-      startButton: "テスト開始",
+      startButton: "테스트 시작",
       prevButton: "← 戻る",
       restartButton: "もう一度テストする",
       questionLabel: "質問",
@@ -462,10 +471,13 @@ export const commonTranslations = {
       subtitle: "审视内心世界的时刻",
       startButton: "精神年龄测试",
       startDescription: "潜藏在内心的真实年龄是多少岁？",
+      mentalTags: "#精神年龄 #自我发现",
       dopamineButton: "多巴胺上瘾测试",
       dopamineDescription: "你的大脑对刺激有多依赖？",
+      dopamineTags: "#多巴胺 #成瘾检查",
       strengthButton: "我的优势测试",
       strengthDescription: "你不知道的自己的特别优势是什么？",
+      strengthTags: "#我的优势 #潜力",
       backToHome: "回到主页",
     },
     footer: {
@@ -479,7 +491,7 @@ export const commonTranslations = {
     },
     contact: {
       title: "联系我们",
-      subtitle: "有任何问题或反馈吗？",
+      subtitle: "有任何问题 or 反馈吗？",
       description:
         "如果您在服务使用过程中有任何不便或想提议的想法，请随时告诉我们。您的宝贵意见对改进服务大有帮助。",
       emailLabel: "电子邮件地址",
@@ -520,7 +532,7 @@ export const commonTranslations = {
         {
           title: "6. 数据 security",
           content:
-            "统计数据经过加密，并通过安全协议进行传输和保护。我们优先保护用户的隐私。",
+            "统计数据经过加密，并通过安全协议进行传输 and 保护。我们优先保护用户的隐私。",
         },
         {
           title: "7. 联系信息",
@@ -540,25 +552,25 @@ export const commonTranslations = {
         {
           title: "2. 服务使用",
           content:
-            "本服务仅供娱乐。它不能替代医学、心理或专业的诊断或建议。",
+            "本服务仅供娱乐。它不能替代医学、心理 or 专业的诊断 or 建议。",
         },
         {
           title: "3. 责任限制",
           content:
-            "对于用户根据测试结果做出的任何决定或采取的行动，我们不承担任何法律责任。请自行决定是否使用本服务。",
+            "对于用户根据测试结果做出的任何决定 or 采取的行动，我们不承担任何法律责任。请自行决定是否使用本服务。",
         },
         {
           title: "4. 版权",
           content:
-            "所有内容，包括设计、代码逻辑、测试问题和结果，均为 Naora 的知识产权。",
+            "所有内容，包括设计、代码逻辑、测试问题 and 结果，均为 Naora 的知识产权。",
         },
         {
           title: "5. 服务变更/暂停",
-          content: "我们保留随时修改或暂停服务的权利，恕不另行通知。",
+          content: "我们保留随时修改 or 暂停服务的权利，恕不另行通知。",
         },
         {
           title: "6. 用户义务",
-          content: "用户不得尝试黑客攻击、逆向工程或擅自分发内容。",
+          content: "用户不得尝试黑客攻击、逆向工程 or 擅自分发内容。",
         },
         {
           title: "7. 适用法律",
@@ -572,17 +584,17 @@ export const commonTranslations = {
         "Naora 是一个始于想要多了解自己一点的瞬间的心理测试平台。\n我们旨在以日常生活中自然显现的选择和行为为基础，创造任何人都能产生共鸣的问题和结果。",
       whyTitle: "💡 为什么创建它？",
       whyContent:
-        "有时我们会想，“我为什么会做出这种选择？”“为什么恋爱时总是有相似的模式？”\nNaora 始于这些小小的疑虑，旨在提供一个可以轻松回顾自己倾向和情感的体验。",
+        "有时我们会想，“我为什么会做出这种选择？”“为什么恋爱时总是有相似的模式？”\nNaora 始于这些小小的疑虑，旨在提供一个可以轻松回顾自己倾向 and 情感的体验。",
       howTitle: "🧠 它是如何运作的？",
       howContent:
-        "每个测试都参考了心理学理论和实际行为模式，结果侧重于帮助用户更轻松地了解自己。\n但是，所有结果仅供娱乐和参考，不能替代专业的诊断或咨询。",
+        "每个测试都参考了心理学理论 and 实际行为模式，结果侧重于帮助用户更轻松地了解自己。\n但是，所有结果仅供娱乐 and 参考，不能替代专业的诊断 or 咨询。",
       valuesTitle: "🌱 我们重视的事情",
       values: [
         "任何人都能产生共鸣的结果",
         "可以毫无负担享受的体验",
         "多了解自己一点的契机",
       ],
-      outro: "未来，我们将通过更多样化的测试和功能，不断扩展了解自我的体验。",
+      outro: "未来，我们将通过更多样化的测试 and 功能，不断扩展了解自我的体验。",
     },
     common: {
       startButton: "开始测试",
@@ -609,11 +621,14 @@ export const commonTranslations = {
       subtitle: "Laikas pažvelgti į savo vidinį pasaulį",
       startButton: "Mentalinio amžiaus testas",
       startDescription: "Kiek metų tavo vidiniam aš iš tikrųjų?",
+      mentalTags: "#PsichologinisAmžius #SavęsPažinimas",
       dopamineButton: "Dopamino priklausomybės testas",
       dopamineDescription:
         "Kiek jūsų smegenys yra priklausomos nuo stimuliacijos?",
+      dopamineTags: "#Dopaminas #Priklausomybė",
       strengthButton: "Mano stiprybių testas",
-      strengthDescription: "Kokia yra tavo ypatinga stiprybė, kurios než인ai?",
+      strengthDescription: "Kokia yra tavo ypatinga stiprybė, kurios nežinai?",
+      strengthTags: "#ManoStiprybė #Potencialas",
       backToHome: "Į pradžią",
     },
     footer: {
@@ -735,7 +750,7 @@ export const commonTranslations = {
         "Galimybė šiek tiek geriau suprasti save",
       ],
       outro:
-        "Ateityje planuojame plėsti savęs pažinimo patirtį siūlydami dar daugiau įvairių testų ir funkcijų.",
+        "Ateityje planuojame plėsti savęs paž인imo patirtį siūlydami dar daugiau įvairių testų ir funkcijų.",
     },
     common: {
       startButton: "Pradėti testą",

@@ -41,33 +41,48 @@ function App() {
                 <p className="home-subtitle">{common.home.subtitle}</p>
                 <div className="main-button-group">
                   <div
-                    className="test-card"
+                    className="test-card mental-card"
                     onClick={() => navigate("/mental-age")}
                   >
-                    <button className="main-test-btn mental-btn">
-                      {common.home.startButton}
-                    </button>
-                    <p className="test-description">
-                      {common.home.startDescription}
-                    </p>
+                    <div className="card-icon">🧠</div>
+                    <div className="card-content">
+                      <div className="card-tag">{common.home.mentalTags}</div>
+                      <h2 className="card-title">{common.home.startButton}</h2>
+                      <p className="card-description">
+                        {common.home.startDescription}
+                      </p>
+                    </div>
+                    <div className="card-arrow">→</div>
                   </div>
 
-                  <div className="test-card" onClick={() => navigate("/dopamine")}>
-                    <button className="main-test-btn dopamine-btn">
-                      {common.home.dopamineButton}
-                    </button>
-                    <p className="test-description">
-                      {common.home.dopamineDescription}
-                    </p>
+                  <div
+                    className="test-card dopamine-card"
+                    onClick={() => navigate("/dopamine")}
+                  >
+                    <div className="card-icon">⚡️</div>
+                    <div className="card-content">
+                      <div className="card-tag">{common.home.dopamineTags}</div>
+                      <h2 className="card-title">{common.home.dopamineButton}</h2>
+                      <p className="card-description">
+                        {common.home.dopamineDescription}
+                      </p>
+                    </div>
+                    <div className="card-arrow">→</div>
                   </div>
 
-                  <div className="test-card" onClick={() => navigate("/strength")}>
-                    <button className="main-test-btn strength-btn">
-                      {common.home.strengthButton}
-                    </button>
-                    <p className="test-description">
-                      {common.home.strengthDescription}
-                    </p>
+                  <div
+                    className="test-card strength-card"
+                    onClick={() => navigate("/strength")}
+                  >
+                    <div className="card-icon">💎</div>
+                    <div className="card-content">
+                      <div className="card-tag">{common.home.strengthTags}</div>
+                      <h2 className="card-title">{common.home.strengthButton}</h2>
+                      <p className="card-description">
+                        {common.home.strengthDescription}
+                      </p>
+                    </div>
+                    <div className="card-arrow">→</div>
                   </div>
                 </div>
               </div>
