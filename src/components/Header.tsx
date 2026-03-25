@@ -23,7 +23,10 @@ const Header: React.FC = () => {
           {isHome && (
             <div className="header-logo-container" onClick={() => navigate("/")}>
               <span className="header-logo-emoji">🧐</span>
-              <span className="header-logo-text">Test Yourself</span>
+              <div className="header-logo-text-wrapper">
+                <span className="header-logo-text">Naora</span>
+                <span className="header-logo-subtext">test yourself</span>
+              </div>
             </div>
           )}
         </div>

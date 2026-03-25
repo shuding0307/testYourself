@@ -10,6 +10,7 @@ import StrengthTest from "./strengthTest/StrengthTest";
 import PrivacyPolicy from "./components/legal/PrivacyPolicy";
 import TermsOfService from "./components/legal/TermsOfService";
 import Contact from "./components/legal/Contact";
+import About from "./components/About";
 import { useLanguageStore } from "./store/useLanguageStore";
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
           <Route path="/mental-age" element={<MentalAgeTest />} />
           <Route path="/dopamine" element={<DopamineTest />} />
           <Route path="/strength" element={<StrengthTest />} />
+          <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/contact" element={<Contact />} />
