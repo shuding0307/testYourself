@@ -469,6 +469,7 @@ export const commonTranslations = {
       backToHome: "回到主页",
     },
     footer: {
+      about: "关于",
       privacy: "隐私政策",
       terms: "服务条款",
       contact: "联系我们",
@@ -616,6 +617,7 @@ export const commonTranslations = {
       backToHome: "Į pradžią",
     },
     footer: {
+      about: "Apie",
       privacy: "Privatumo politika",
       terms: "Naudojimo taisyklės",
       contact: "Kontaktai",
