@@ -20,7 +20,7 @@ export const commonTranslations = {
       contact: "문의하기",
       rights: "© 2024 Test Yourself. All rights reserved.",
       description:
-        "Test Yourself는 여러분의 자아 발견과 심리적 성찰을 돕는 다양한 테스트를 제공하는 심리 테스트 플랫폼입니다. 우리는 과학적인 데이터와 심리학적 원리를 바탕으로 신뢰할 수 있는 결과를 제공하기 위해 노력하고 있습니다.",
+        "Test Yourself는 다양한 테스트를 통해 자신의 성향과 감정을 더 깊이 이해할 수 있도록 돕는 심리 테스트 플랫폼입니다. 각 테스트는 일상 속 행동 패턴과 심리 이론을 참고해 구성되었으며, 누구나 공감할 수 있는 인사이트를 제공하는 것을 목표로 합니다. 본 결과는 재미와 참고를 위한 콘텐츠로, 자신을 돌아보는 하나의 가벼운 계기로 활용해 주세요.",
     },
     common: {
       startButton: "테스트 시작",
@@ -60,7 +60,7 @@ export const commonTranslations = {
       contact: "Contact",
       rights: "© 2024 Test Yourself. All rights reserved.",
       description:
-        "Test Yourself is a psychological testing platform providing various tests to help you discover yourself and reflect on your inner mind. We strive to provide reliable results based on scientific data and psychological principles.",
+        "Test Yourself is a psychological testing platform that helps you gain a deeper understanding of your personality and emotions through various tests. Each test is designed based on daily behavior patterns and psychological theories, aiming to provide insights that anyone can relate to. Please use these results for fun and reference, as a lighthearted opportunity for self-reflection.",
     },
     common: {
       startButton: "Start Test",
@@ -101,7 +101,7 @@ export const commonTranslations = {
       contact: "お問い合わせ",
       rights: "© 2024 Test Yourself. All rights reserved.",
       description:
-        "Test Yourselfは、皆さんの自己発見と心理的な省察を助ける様々なテストを提供する心理テストプラットフォームです。私たちは科学的なデータと心理学的な原理に基づき、信頼できる結果を提供するために努めています。",
+        "Test Yourselfは、様々なテストを通じて自分の傾向や感情をより深く理解できるよう支援する心理テストプラットフォームです。各テストは日常の行動パターンや心理学の理論を参考に構成されており、誰もが共感できるインサイトを提供することを目指しています。本結果は楽しみと参考のためのコンテンツとして、自分を振り返る一つの気軽なきっかけとして活用してください。",
     },
     common: {
       startButton: "テスト開始",
@@ -112,7 +112,7 @@ export const commonTranslations = {
       resultSub: "あなたの状態は...",
       agePlaceholder: "年齢",
       ageUnit: "歳",
-      ageError: "年齢を正確に入力してください！",
+      ageError: "年齢를 정확히 입력해주세요!",
     },
     answers: {
       agreeVery: "強くそう思う",
@@ -141,7 +141,7 @@ export const commonTranslations = {
       contact: "联系我们",
       rights: "© 2024 Test Yourself. All rights reserved.",
       description:
-        "Test Yourself 是一个提供多种测试以帮助您发现自我和进行心理反思的心理测试平台。我们致力于基于科学数据和心理学原理提供可靠的结果。",
+        "Test Yourself 是一个心理测试平台，通过各种测试帮助您更深入地了解自己的性格和情感。每个测试都参考了日常行为模式和心理学理论，旨在提供任何人都能产生共鸣的见解。本结果仅供娱乐和参考，请将其作为反思自我的一种轻松契机。",
     },
     common: {
       startButton: "开始测试",
@@ -149,7 +149,7 @@ export const commonTranslations = {
       restartButton: "重新测试",
       questionLabel: "题目",
       resultTitle: "测试结果",
-      resultSub: "你的状态是...",
+      resultSub: "你的状态은...",
       agePlaceholder: "年龄",
       ageUnit: "岁",
       ageError: "请输入正确的年龄！",
@@ -172,7 +172,7 @@ export const commonTranslations = {
       dopamineDescription:
         "Kiek jūsų smegenys yra priklausomos nuo stimuliacijos?",
       strengthButton: "Mano stiprybių testas",
-      strengthDescription: "Kokia yra tavo ypatinga stiprybė, kurios nežinai?",
+      strengthDescription: "Kokia yra tavo ypatinga stiprybė, kurios než인ai?",
       backToHome: "Į pradžią",
     },
     footer: {
@@ -182,7 +182,7 @@ export const commonTranslations = {
       contact: "Kontaktai",
       rights: "© 2024 Test Yourself. All rights reserved.",
       description:
-        "„Test Yourself“ yra psichologinių testų platforma, teikianti įvairius testus, padedančius atrasti save ir apmąstyti savo vidinį pasaulį. Mes stengiamės pateikti patikimus rezultatus, pagrįstus moksliniais duomenimis ir psichologiniais principais.",
+        "„Test Yourself“ yra psichologinių testų platforma, padedanti giliau suprasti savo asmenybę ir emocijas atliekant įvairius testus. Kiekvienas testas sukurtas remiantis kasdienio elgesio modeliais ir psichologinėmis teorijomis, siekiant pateikti įžvalgas, su kuriomis galėtų susitapatinti kiekvienas. Prašome šiuos rezultatus naudoti pramogai ir kaip informacinio pobūdžio turinį – tai lengvas būdas geriau pažinti save.",
     },
     common: {
       startButton: "Pradėti testą",
