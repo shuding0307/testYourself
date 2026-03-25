@@ -13,6 +13,15 @@ export const commonTranslations = {
       strengthDescription: "나만 모르는 나의 특별한 강점은 무엇일까?",
       backToHome: "메인으로",
     },
+    footer: {
+      about: "소개",
+      privacy: "개인정보처리방침",
+      terms: "이용약관",
+      contact: "문의하기",
+      rights: "© 2024 Test Yourself. All rights reserved.",
+      description:
+        "Test Yourself는 여러분의 자아 발견과 심리적 성찰을 돕는 다양한 테스트를 제공하는 심리 테스트 플랫폼입니다. 우리는 과학적인 데이터와 심리학적 원리를 바탕으로 신뢰할 수 있는 결과를 제공하기 위해 노력하고 있습니다.",
+    },
     common: {
       startButton: "테스트 시작",
       prevButton: "← 이전 질문으로",
@@ -44,6 +53,15 @@ export const commonTranslations = {
       strengthDescription: "What are your special strengths you didn't know?",
       backToHome: "Home",
     },
+    footer: {
+      about: "About",
+      privacy: "Privacy Policy",
+      terms: "Terms of Service",
+      contact: "Contact",
+      rights: "© 2024 Test Yourself. All rights reserved.",
+      description:
+        "Test Yourself is a psychological testing platform providing various tests to help you discover yourself and reflect on your inner mind. We strive to provide reliable results based on scientific data and psychological principles.",
+    },
     common: {
       startButton: "Start Test",
       prevButton: "← Previous",
@@ -68,13 +86,22 @@ export const commonTranslations = {
       title: "自分を知るための\nテストプラットフォーム",
       subtitle: "あなたの内面を見つめる時間",
       startButton: "精神年齢テスト",
-      startDescription: "自分の中に眠る本当の年齢は何歳だろう？",
+      startDescription: "自分の中に眠る本当의 年齢は何歳だろう？",
       dopamineButton: "ドーパミン中毒テスト",
-      dopamineDescription: "あなたの脳はどれほど刺激에 依存していますか？",
+      dopamineDescription: "あなたの脳はどれほど刺激に依存していますか？",
       strengthButton: "あなたの強みテスト",
       strengthDescription:
         "あなただけが知らないあなたの特別な強みは何でしょうか？",
       backToHome: "ホームへ",
+    },
+    footer: {
+      about: "紹介",
+      privacy: "プライバシーポリシー",
+      terms: "利用規約",
+      contact: "お問い合わせ",
+      rights: "© 2024 Test Yourself. All rights reserved.",
+      description:
+        "Test Yourselfは、皆さんの自己発見と心理的な省察を助ける様々なテストを提供する心理テストプラットフォームです。私たちは科学的なデータと心理学的な原理に基づき、信頼できる結果を提供するために努めています。",
     },
     common: {
       startButton: "テスト開始",
@@ -107,6 +134,15 @@ export const commonTranslations = {
       strengthDescription: "你不知道的自己的特别优势是什么？",
       backToHome: "回到主页",
     },
+    footer: {
+      about: "简介",
+      privacy: "隐私政策",
+      terms: "服务条款",
+      contact: "联系我们",
+      rights: "© 2024 Test Yourself. All rights reserved.",
+      description:
+        "Test Yourself 是一个提供多种测试以帮助您发现自我和进行心理反思的心理测试平台。我们致力于基于科学数据和心理学原理提供可靠的结果。",
+    },
     common: {
       startButton: "开始测试",
       prevButton: "← 返回",
@@ -138,6 +174,15 @@ export const commonTranslations = {
       strengthButton: "Mano stiprybių testas",
       strengthDescription: "Kokia yra tavo ypatinga stiprybė, kurios nežinai?",
       backToHome: "Į pradžią",
+    },
+    footer: {
+      about: "Apie",
+      privacy: "Privatumo politika",
+      terms: "Naudojimo taisyklės",
+      contact: "Kontaktai",
+      rights: "© 2024 Test Yourself. All rights reserved.",
+      description:
+        "„Test Yourself“ yra psichologinių testų platforma, teikianti įvairius testus, padedančius atrasti save ir apmąstyti savo vidinį pasaulį. Mes stengiamės pateikti patikimus rezultatus, pagrįstus moksliniais duomenimis ir psichologiniais principais.",
     },
     common: {
       startButton: "Pradėti testą",
