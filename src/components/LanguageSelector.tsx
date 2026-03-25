@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { type Language } from '../data/commonTranslations';
 import { useLanguageStore } from '../store/useLanguageStore';
+import './LanguageSelector.css';
 
 const LanguageSelector: React.FC = () => {
   const { lang, setLang } = useLanguageStore();

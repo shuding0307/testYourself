@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import LanguageSelector from "./LanguageSelector";
 import { useLanguageStore } from "../store/useLanguageStore";
+import "./Header.css";
 
 const Header: React.FC = () => {
   const navigate = useNavigate();

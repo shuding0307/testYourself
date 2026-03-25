@@ -1,5 +1,7 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
+import "./styles/Home.css";
+import "./styles/Common.css";
 import MentalAgeTest from "./mentalAge/MentalAgeTest";
 import Header from "./components/Header";
 import Footer from "./components/Footer";

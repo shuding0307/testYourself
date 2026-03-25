@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useLanguageStore } from "../store/useLanguageStore";
+import "./Footer.css";
 
 const Footer: React.FC = () => {
   const { common } = useLanguageStore();
