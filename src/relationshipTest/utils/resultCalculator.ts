@@ -15,54 +15,50 @@ export const calculateRelationshipResult = (
   };
 
   answers.forEach((ans, index) => {
-    const questionIndex = index + 1;
+    const qIdx = index + 1;
 
     if (ans === "A") {
-      scores.direct_lover += 2;
-      if ([1, 4, 7, 9].includes(questionIndex)) scores.atmosphere_sensitive += 1;
-      if ([2, 3, 5, 6, 8, 10].includes(questionIndex)) scores.direct_lover += 1;
+      // 주로 표현 및 적극성
+      if ([1, 4, 7, 9].includes(qIdx)) scores.direct_lover += 3;
+      if ([2, 5, 8, 10].includes(qIdx)) scores.atmosphere_sensitive += 3;
+      if ([3, 6].includes(qIdx)) scores.direct_lover += 2;
     } else if (ans === "B") {
-      scores.wary_flirt += 2;
-      scores.stability_seeker += 1;
-      if ([2, 6, 7, 10].includes(questionIndex)) scores.devoted_giver += 1;
+      // 주로 안정 및 배려
+      if ([1, 3, 6, 10].includes(qIdx)) scores.devoted_giver += 3;
+      if ([2, 4, 7, 9].includes(qIdx)) scores.stability_seeker += 3;
+      if ([5, 8].includes(qIdx)) scores.stability_seeker += 2;
     } else if (ans === "C") {
-      scores.deep_emotionalist += 2;
-      scores.immersive_obsessive += 1;
-      if ([4, 5, 8, 9].includes(questionIndex)) scores.immersive_obsessive += 1;
+      // 주로 몰입 및 깊은 감성
+      if ([1, 4, 6, 8, 10].includes(qIdx)) scores.deep_emotionalist += 3;
+      if ([2, 3, 5, 7, 9].includes(qIdx)) scores.immersive_obsessive += 3;
     } else if (ans === "D") {
-      scores.emotion_hider += 2;
-      if ([3, 4, 8, 9].includes(questionIndex)) scores.stability_seeker += 1;
-      if ([2, 5, 6, 7, 10].includes(questionIndex)) scores.emotion_hider += 1;
-      if (questionIndex === 1) scores.direct_lover += 1;
+      // 주로 신중 및 거리두기
+      if ([1, 2, 5, 7, 10].includes(qIdx)) scores.wary_flirt += 3;
+      if ([3, 4, 6, 8, 9].includes(qIdx)) scores.emotion_hider += 3;
     }
   });
 
-  // Find the type with the highest score
-  let maxScore = -1;
-  let resultType: RelationshipType = "stability_seeker";
+  // 결과 산출
+  const priorities: RelationshipType[] = [
+    "direct_lover",
+    "wary_flirt",
+    "devoted_giver",
+    "emotion_hider",
+    "immersive_obsessive",
+    "stability_seeker",
+    "atmosphere_sensitive",
+    "deep_emotionalist",
+  ];
 
-  for (const type in scores) {
-    const relationshipType = type as RelationshipType;
-    if (scores[relationshipType] > maxScore) {
-      maxScore = scores[relationshipType];
-      resultType = relationshipType;
-    } else if (scores[relationshipType] === maxScore) {
-      // Tie-breaking: priority order (arbitrary but consistent)
-      const priorities: RelationshipType[] = [
-        "direct_lover",
-        "deep_emotionalist",
-        "emotion_hider",
-        "stability_seeker",
-        "immersive_obsessive",
-        "devoted_giver",
-        "wary_flirt",
-        "atmosphere_sensitive",
-      ];
-      if (priorities.indexOf(relationshipType) < priorities.indexOf(resultType)) {
-        resultType = relationshipType;
-      }
+  let resultType = priorities[0];
+  let maxScore = -1;
+
+  priorities.forEach((type) => {
+    if (scores[type] > maxScore) {
+      maxScore = scores[type];
+      resultType = type;
     }
-  }
+  });
 
   return resultType;
 };
