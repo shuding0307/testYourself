@@ -14,6 +14,9 @@ export const commonTranslations = {
       strengthButton: "나의 강점 테스트",
       strengthDescription: "나만 모르는 나의 특별한 강점은 무엇일까?",
       strengthTags: "#나의강점 #잠재력",
+      dessertButton: "디저트 성격 테스트",
+      dessertDescription: "나는 어떤 달콤함을 닮았을까?",
+      dessertTags: "#디저트 #성격유형",
       backToHome: "메인으로",
     },
     footer: {
@@ -168,6 +171,9 @@ export const commonTranslations = {
       strengthButton: "Strength Test",
       strengthDescription: "What are your special strengths you didn't know?",
       strengthTags: "#MyStrength #Potential",
+      dessertButton: "Dessert Personality Test",
+      dessertDescription: "What kind of sweetness are you?",
+      dessertTags: "#Dessert #Personality",
       backToHome: "Home",
     },
     footer: {
@@ -315,7 +321,7 @@ export const commonTranslations = {
       title: "自分を知るための\nテストプラットフォーム",
       subtitle: "あなたの内面を見つめる時間",
       startButton: "精神年齢テスト",
-      startDescription: "自分の中に眠る本当の年齢は何歳だろう？",
+      startDescription: "自分の中に眠る本当의年齢は何歳だろう？",
       mentalTags: "#精神年齢 #自己分析",
       dopamineButton: "ドーパミン中毒テスト",
       dopamineDescription: "あなたの脳はどれほど刺激に依存していますか？",
@@ -324,6 +330,9 @@ export const commonTranslations = {
       strengthDescription:
         "あなただけが知らないあなたの特別な強みは何でしょうか？",
       strengthTags: "#私の強み #ポテンシャル",
+      dessertButton: "デザート性格診断",
+      dessertDescription: "あなたはどんな甘さに似ていますか？",
+      dessertTags: "#デザート #性格診断",
       backToHome: "ホームへ",
     },
     footer: {
@@ -404,7 +413,7 @@ export const commonTranslations = {
         {
           title: "3. 責任の制限",
           content:
-            "ユーザーがテスト結果に基づいて下した決定や行動について、本サービスは一切の法的責任を負いません。サービスの利用はユーザー自身の判断で行ってください。",
+            "ユーザーがテスト結果に基づいて下した決定や行動について、本サービスは一切의法的責任を負いません。サービスの利用はユーザー自身の判断で行ってください。",
         },
         {
           title: "4. 著作権",
@@ -462,7 +471,7 @@ export const commonTranslations = {
       agree: "そう思う",
       neutral: "普通",
       disagree: "そう思わない",
-      disagreeVery: "全くそう思わない",
+      disagreeVery: "全くそう思うわない",
     },
   },
   zh: {
@@ -478,6 +487,9 @@ export const commonTranslations = {
       strengthButton: "我的优势测试",
       strengthDescription: "你不知道的自己的特别优势是什么？",
       strengthTags: "#我的优势 #潜力",
+      dessertButton: "甜点性格测试",
+      dessertDescription: "你像哪种甜味？",
+      dessertTags: "#甜点 #性格测试",
       backToHome: "回到主页",
     },
     footer: {
@@ -530,7 +542,7 @@ export const commonTranslations = {
             "我们利用 Google 服务进行广告 and 分析。这些提供商根据其各自的隐私政策运营。",
         },
         {
-          title: "6. 数据 security",
+          title: "6. 데이터 security",
           content:
             "统计数据经过加密，并通过安全协议进行传输 and 保护。我们优先保护用户的隐私。",
         },
@@ -627,8 +639,11 @@ export const commonTranslations = {
         "Kiek jūsų smegenys yra priklausomos nuo stimuliacijos?",
       dopamineTags: "#Dopaminas #Priklausomybė",
       strengthButton: "Mano stiprybių testas",
-      strengthDescription: "Kokia yra tavo ypatinga stiprybė, kurios nežinai?",
+      strengthDescription: "Kokia yra tavo ypatinga stiprybė, kurios než인ai?",
       strengthTags: "#ManoStiprybė #Potencialas",
+      dessertButton: "Deserto asmenybės testas",
+      dessertDescription: "Kokio saldumo esi tu?",
+      dessertTags: "#Desertas #Asmenybė",
       backToHome: "Į pradžią",
     },
     footer: {

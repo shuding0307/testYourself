@@ -165,6 +165,20 @@
   color: #10b981;
 }
 
+/* Dessert Card */
+.dessert-card:hover {
+  border-color: #ff9a9e;
+}
+.dessert-card .card-tag {
+  color: #ff7eb3;
+}
+.dessert-card .card-icon {
+  background: rgba(255, 154, 158, 0.1);
+}
+.dessert-card:hover .card-arrow {
+  color: #ff9a9e;
+}
+
 @media (max-width: 480px) {
   .home-title {
     font-size: 2.2rem;
