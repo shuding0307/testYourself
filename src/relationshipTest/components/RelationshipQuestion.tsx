@@ -15,7 +15,7 @@ const RelationshipQuestion: React.FC<RelationshipQuestionProps> = ({
   onBack,
   totalSteps,
 }) => {
-  const { common } = useLanguageStore();
+  const { lang, common } = useLanguageStore();
   const question = relationshipQuestions[currentStep];
 
   if (!question) return null;
@@ -34,7 +34,7 @@ const RelationshipQuestion: React.FC<RelationshipQuestionProps> = ({
           {common.common.questionLabel} {currentStep + 1} / {totalSteps}
         </span>
 
-        <h2 className="q-text">{question.text}</h2>
+        <h2 className="q-text">{question.text[lang] || question.text.ko}</h2>
 
         <div className="answer-buttons">
           {question.options.map((option, index) => (
@@ -44,7 +44,7 @@ const RelationshipQuestion: React.FC<RelationshipQuestionProps> = ({
               onClick={() => onAnswer(option.value)}
               style={{ textAlign: "left", padding: "18px" }}
             >
-              {option.text}
+              {option.text[lang] || option.text.ko}
             </button>
           ))}
         </div>

@@ -98,12 +98,148 @@ export const relationshipTranslations: Record<string, RelationshipTranslation> =
         },
       },
     },
+    en: {
+      title: "Relationship Type Test",
+      subtitle: "What kind of love are you in?",
+      startBtn: "Start Test",
+      nextBtn: "Next",
+      resultBtn: "View Results",
+      retryBtn: "Retry",
+      shareBtn: "Share",
+      strengthLabel: "💡 Your Core Nature:",
+      strengthDescription: "That's why in love, {desc}",
+      results: {
+        direct_lover: {
+          title: "🔥 Direct Lover",
+          subTitle: "An honest and passionate expresser",
+          desc: "You are someone who is accustomed to expressing your feelings rather than hiding them. When you develop a liking for someone, it naturally leads to action, and you value honesty most in relationships.\n\nYou try to clearly convey your feelings to the other person, so misunderstandings rarely build up, and relationships often deepen quickly. However, sometimes you might move faster than the other person's pace, potentially causing pressure.\n\nNevertheless, your sincerity is clearly delivered, and you are the type who creates 'certainty,' which is most important in romance. You are someone who knows how to put emotions into action, moving the relationship forward.",
+          strengthId: "drive_creativity",
+          strengthReason: "Action tends to come before emotion.",
+        },
+        wary_flirt: {
+          title: "👀 Observant Flirt",
+          subTitle: "A strategist who reads the flow",
+          desc: "You are the type who looks at the situation and flow before your emotions. You carefully observe the other person's tone, behavior, and even texting speed to balance the relationship.\n\nYou often worry about whether 'this timing is right' rather than approaching first. Thus, while you aren't easily hurt, you might also miss opportunities.\n\nOthers see you as a prudent and sensible person, but you often have quite a lot on your mind. You move once you're certain, but you never act easily before that.",
+          strengthId: "analytical_empathy",
+          strengthReason: "You move while carefully observing the other person's reaction.",
+        },
+        devoted_giver: {
+          title: "🫶 Devoted Giver",
+          subTitle: "A tree that gives generously",
+          desc: "You are the type who puts the other person at the center once you start dating. When you like someone, you naturally adapt to them and try to maintain the relationship in a direction comfortable for them.\n\nThus, the other person can feel a very comfortable and stable romance. However, in that process, you often push your own emotions or desires to the background.\n\nYou might occasionally wonder 'Why am I the only one adapting?', but you are someone who thinks deeply about your partner. You know how to give love, but you are also the type who needs to take care of yourself.",
+          strengthId: "empathy_patience",
+          strengthReason: "You find your own joy in your partner's happiness.",
+        },
+        emotion_hider: {
+          title: "🧊 Emotion Hider",
+          subTitle: "Deep and genuine as you get to know them",
+          desc: "It's not that you don't have emotions, but rather that you find it difficult to express them. Even if you have feelings of liking someone, you tend to not reveal them easily and try to organize them yourself.\n\nThus, it might be difficult for the other person to grasp your heart. However, once you open your heart, you are someone who builds deep and stable relationships.\n\nWhile you appear calm on the outside, you are the type where many thoughts and emotions are moving within. Your sincerity is bigger than your expression.",
+          strengthId: "patience_drive",
+          strengthReason: "You tend to solidify your emotions internally rather than revealing them.",
+        },
+        immersive_obsessive: {
+          title: "🎯 Immersive Lover",
+          subTitle: "A lover who gives their whole heart",
+          desc: "You are the type who falls deeply once you start dating. Your partner takes up a large portion of your life, and you naturally invest a lot of time and emotion.\n\nAs much as you don't take love lightly, your seriousness is strongly revealed in the relationship. However, you are also heavily influenced by every single action of your partner.\n\nAs your emotional depth is large, your joy can be great, but your hurt can also be deep. You are someone who can truly love someone sincerely.",
+          strengthId: "drive_patience",
+          strengthReason: "You concentrate deeply on one person and pour in all your energy.",
+        },
+        stability_seeker: {
+          title: "🐢 Stability Seeker",
+          subTitle: "Love like a comfortable shelter",
+          desc: "You are the type who values long-lasting relationships over fast emotions. In romance, you build relationships slowly over time rather than getting close in a hurry.\n\nYou value trust, stability, and comfort with your partner, and your emotional fluctuations aren't very large. Thus, your relationships often last for a long time.\n\nWhile not stimulating, you are the type who has the most realistic and healthy romance.",
+          strengthId: "analytical_drive",
+          strengthReason: "You carefully design the future of the relationship and prioritize stability.",
+        },
+        atmosphere_sensitive: {
+          title: "🎭 Romantic Moodist",
+          subTitle: "A romanticist who dreams of romance",
+          desc: "You are the type who values 'feeling' very importantly in romance. You are sensitive to excitement, atmosphere, and the flow of emotions, and you feel the emotions of that moment deeply.\n\nThus, you value the excitement when a relationship starts and consider emotional exchange important within the relationship. However, because you are heavily influenced by the atmosphere, emotional swings might occur.\n\nYou are the type who feels romance deeply as an experience.",
+          strengthId: "creativity_drive",
+          strengthReason: "You creatively enjoy every moment's emotion and atmosphere.",
+        },
+        deep_emotionalist: {
+          title: "🌊 Deep Emotionalist",
+          subTitle: "Possessor of an inner self deeper than the sea",
+          desc: "You are the type who has much deeper emotions than what is revealed on the outside. You don't take love lightly, and once a feeling develops, it tends to last for a long time.\n\nYou value deep bonds in relationships and often find it difficult to organize your feelings easily. Thus, emotions tend to linger for a long time even after a breakup.\n\nHowever, you are someone who can create a truly genuine relationship.",
+          strengthId: "patience_creativity",
+          strengthReason: "You value deep, invisible bonds preciously.",
+        },
+      },
+    },
+    lt: {
+      title: "Santykių tipo testas",
+      subtitle: "Kokią meilę jūs išgyvenate?",
+      startBtn: "Pradėti testą",
+      nextBtn: "Kitas",
+      resultBtn: "Peržiūrėti rezultatus",
+      retryBtn: "Bandyti dar kartą",
+      shareBtn: "Dalintis",
+      strengthLabel: "💡 Jūsų pagrindinė prigimtis:",
+      strengthDescription: "Štai kodėl meilėje {desc}",
+      results: {
+        direct_lover: {
+          title: "🔥 Tiesmukas mylėtojas",
+          subTitle: "Sąžiningas ir aistringas jausmų reiškėjas",
+          desc: "Esate žmogus, kuris yra įpratęs išreikšti savo jausmus, o ne juos slėpti. Kai kas nors jums pradeda patikti, tai natūraliai virsta veiksmais, o santykiuose labiausiai vertinate sąžiningumą.\n\nStengiatės aiškiai perteikti savo jausmus kitam asmeniui, todėl retai kyla nesusipratimų, o santykiai dažnai greitai pagilėja. Tačiau kartais galite judėti greičiau nei kito asmens tempas, o tai gali sukelti spaudimą.\n\nNepaisant to, jūsų nuoširdumas yra aiškiai perduodamas, ir jūs esate tas tipas, kuris sukuria „tikrumą“, kuris yra svarbiausias romantikoje. Esate žmogus, kuris žino, kaip emocijas paversti veiksmais, judant santykius į priekį.",
+          strengthId: "drive_creativity",
+          strengthReason: "Veiksmas linkęs eiti pirmiau nei emocija.",
+        },
+        wary_flirt: {
+          title: "👀 Stebintis flirto meistras",
+          subTitle: "Strategas, skaitantis situaciją",
+          desc: "Esate tipas, kuris pirmiausia žiūri į situaciją ir eigą, o ne į savo emocijas. Atidžiai stebite kito asmens toną, elgesį ir net žinučių rašymo greitį, kad išlaikytumėte santykių pusiausvyrą.\n\nDažnai nerimaujate, ar „šis momentas yra tinkamas“, užuot kreipęsi pirmi. Taigi, nors nesate lengvai įžeidžiamas, galite praleisti progas.\n\nKiti jus mato kaip protingą ir protingą žmogų, tačiau jūsų galvoje dažnai sukasi daugybė minčių. Judate tada, kai esate tikras, bet niekada nesiimate veiksmų neapgalvoję.",
+          strengthId: "analytical_empathy",
+          strengthReason: "Judate atidžiai stebėdami kito asmens reakciją.",
+        },
+        devoted_giver: {
+          title: "🫶 Atsidavęs davėjas",
+          subTitle: "Dosniai duodantis medis",
+          desc: "Esate tipas, kuris, pradėjęs susitikinėti, kitą asmenį iškelia į centrą. Kai kas nors jums patinka, natūraliai prie jo prisitaikote ir stengiatės išlaikyti santykių jam patogia kryptimi.\n\nTaigi, kitas asmuo gali jausti labai patogią ir stabilią romantiką. Tačiau šiame procese dažnai nustumiate savo emocijas ar troškimus į antrą planą.\n\nKartais galite susimąstyti: „Kodėl aš vienintelis prisitaikau?“, tačiau esate žmogus, kuris giliai galvoja apie savo partnerį. Žinote, kaip duoti meilę, bet taip pat esate tipas, kuriam reikia pasirūpinti savimi.",
+          strengthId: "empathy_patience",
+          strengthReason: "Savo džiaugsmą randate partnerio laimėje.",
+        },
+        emotion_hider: {
+          title: "🧊 Emocijų slėpėjas",
+          subTitle: "Gilus ir tikras, kai geriau pažįstate",
+          desc: "Ne tai, kad neturite emocijų, bet greičiau tai, kad jums sunku jas išreikšti. Net jei jaučiate simpatiją kam nors, esate linkęs to lengvai neparodyti ir stengiatės juos susitvarkyti pats.\n\nTaigi kitam asmeniui gali būti sunku suprasti jūsų širdį. Tačiau kartą atvėręs širdį, esate žmogus, kuris kuria gilius ir stabilius santykius.\n\nNors iš išorės atrodote ramus, esate tipas, kuriame juda daugybė minčių ir emocijų. Jūsų nuoširdumas yra didesnis už jūsų išraišką.",
+          strengthId: "patience_drive",
+          strengthReason: "Esate linkęs stiprinti savo emocijas viduje, o ne jas rodyti.",
+        },
+        immersive_obsessive: {
+          title: "🎯 Įtraukiantis mylėtojas",
+          subTitle: "Mylėtojas, atiduodantis visą širdį",
+          desc: "Esate tipas, kuris giliai įsimyli, kai pradeda susitikinėti. Partneris užima didelę jūsų gyvenimo dalį, ir jūs natūraliai investuojate daug laiko ir emocijų.\n\nKiek rimtai žiūrite į meilę, jūsų rimtumas stipriai pasireiškia santykiuose. Tačiau jus taip pat stipriai veikia kiekvienas jūsų partnerio veiksmas.\n\nKadangi jūsų emocinis gylis yra didelis, jūsų džiaugsmas gali būti didelis, bet jūsų skausmas taip pat gali būti gilus. Esate žmogus, kuris gali nuoširdžiai mylėti.",
+          strengthId: "drive_patience",
+          strengthReason: "Giliai susikoncentruojate į vieną asmenį ir atiduodate visą savo energiją.",
+        },
+        stability_seeker: {
+          title: "🐢 Stabilumo ieškotojas",
+          subTitle: "Meilė kaip patogi pastogė",
+          desc: "Esate tipas, kuris vertina ilgalaikius santykius labiau nei greitas emocijas. Romantikoje santykius kuriate lėtai, o ne skubate suartėti.\n\nVertinate pasitikėjimą, stabilumą ir komfortą su savo partneriu, o jūsų emociniai svyravimai nėra labai dideli. Taigi jūsų santykiai dažnai trunka ilgą laiką.\n\nNors ir nestimuliuojantis, esate tipas, turintis realistiškiausią ir sveikiausią romantiką.",
+          strengthId: "analytical_drive",
+          strengthReason: "Atidžiai projektuojate santykių ateitį ir teikiate pirmenybę stabilumui.",
+        },
+        atmosphere_sensitive: {
+          title: "🎭 Romantiškas nuotaikos žmogus",
+          subTitle: "Romantikas, svajojantis apie romantiką",
+          desc: "Esate tipas, kuriam „jausmas“ romantikoje yra labai svarbus. Esate jautrus jauduliui, atmosferai ir emocijų tėkmei, giliai jaučiate tos akimirkos emocijas.\n\nTodėl vertinate jaudulį, kai prasideda santykiai, ir laikote emocinį apsikeitimą svarbiu santykiuose. Tačiau, kadangi jus stipriai veikia atmosfera, gali atsirasti emocinių svyravimų.\n\nEsate tipas, kuris giliai jaučia romantiką kaip patirtį.",
+          strengthId: "creativity_drive",
+          strengthReason: "Kūrybiškai mėgaujatės kiekvienos akimirkos emocija ir atmosfera.",
+        },
+        deep_emotionalist: {
+          title: "🌊 Gilus emocionalistas",
+          subTitle: "Vidinio aš, gilesnio už jūrą, savininkas",
+          desc: "Esate tipas, turintis daug gilesnes emocijas nei tai, kas matoma išorėje. Į meilę nežiūrite lengvai, o atsiradus jausmui, jis linkęs išlikti ilgą laiką.\n\nVertinate gilius ryšius santykiuose ir dažnai jums sunku lengvai susitvarkyti jausmus. Todėl emocijos linkusios išlikti ilgą laiką net po išsiskyrimo.\n\nTačiau esate žmogus, kuris gali sukurti tikrai tikrą ryšį.",
+          strengthId: "patience_creativity",
+          strengthReason: "Branginate gilius, nematomus ryšius.",
+        },
+      },
+    },
   };
 
-// 타 언어들에 대해 기본값(ko) 설정 (번역 데이터 부족 시 fallback)
-relationshipTranslations.en = relationshipTranslations.ko;
-relationshipTranslations.jp = relationshipTranslations.ko;
-relationshipTranslations.zh = relationshipTranslations.ko;
-relationshipTranslations.lt = relationshipTranslations.ko;
+// 타 언어들에 대해 기본값(en) 설정 (번역 데이터 부족 시 fallback)
+relationshipTranslations.jp = relationshipTranslations.en;
+relationshipTranslations.zh = relationshipTranslations.en;
 
 export type RelationshipTranslationType = typeof relationshipTranslations.ko;

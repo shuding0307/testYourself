@@ -1,3 +1,6 @@
+import { commonTranslations } from "../data/commonTranslations";
+import type { Language } from "../data/commonTranslations";
+
 export type Trait = {
   expressiveness: number;
   stability: number;
@@ -21,9 +24,11 @@ export const calculateCompatibilityScore = (t1: Trait, t2: Trait) => {
   return Math.max(percentage, 40);
 };
 
-export const getCompatibilityStatus = (score: number) => {
-  if (score >= 90) return { text: '💘 환상의 궁합', color: '#ff4d7d' };
-  if (score >= 75) return { text: '😊 안정적인 관계', color: '#4dabf7' };
-  if (score >= 60) return { text: '😐 노력이 필요한 관계', color: '#fab005' };
-  return { text: '💥 맞지 않는 스타일', color: '#fa5252' };
+export const getCompatibilityStatus = (score: number, lang: Language = "ko") => {
+  const t = commonTranslations[lang]?.compatibility?.status || commonTranslations.ko.compatibility.status;
+  
+  if (score >= 90) return { text: t.fantasy, color: '#ff4d7d' };
+  if (score >= 75) return { text: t.stable, color: '#4dabf7' };
+  if (score >= 60) return { text: t.effort, color: '#fab005' };
+  return { text: t.mismatch, color: '#fa5252' };
 };
