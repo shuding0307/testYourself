@@ -17,6 +17,9 @@ export const commonTranslations = {
       dessertButton: "디저트 성격 테스트",
       dessertDescription: "나는 어떤 달콤함을 닮았을까?",
       dessertTags: "#디저트 #성격유형",
+      relationshipButton: "연애 타입 테스트",
+      relationshipDescription: "당신은 어떤 사랑을 하고 있나요?",
+      relationshipTags: "#연애스타일 #심리테스트",
       backToHome: "메인으로",
     },
     footer: {
@@ -174,6 +177,9 @@ export const commonTranslations = {
       dessertButton: "Dessert Personality Test",
       dessertDescription: "What kind of sweetness are you?",
       dessertTags: "#Dessert #Personality",
+      relationshipButton: "Relationship Type Test",
+      relationshipDescription: "What kind of love are you in?",
+      relationshipTags: "#LoveStyle #Psychology",
       backToHome: "Home",
     },
     footer: {
@@ -333,6 +339,9 @@ export const commonTranslations = {
       dessertButton: "デザート性格診断",
       dessertDescription: "あなたはどんな甘さに似ていますか？",
       dessertTags: "#デザート #性格診断",
+      relationshipButton: "恋愛タイプ診断",
+      relationshipDescription: "あなたはどのような恋愛をしていますか？",
+      relationshipTags: "#恋愛スタイル #心理テスト",
       backToHome: "ホームへ",
     },
     footer: {
@@ -490,6 +499,9 @@ export const commonTranslations = {
       dessertButton: "甜点性格测试",
       dessertDescription: "你像哪种甜味？",
       dessertTags: "#甜点 #性格测试",
+      relationshipButton: "恋爱类型测试",
+      relationshipDescription: "你正在谈什么样的恋爱？",
+      relationshipTags: "#恋爱风格 #心理测试",
       backToHome: "回到主页",
     },
     footer: {
@@ -644,6 +656,9 @@ export const commonTranslations = {
       dessertButton: "Deserto asmenybės testas",
       dessertDescription: "Kokio saldumo esi tu?",
       dessertTags: "#Desertas #Asmenybė",
+      relationshipButton: "Santykių tipo testas",
+      relationshipDescription: "Kokią meilę jūs išgyvenate?",
+      relationshipTags: "#MeilėsStilius #PsichologinisTestas",
       backToHome: "Į pradžią",
     },
     footer: {

@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const contactT = (t as any).contact || {
+  const contactT = t.contact || {
     title: "Contact Us",
     subtitle: "Have any questions or feedback?",
     description: "If you have any inconveniences or ideas to suggest while using the service, please let us know. Your feedback is a great help.",
