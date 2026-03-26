@@ -1,0 +1,51 @@
+.relationship-test-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.relationship-strength-link {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px dashed #e5e4e7;
+}
+
+.strength-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: left;
+  border: 1px solid #eee;
+}
+
+.strength-label {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.strength-reason {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Dark mode adjustments if needed */
+@media (prefers-color-scheme: dark) {
+  .strength-card {
+    background: #1f2028;
+    border-color: #2e303a;
+  }
+  .strength-label {
+    color: #f3f4f6;
+  }
+  .strength-reason {
+    color: #9ca3af;
+  }
+}

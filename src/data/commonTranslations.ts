@@ -17,6 +17,9 @@ export const commonTranslations = {
       dessertButton: "디저트 성격 테스트",
       dessertDescription: "나는 어떤 달콤함을 닮았을까?",
       dessertTags: "#디저트 #성격유형",
+      relationshipButton: "연애 타입 테스트",
+      relationshipDescription: "당신은 어떤 사랑을 하고 있나요?",
+      relationshipTags: "#연애스타일 #심리테스트",
       backToHome: "메인으로",
     },
     footer: {
@@ -157,6 +160,17 @@ export const commonTranslations = {
       disagree: "아니다",
       disagreeVery: "전혀 아니다",
     },
+    compatibility: {
+      title: "유형별 궁합",
+      best: "최고의 파트너",
+      worst: "노력이 필요해요",
+      status: {
+        fantasy: "💘 환상의 궁합",
+        stable: "😊 안정적인 관계",
+        effort: "😐 노력이 필요한 관계",
+        mismatch: "💥 맞지 않는 스타일",
+      },
+    },
   },
   en: {
     home: {
@@ -174,6 +188,9 @@ export const commonTranslations = {
       dessertButton: "Dessert Personality Test",
       dessertDescription: "What kind of sweetness are you?",
       dessertTags: "#Dessert #Personality",
+      relationshipButton: "Relationship Type Test",
+      relationshipDescription: "What kind of love are you in?",
+      relationshipTags: "#LoveStyle #Psychology",
       backToHome: "Home",
     },
     footer: {
@@ -315,6 +332,17 @@ export const commonTranslations = {
       disagree: "Disagree",
       disagreeVery: "Strongly Disagree",
     },
+    compatibility: {
+      title: "Compatibility by Type",
+      best: "Best Partner",
+      worst: "Needs Effort",
+      status: {
+        fantasy: "💘 Perfect Match",
+        stable: "😊 Stable Relationship",
+        effort: "😐 Relationship needing effort",
+        mismatch: "💥 Mismatched Style",
+      },
+    },
   },
   jp: {
     home: {
@@ -328,11 +356,14 @@ export const commonTranslations = {
       dopamineTags: "#ドーパミン #依存度チェック",
       strengthButton: "あなたの強みテスト",
       strengthDescription:
-        "あなただけが知らないあなたの特別な強みは何でしょうか？",
+        "あなただけ가知らないあなたの特別な強みは何でしょうか？",
       strengthTags: "#私の強み #ポテンシャル",
       dessertButton: "デザート性格診断",
       dessertDescription: "あなたはどんな甘さに似ていますか？",
       dessertTags: "#デザート #性格診断",
+      relationshipButton: "恋愛タイプ診断",
+      relationshipDescription: "あなたはどのような恋愛をしていますか？",
+      relationshipTags: "#恋愛スタイル #心理テスト",
       backToHome: "ホームへ",
     },
     footer: {
@@ -342,7 +373,7 @@ export const commonTranslations = {
       contact: "お問い合わせ",
       rights: "© 2026 Naora. All rights reserved.",
       description:
-        "Naoraは、様々なテストを通じて自分の傾向や感情をより深く理解できるよう支援하는心理テストプラットフォームです。各テストは日常の行動パターンや心理学の理論を参考に構成されており、誰もが共感できるインサイトを提供することを目指しています。本結果は楽しみと参考のためのコンテンツとして、自分を振り返る一つの気軽なきっかけとして活用してください。",
+        "Naoraは、様々なテストを通じて自分の傾向や感情をより深く理解できるよう支援하는心理テストプラットフォームです。各テストは日常의行動パターンや心理学の理論を参考に構成されており、誰もが共感できるインサイトを提供することを目指しています。本結果は楽しみと参考のためのコンテンツとして、自分を振り返る一つの気軽なきっかけとして活用してください。",
     },
     contact: {
       title: "お問い合わせ",
@@ -428,7 +459,7 @@ export const commonTranslations = {
         {
           title: "6. ユーザーの義務",
           content:
-            "ユーザーはサービスのハッキングやリバースエンジニアリングを行ってはならず、コンテンツを無断で配布したり商業的に利用したりしてはなりません。",
+            "ユーザーはサービスのハッキングやリバースエンジニアリングを行ってはならず、コンテンツを無단で配布したり商業的に利用したりしてはなりません。",
         },
         {
           title: "7. 準拠法",
@@ -473,6 +504,17 @@ export const commonTranslations = {
       disagree: "そう思わない",
       disagreeVery: "全くそう思うわない",
     },
+    compatibility: {
+      title: "タイプ別相性",
+      best: "最高のパートナー",
+      worst: "努力が必要です",
+      status: {
+        fantasy: "💘 最高の相性",
+        stable: "😊 安定した関係",
+        effort: "😐 努力が必要な関係",
+        mismatch: "💥 合わないスタイル",
+      },
+    },
   },
   zh: {
     home: {
@@ -490,6 +532,9 @@ export const commonTranslations = {
       dessertButton: "甜点性格测试",
       dessertDescription: "你像哪种甜味？",
       dessertTags: "#甜点 #性格测试",
+      relationshipButton: "恋爱类型测试",
+      relationshipDescription: "你正在谈什么样的恋爱？",
+      relationshipTags: "#恋爱风格 #心理测试",
       backToHome: "回到主页",
     },
     footer: {
@@ -626,6 +671,17 @@ export const commonTranslations = {
       disagree: "不同意",
       disagreeVery: "非常不同意",
     },
+    compatibility: {
+      title: "类型兼容性",
+      best: "最佳拍档",
+      worst: "需要努力",
+      status: {
+        fantasy: "💘 绝佳契合",
+        stable: "😊 稳定的关系",
+        effort: "😐 需要努力的关系",
+        mismatch: "💥 不匹配的风格",
+      },
+    },
   },
   lt: {
     home: {
@@ -644,6 +700,9 @@ export const commonTranslations = {
       dessertButton: "Deserto asmenybės testas",
       dessertDescription: "Kokio saldumo esi tu?",
       dessertTags: "#Desertas #Asmenybė",
+      relationshipButton: "Santykių tipo testas",
+      relationshipDescription: "Kokią meilę jūs išgyvenate?",
+      relationshipTags: "#MeilėsStilius #PsichologinisTestas",
       backToHome: "Į pradžią",
     },
     footer: {
@@ -688,7 +747,7 @@ export const commonTranslations = {
         {
           title: "4. Slapukai ir reklamos identifikatoriai",
           content:
-            "Mes naudojame trečiųjų šalių paslaugas, tokias kaip „Google AdSense“ ir „Google Analytics“, kurios gali naudoti slapukus ar reklamos identifikatorius, kad pateiktų personalizuotas reklamas pagal jūsų interesus ir analizuotų srautą.",
+            "Mes naudojame trečiųjų šalių paslaugas, tokias kaip „Google AdSense“ ir „Google Analytics“, kurios gali naudoti slapukus ar reklamos identifikatoriai, kad pateiktų personalizuotas reklamas pagal jūsų interesus ir analizuotų srautą.",
         },
         {
           title: "5. Trečiųjų šalių paslaugos",
@@ -784,6 +843,17 @@ export const commonTranslations = {
       neutral: "Neutralu",
       disagree: "Nesutinku",
       disagreeVery: "Visiškai nesutinku",
+    },
+    compatibility: {
+      title: "Suderinamumas pagal tipą",
+      best: "Geriausias partneris",
+      worst: "Reikia pastangų",
+      status: {
+        fantasy: "💘 Tobulas suderinamumas",
+        stable: "😊 Stabilūs santykiai",
+        effort: "😐 Santykiai, kuriems reikia pastangų",
+        mismatch: "💥 Nesutampantis stilius",
+      },
     },
   },
 };

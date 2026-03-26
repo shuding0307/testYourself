@@ -179,6 +179,20 @@
   color: #ff9a9e;
 }
 
+/* Relationship Card */
+.relationship-card:hover {
+  border-color: #f6d365;
+}
+.relationship-card .card-tag {
+  color: #f6d365;
+}
+.relationship-card .card-icon {
+  background: rgba(246, 211, 101, 0.1);
+}
+.relationship-card:hover .card-arrow {
+  color: #f6d365;
+}
+
 @media (max-width: 480px) {
   .home-title {
     font-size: 2.2rem;

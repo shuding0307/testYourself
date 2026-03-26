@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import DopamineTest from "./dopamine/DopamineTest";
 import StrengthTest from "./strengthTest/StrengthTest";
 import DessertTest from "./dessertTest/DessertTest";
+import RelationshipTest from "./relationshipTest/RelationshipTest";
 import PrivacyPolicy from "./components/legal/PrivacyPolicy";
 import TermsOfService from "./components/legal/TermsOfService";
 import Contact from "./components/legal/Contact";
@@ -100,6 +101,23 @@ function App() {
                     </div>
                     <div className="card-arrow">→</div>
                   </div>
+
+                  <div
+                    className="test-card relationship-card"
+                    onClick={() => navigate("/relationship")}
+                  >
+                    <div className="card-icon">💑</div>
+                    <div className="card-content">
+                      <div className="card-tag">{common.home.relationshipTags}</div>
+                      <h2 className="card-title">
+                        {common.home.relationshipButton}
+                      </h2>
+                      <p className="card-description">
+                        {common.home.relationshipDescription}
+                      </p>
+                    </div>
+                    <div className="card-arrow">→</div>
+                  </div>
                 </div>
               </div>
             }
@@ -108,6 +126,7 @@ function App() {
           <Route path="/dopamine" element={<DopamineTest />} />
           <Route path="/strength" element={<StrengthTest />} />
           <Route path="/dessert" element={<DessertTest />} />
+          <Route path="/relationship" element={<RelationshipTest />} />
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
