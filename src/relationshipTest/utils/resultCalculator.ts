@@ -3,33 +3,66 @@ import type { RelationshipType } from "../data/types";
 export const calculateRelationshipResult = (
   answers: string[],
 ): RelationshipType => {
-  const counts = { A: 0, B: 0, C: 0 };
-  answers.forEach((ans) => {
-    if (ans === "A") counts.A++;
-    if (ans === "B") counts.B++;
-    if (ans === "C") counts.C++;
+  const scores: Record<RelationshipType, number> = {
+    direct_lover: 0,
+    wary_flirt: 0,
+    devoted_giver: 0,
+    emotion_hider: 0,
+    immersive_obsessive: 0,
+    stability_seeker: 0,
+    atmosphere_sensitive: 0,
+    deep_emotionalist: 0,
+  };
+
+  answers.forEach((ans, index) => {
+    const questionIndex = index + 1;
+
+    if (ans === "A") {
+      scores.direct_lover += 2;
+      if ([1, 4, 7, 9].includes(questionIndex)) scores.atmosphere_sensitive += 1;
+      if ([2, 3, 5, 6, 8, 10].includes(questionIndex)) scores.direct_lover += 1;
+    } else if (ans === "B") {
+      scores.wary_flirt += 2;
+      scores.stability_seeker += 1;
+      if ([2, 6, 7, 10].includes(questionIndex)) scores.devoted_giver += 1;
+    } else if (ans === "C") {
+      scores.deep_emotionalist += 2;
+      scores.immersive_obsessive += 1;
+      if ([4, 5, 8, 9].includes(questionIndex)) scores.immersive_obsessive += 1;
+    } else if (ans === "D") {
+      scores.emotion_hider += 2;
+      if ([3, 4, 8, 9].includes(questionIndex)) scores.stability_seeker += 1;
+      if ([2, 5, 6, 7, 10].includes(questionIndex)) scores.emotion_hider += 1;
+      if (questionIndex === 1) scores.direct_lover += 1;
+    }
   });
 
-  // Simple weighted logic to differentiate between 8 types based on A, B, C counts
-  // A: Direct, Active, Expressive
-  // B: Observant, Stable, Strategic
-  // C: Deep, Internal, Sensitive
+  // Find the type with the highest score
+  let maxScore = -1;
+  let resultType: RelationshipType = "stability_seeker";
 
-  if (counts.A >= 7) return "direct_lover";
-  if (counts.B >= 7) return "stability_seeker";
-  if (counts.C >= 7) return "deep_emotionalist";
-
-  if (counts.A >= 4 && counts.B >= 3) return "wary_flirt";
-  if (counts.B >= 4 && counts.C >= 3) return "devoted_giver";
-  if (counts.C >= 4 && counts.A >= 3) return "immersive_obsessive";
-  if (counts.A >= 4 && counts.C >= 3) return "atmosphere_sensitive";
-
-  // Default fallback based on highest count
-  if (counts.A >= counts.B && counts.A >= counts.C) {
-    return counts.B > counts.C ? "direct_lover" : "atmosphere_sensitive";
+  for (const type in scores) {
+    const relationshipType = type as RelationshipType;
+    if (scores[relationshipType] > maxScore) {
+      maxScore = scores[relationshipType];
+      resultType = relationshipType;
+    } else if (scores[relationshipType] === maxScore) {
+      // Tie-breaking: priority order (arbitrary but consistent)
+      const priorities: RelationshipType[] = [
+        "direct_lover",
+        "deep_emotionalist",
+        "emotion_hider",
+        "stability_seeker",
+        "immersive_obsessive",
+        "devoted_giver",
+        "wary_flirt",
+        "atmosphere_sensitive",
+      ];
+      if (priorities.indexOf(relationshipType) < priorities.indexOf(resultType)) {
+        resultType = relationshipType;
+      }
+    }
   }
-  if (counts.B >= counts.A && counts.B >= counts.C) {
-    return counts.C > counts.A ? "stability_seeker" : "wary_flirt";
-  }
-  return counts.A > counts.B ? "immersive_obsessive" : "emotion_hider";
+
+  return resultType;
 };

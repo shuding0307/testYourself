@@ -8,6 +8,7 @@ export const relationshipQuestions: Question[] = [
       { text: "티 안 내려고 해도 결국 먼저 표현하게 됨", value: "A" },
       { text: "상대 반응을 계속 보면서 조심스럽게 다가감", value: "B" },
       { text: "확신 생길 때까지 혼자 마음 키움", value: "C" },
+      { text: "바로 호감있음을 표현함", value: "D" },
     ],
   },
   {
@@ -17,6 +18,7 @@ export const relationshipQuestions: Question[] = [
       { text: "하고 싶을 때 바로 함 (답장 속도 중요)", value: "A" },
       { text: "상대 속도 맞추려고 노력함", value: "B" },
       { text: "너무 자주 하면 부담될까 봐 조절함", value: "C" },
+      { text: "뭐라고 보낼지 고민하다 답장이 늦어지는 편임", value: "D" },
     ],
   },
   {
@@ -26,6 +28,7 @@ export const relationshipQuestions: Question[] = [
       { text: "이유를 바로 물어봄", value: "A" },
       { text: "나도 템포를 맞으면서 상황 지켜봄", value: "B" },
       { text: "혼자 의미 부여하면서 고민함", value: "C" },
+      { text: "크게 신경 쓰지 않고 내 할 일 함", value: "D" },
     ],
   },
   {
@@ -35,6 +38,7 @@ export const relationshipQuestions: Question[] = [
       { text: "감정 표현과 솔직함", value: "A" },
       { text: "안정감과 신뢰", value: "B" },
       { text: "서로에게 주는 감정의 깊이", value: "C" },
+      { text: "서로의 삶을 존중하는 적당한 거리감", value: "D" },
     ],
   },
   {
@@ -44,6 +48,7 @@ export const relationshipQuestions: Question[] = [
       { text: "바로 풀고 싶어서 대화 시도함", value: "A" },
       { text: "서로 정리할 시간 갖는 게 필요함", value: "B" },
       { text: "혼자 생각 많아지면서 말 줄어듦", value: "C" },
+      { text: "감정이 정리될 때까지 혼자 시간을 갖는다", value: "D" },
     ],
   },
   {
@@ -53,6 +58,7 @@ export const relationshipQuestions: Question[] = [
       { text: "적극적으로 해결하려고 함", value: "A" },
       { text: "옆에서 안정적으로 지켜줌", value: "B" },
       { text: "감정적으로 깊이 공감함", value: "C" },
+      { text: "어떻게 도와야 할지 고민하다 조심스럽게 다가간다", value: "D" },
     ],
   },
   {
@@ -62,6 +68,7 @@ export const relationshipQuestions: Question[] = [
       { text: "설레는 감정 그대로 적극 표현", value: "A" },
       { text: "천천히 거리 조절하면서 알아감", value: "B" },
       { text: "감정은 크지만 표현은 조심스러움", value: "C" },
+      { text: "상대를 충분히 파악하기 전까지는 신중하게 행동한다", value: "D" },
     ],
   },
   {
@@ -71,6 +78,7 @@ export const relationshipQuestions: Question[] = [
       { text: "티 내고 솔직하게 말함", value: "A" },
       { text: "티 안 내려고 하지만 신경 쓰임", value: "B" },
       { text: "겉으로는 괜찮은 척, 속으로는 계속 생각남", value: "C" },
+      { text: "크게 질투를 느끼지 않는 편이다", value: "D" },
     ],
   },
   {
@@ -80,6 +88,7 @@ export const relationshipQuestions: Question[] = [
       { text: "여전히 표현 중요하다고 생각", value: "A" },
       { text: "편안함이 더 중요해짐", value: "B" },
       { text: "감정 깊어지면서 의존도도 올라감", value: "C" },
+      { text: "각자의 시간을 존중하는 게 더 중요해진다", value: "D" },
     ],
   },
   {
@@ -89,6 +98,7 @@ export const relationshipQuestions: Question[] = [
       { text: "힘들어도 빨리 정리하려고 함", value: "A" },
       { text: "이유를 이해하려고 노력함", value: "B" },
       { text: "오래 붙잡고 감정 정리 힘들어함", value: "C" },
+      { text: "겉으로는 괜찮은 척하며 담담하게 넘기려 한다", value: "D" },
     ],
   },
 ];
